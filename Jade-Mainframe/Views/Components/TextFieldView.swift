@@ -13,8 +13,8 @@ struct TextFieldView: View {
     
     var title: String
     var placeholderText: String
-    let isRequired: Bool = false
-    let autocapitalizationType: UITextAutocapitalizationType = .none
+    let isRequired: Bool
+    let autocapitalizationType: UITextAutocapitalizationType
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -44,7 +44,14 @@ struct TextFieldView: View {
 }
 
 struct TextField_Previews: PreviewProvider {
+    
+    private static let mockTextField: TextFieldView = .fixture()
+    private static let mockTextFieldRequired: TextFieldView = .fixtureRequired()
+    
     static var previews: some View {
-        TextFieldView(title: "Title", placeholderText: "Placeholder text")
+        VStack {
+            mockTextField
+            mockTextFieldRequired
+        }
     }
 }

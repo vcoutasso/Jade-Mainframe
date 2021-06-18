@@ -12,6 +12,7 @@
 		4C0DDEC7267CDED000B2B3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */; };
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
 		4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */; };
+		4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */; };
 		C4674802267CE299002CB98D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4674801267CE299002CB98D /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C0DDECB267CDED000B2B3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
 		C4674801267CE299002CB98D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 		4C0DDED6267CEA9E00B2B3BA /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
+				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
 				4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */,
 			);
