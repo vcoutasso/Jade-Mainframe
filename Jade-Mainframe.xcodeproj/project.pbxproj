@@ -55,9 +55,12 @@
 		4C0DDEC1267CDECF00B2B3BA /* Jade-Mainframe */ = {
 			isa = PBXGroup;
 			children = (
+				4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */,
+				4C0DDED6267CEA9E00B2B3BA /* Fixtures */,
+				4C0DDED1267CE83D00B2B3BA /* Resources */,
+				4C0DDED4267CE8C100B2B3BA /* Views */,
 				4C0DDEC2267CDECF00B2B3BA /* Jade_MainframeApp.swift */,
 				4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */,
-				4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */,
 				4C0DDECB267CDED000B2B3BA /* Info.plist */,
 				4C0DDEC8267CDED000B2B3BA /* Preview Content */,
 			);
@@ -70,6 +73,43 @@
 				4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C0DDED1267CE83D00B2B3BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C0DDED2267CE84300B2B3BA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4C0DDED4267CE8C100B2B3BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C0DDED2267CE84300B2B3BA /* Components */,
+				4C0DDED5267CE9D500B2B3BA /* Scenes */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C0DDED5267CE9D500B2B3BA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4C0DDED6267CEA9E00B2B3BA /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
