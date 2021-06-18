@@ -1,2 +1,2 @@
 # Jade-Mainframe
-É o bonde das maravilhas
+É o bonde das maravilhas, nóis.
