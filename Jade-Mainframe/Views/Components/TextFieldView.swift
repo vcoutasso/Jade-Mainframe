@@ -30,7 +30,7 @@ struct TextFieldView: View {
         var displayedTitle: String = title
         
         if let last = title.last {
-            if isRequired && last != "*" { displayedTitle.append("*") }
+            if isRequired && String(last) != L10n.Strings.requiredFieldSymbol { displayedTitle.append(L10n.Strings.requiredFieldSymbol) }
         }
         
         return Text(displayedTitle)

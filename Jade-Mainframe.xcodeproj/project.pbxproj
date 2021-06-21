@@ -13,6 +13,9 @@
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
 		4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */; };
 		4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */; };
+		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
+		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
+		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
 		C4674802267CE299002CB98D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4674801267CE299002CB98D /* README.md */; };
 		F38F8A32D13E83270366D7ED /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +30,10 @@
 		4C0DDECB267CDED000B2B3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
+		4C3DC5602680ED4700E5A297 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		4C3DC5672680F7CD00E5A297 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4C3DC5682680F7CD00E5A297 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		4C3DC56E2680F7FB00E5A297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EFD1C329974506B7B806C3 /* Pods-Jade-Mainframe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.debug.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.debug.xcconfig"; sourceTree = "<group>"; };
 		C4674801267CE299002CB98D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				C4674801267CE299002CB98D /* README.md */,
+				4C3DC5602680ED4700E5A297 /* swiftgen.yml */,
 				4C0DDEC1267CDECF00B2B3BA /* Jade-Mainframe */,
 				4C0DDEC0267CDECF00B2B3BA /* Products */,
 				B290A4C4470D3EB990CDFC03 /* Pods */,
@@ -66,6 +74,7 @@
 		4C0DDEC1267CDECF00B2B3BA /* Jade-Mainframe */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DC56D2680F7FB00E5A297 /* Localizable.strings */,
 				4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */,
 				4C0DDED6267CEA9E00B2B3BA /* Fixtures */,
 				4C0DDED1267CE83D00B2B3BA /* Resources */,
@@ -89,6 +98,7 @@
 		4C0DDED1267CE83D00B2B3BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DC5662680F65100E5A297 /* SwiftGen */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,13 +135,21 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		4C3DC5662680F65100E5A297 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DC5672680F7CD00E5A297 /* Assets.swift */,
+				4C3DC5682680F7CD00E5A297 /* Strings.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 		B290A4C4470D3EB990CDFC03 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				81EFD1C329974506B7B806C3 /* Pods-Jade-Mainframe.debug.xcconfig */,
 				0914DF64E6FEB7C81331838B /* Pods-Jade-Mainframe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4674802267CE299002CB98D /* README.md in Resources */,
+				4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */,
 				4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */,
 				4C0DDEC7267CDED000B2B3BA /* Assets.xcassets in Resources */,
 			);
@@ -242,11 +261,24 @@
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
 				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
+				4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */,
+				4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */,
 				4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C3DC56D2680F7FB00E5A297 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C3DC56E2680F7FB00E5A297 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C0DDECC267CDED000B2B3BA /* Debug */ = {

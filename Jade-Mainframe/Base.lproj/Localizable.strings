@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Jade-Mainframe
+
+  Created by Vinícius Couto on 21/06/21.
+  
+*/
+
+/* String constants */
+"Strings.requiredFieldSymbol" = "*";
+"Strings.empty" = "";
