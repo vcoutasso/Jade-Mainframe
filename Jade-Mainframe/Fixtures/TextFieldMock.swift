@@ -20,7 +20,7 @@ extension TextFieldView {
     }
     
     static func fixtureRequired(
-        title: String = "Title",
+        title: String = "Title*",
         placeholderText: String = "Placeholder text",
         isRequired: Bool = true,
         autocapitalizationType: UITextAutocapitalizationType = .none

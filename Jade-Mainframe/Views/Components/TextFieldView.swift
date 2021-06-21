@@ -26,8 +26,14 @@ struct TextFieldView: View {
     
     // Title optionally adds a visual/textual indicator that the field is required and must be filled
     private var fieldTitle: some View {
-        // TODO: Add verification for doubled asterisks in case `title` already comes with one
-        Text(title + (isRequired ? "*" : ""))
+        
+        var displayedTitle: String = title
+        
+        if let last = title.last {
+            if isRequired && last != "*" { displayedTitle.append("*") }
+        }
+        
+        return Text(displayedTitle)
             .font(.system(.body, design: .default)
                     .weight(.bold))
     }
