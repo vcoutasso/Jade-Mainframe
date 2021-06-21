@@ -11,8 +11,8 @@ struct TextFieldView: View {
     
     @State private var inputText: String = ""
     
-    var title: String
-    var placeholderText: String
+    let title: String
+    let placeholderText: String
     let isRequired: Bool
     let autocapitalizationType: UITextAutocapitalizationType
     
@@ -34,12 +34,17 @@ struct TextFieldView: View {
     
     private var textField: some View {
         TextField(placeholderText, text: $inputText)
-            .disableAutocorrection(true)
+            .disableAutocorrection(LayoutMetrics.disableAutocorrection)
             .autocapitalization(autocapitalizationType)
             .padding()
             .border(Color(.systemGray6))
             .background(Color(.systemGray5))
-            .cornerRadius(10)
+            .cornerRadius(LayoutMetrics.cornerRadius)
+    }
+    
+    private enum LayoutMetrics {
+        static let disableAutocorrection: Bool = true
+        static let cornerRadius: CGFloat = 10
     }
 }
 
