@@ -12,8 +12,6 @@ import Foundation
 internal enum L10n {
 
   internal enum Strings {
-    /// 
-    internal static let empty = L10n.tr("Localizable", "Strings.empty")
     /// *
     internal static let requiredFieldSymbol = L10n.tr("Localizable", "Strings.requiredFieldSymbol")
   }
