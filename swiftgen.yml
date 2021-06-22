@@ -1,0 +1,10 @@
+strings:
+  inputs: Jade-Mainframe/Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Jade-Mainframe/Resources/SwiftGen/Strings.swift
+xcassets:
+  inputs: Jade-Mainframe/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Jade-Mainframe/Resources/SwiftGen/Assets.swift
