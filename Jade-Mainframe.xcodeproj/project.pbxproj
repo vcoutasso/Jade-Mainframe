@@ -13,6 +13,7 @@
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
 		4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */; };
 		4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */; };
+		4C19009C26822F770071366F /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19009B26822F770071366F /* TextBindingManager.swift */; };
 		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
 		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
 		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
@@ -30,6 +31,7 @@
 		4C0DDECB267CDED000B2B3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
+		4C19009B26822F770071366F /* TextBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
 		4C3DC5602680ED4700E5A297 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		4C3DC5672680F7CD00E5A297 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4C3DC5682680F7CD00E5A297 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */,
 				4C0DDED6267CEA9E00B2B3BA /* Fixtures */,
 				4C0DDED1267CE83D00B2B3BA /* Resources */,
+				4C19009A26822F300071366F /* Shared */,
 				4C0DDED4267CE8C100B2B3BA /* Views */,
 				4C0DDEC2267CDECF00B2B3BA /* Jade_MainframeApp.swift */,
 				4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */,
@@ -133,6 +136,14 @@
 				4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		4C19009A26822F300071366F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4C19009B26822F770071366F /* TextBindingManager.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		4C3DC5662680F65100E5A297 /* SwiftGen */ = {
@@ -278,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
+				4C19009C26822F770071366F /* TextBindingManager.swift in Sources */,
 				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
 				4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */,
