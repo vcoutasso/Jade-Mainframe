@@ -10,6 +10,7 @@ import SwiftUI
 struct TextFieldView: View {
     
     @State private var inputText: String = ""
+    @State private var foregroundColor: Color = .black
     
     let title: String
     let placeholderText: String
@@ -19,9 +20,14 @@ struct TextFieldView: View {
     var body: some View {
         VStack(alignment: .leading) {
             fieldTitle
+                .foregroundColor(foregroundColor)
             textField
         }
         .padding()
+    }
+    
+    func updateTitleColor() {
+        foregroundColor = isRequired && inputText.isEmpty ? .red : .black
     }
     
     // Title optionally adds a visual/textual indicator that the field is required and must be filled
@@ -39,7 +45,7 @@ struct TextFieldView: View {
     }
     
     private var textField: some View {
-        TextField(placeholderText, text: $inputText)
+        TextField(placeholderText, text: $inputText, onCommit: { updateTitleColor() })
             .disableAutocorrection(LayoutMetrics.disableAutocorrection)
             .autocapitalization(autocapitalizationType)
             .padding()
