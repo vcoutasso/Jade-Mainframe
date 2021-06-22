@@ -6,28 +6,30 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TextFieldView: View {
     
     @State private var inputText: String = ""
-    @State private var foregroundColor: Color = .black
+    @State private var titleColor: Color = .black
     
     let title: String
     let placeholderText: String
     let isRequired: Bool
+    let numbersOnly: Bool
     let autocapitalizationType: UITextAutocapitalizationType
     
     var body: some View {
         VStack(alignment: .leading) {
             fieldTitle
-                .foregroundColor(foregroundColor)
+                .foregroundColor(titleColor)
             textField
         }
         .padding()
     }
     
     func updateTitleColor() {
-        foregroundColor = isRequired && inputText.isEmpty ? .red : .black
+        titleColor = isRequired && inputText.isEmpty ? .red : .black
     }
     
     // Title optionally adds a visual/textual indicator that the field is required and must be filled
@@ -43,15 +45,27 @@ struct TextFieldView: View {
             .font(.system(.body, design: .default)
                     .weight(.bold))
     }
-    
     private var textField: some View {
-        TextField(placeholderText, text: $inputText, onCommit: { updateTitleColor() })
-            .disableAutocorrection(LayoutMetrics.disableAutocorrection)
-            .autocapitalization(autocapitalizationType)
-            .padding()
-            .border(Color(.systemGray6))
-            .background(Color(.systemGray5))
-            .cornerRadius(LayoutMetrics.cornerRadius)
+        Group {
+            if numbersOnly {
+                TextField(placeholderText, text: $inputText, onCommit: { updateTitleColor() })
+                    .keyboardType(.numberPad)
+                    .onReceive(Just(inputText)) { inputValue in
+                        let filtered = inputValue.filter { "0123456789".contains($0) }
+                        if filtered != inputValue {
+                            inputText = filtered
+                        }
+                    }
+            }
+            else {
+                TextField(placeholderText, text: $inputText, onCommit: { updateTitleColor() })            .disableAutocorrection(LayoutMetrics.disableAutocorrection)
+                    .autocapitalization(autocapitalizationType)
+            }
+        }
+        .padding()
+        .border(Color(.systemGray6))
+        .background(Color(.systemGray5))
+        .cornerRadius(LayoutMetrics.cornerRadius)
     }
     
     private enum LayoutMetrics {

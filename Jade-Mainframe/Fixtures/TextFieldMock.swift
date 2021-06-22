@@ -11,21 +11,23 @@ import SwiftUI
 #if DEBUG
 extension TextFieldView {
     static func fixture(
-        title: String = "Title",
-        placeholderText: String = "Placeholder text",
+        title: String = "Description",
+        placeholderText: String = "Product description",
         isRequired: Bool = false,
+        numbersOnly: Bool = false,
         autocapitalizationType: UITextAutocapitalizationType = .none
     ) -> TextFieldView {
-        .init(title: title, placeholderText: placeholderText, isRequired: isRequired, autocapitalizationType: autocapitalizationType)
+        .init(title: title, placeholderText: placeholderText, isRequired: isRequired, numbersOnly: numbersOnly, autocapitalizationType: autocapitalizationType)
     }
     
     static func fixtureRequired(
-        title: String = "Title*",
-        placeholderText: String = "Placeholder text",
+        title: String = "Price*",
+        placeholderText: String = "Price (R$)",
         isRequired: Bool = true,
+        numbersOnly: Bool = true,
         autocapitalizationType: UITextAutocapitalizationType = .none
     ) -> TextFieldView {
-        .init(title: title, placeholderText: placeholderText, isRequired: isRequired, autocapitalizationType: autocapitalizationType)
+        .init(title: title, placeholderText: placeholderText, isRequired: isRequired, numbersOnly: numbersOnly, autocapitalizationType: autocapitalizationType)
     }
 }
 #endif
