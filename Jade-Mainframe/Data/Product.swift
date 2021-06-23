@@ -9,5 +9,6 @@ import Foundation
 
 struct Product: Identifiable {
     var id = UUID()
-    let productName, imageName: String
+    let productName: String
+    let imageName: String
 }
