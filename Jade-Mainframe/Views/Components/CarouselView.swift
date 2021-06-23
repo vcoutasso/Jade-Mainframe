@@ -7,33 +7,15 @@
 
 import SwiftUI
 
-private struct Product: Identifiable {
-    var id = UUID()
-    let productName, imageName: String
-    
-}
-
 struct CarouselView: View {
     
-    // associar isso ao banco de dados
-    // os parametros ainda devem ser decididos
-   private let products: [Product] = [
-    Product( productName: "0", imageName: "0"),
-    Product( productName: "0fe", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    Product( productName: "0fef", imageName: "0"),
-    ]
-    let categorieTitle = "titulo"
- 
+    let products: [Product]
+    let categoryTitle: String
+    
     var body: some View { 
         VStack(alignment: .leading) {
             
-            Text(categorieTitle)
+            Text(categoryTitle)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.leading)
@@ -65,7 +47,9 @@ struct CarouselView: View {
 }
 
 struct CarouselView_Previews: PreviewProvider {
+    static private let mockProduct: Product = .fixture()
+    
     static var previews: some View {
-        CarouselView()
+        CarouselView(products: [Product](repeating: mockProduct, count: 10), categoryTitle: "Lorem Ipsum")
     }
 }
