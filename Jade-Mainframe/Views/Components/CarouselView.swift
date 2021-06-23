@@ -17,42 +17,37 @@ struct CarouselView: View {
     
     // associar isso ao banco de dados
     // os parametros ainda devem ser decididos
-   private let products: [Product] = [  Product( productName: "0", imageUrl: "0"),
-                                        Product( productName: "0fe", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
-                                        Product( productName: "0fef", imageUrl: "0"),
+   private let products: [Product] = [
+    Product( productName: "0", imageUrl: "0"),
+    Product( productName: "0fe", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
+    Product( productName: "0fef", imageUrl: "0"),
     ]
     let categorieTitle = "titulo"
-    
-   
-    
-    
-    
-    var body: some View {
-        
+ 
+    var body: some View { 
+        VStack(alignment: .leading){
             
+            Text(categorieTitle)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.leading)
             
-            VStack(alignment: .leading){
-                Text(categorieTitle)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
-                ScrollView(.horizontal){
-                        HStack(spacing: 20){
-                            
-                            ForEach(products){ item in
-                                ProductMiniView(productIdentification: item.productName, imageUrl: item.imageUrl)
-                            }
+            ScrollView(.horizontal){
+                HStack(spacing: 20){
+                    ForEach(products){ item in
+                        ProductMiniView(productIdentification: item.productName, imageUrl: item.imageUrl)
                     }
+                }
             }
         }
-    
-}
+        
+    }
 
 struct CarouselView_Previews: PreviewProvider {
     static var previews: some View {
@@ -66,7 +61,7 @@ struct ProductMiniView : View {
     var body: some View{
         VStack{
         // Seria Image(imageUrl) ao inves do retangulo
-            Rectangle().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+            Image(systemName: "").frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).background(Color(.black))
             Text(productIdentification)
         }
     }
