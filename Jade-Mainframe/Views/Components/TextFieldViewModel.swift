@@ -15,43 +15,51 @@ class TextFieldViewModel: ObservableObject {
     
     // MARK: - Published Variables
     @Published var titleColor: Color = .black
-    @Published var title: String
+    @Published var displayedTitle: String
     @Published var placeholderText: String
     @Published var isRequired: Bool
     @Published var numbersOnly: Bool
     @Published var autocapitalizationType: UITextAutocapitalizationType
     
-    @Published var text = "" {
+    @Published var inputText = "" {
         didSet {
-            if text.count > maxLength && oldValue.count <= maxLength {
-                text = oldValue
+            if inputText.count > maxLength && oldValue.count <= maxLength {
+                inputText = oldValue
             }
         }
     }
     
-    var maxLength: Int {
+    // MARK: - Private variables
+    private var maxLength: Int {
         numbersOnly ? maxNumberLength : maxStringLength
     }
     
     // MARK: - Initialization
     init(title: String, placeholderText: String, isRequired: Bool, numbersOnly: Bool, autocapitalizationType: UITextAutocapitalizationType = .none) {
-        self.title = title
+        self.displayedTitle = title
         self.placeholderText = placeholderText
         self.isRequired = isRequired
         self.numbersOnly = numbersOnly
         self.autocapitalizationType = autocapitalizationType
+        
+        // Title optionally adds a visual/textual indicator that the field is required and must be filled
+        if let last = title.last {
+            if self.isRequired && String(last) != L10n.Strings.requiredFieldSymbol {
+                self.displayedTitle.append(L10n.Strings.requiredFieldSymbol)
+            }
+        }
     }
     
     // MARK: - View methods
     func handleTitleColor() {
-        titleColor = isRequired && text.isEmpty ? .red : .black
+        titleColor = isRequired && inputText.isEmpty ? .red : .black
         objectWillChange.send()
     }
     
     func handleTextReceive(inputValue: String) {
         let filtered = inputValue.filter { "0123456789".contains($0) }
         if filtered != inputValue {
-            text = filtered
+            inputText = filtered
             objectWillChange.send()
         }
     }

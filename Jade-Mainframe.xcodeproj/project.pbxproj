@@ -115,8 +115,8 @@
 		4C0DDED2267CE84300B2B3BA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
 				B2B3BDE12682759B002E12D0 /* CarouselView.swift */,
+				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
 				4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */,
 			);
 			path = Components;

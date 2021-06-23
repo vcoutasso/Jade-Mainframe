@@ -21,16 +21,8 @@ struct TextFieldView: View {
         .padding()
     }
     
-    // Title optionally adds a visual/textual indicator that the field is required and must be filled
     private var fieldTitle: some View {
-        
-        var displayedTitle: String = viewModel.title
-        
-        if let last = viewModel.title.last {
-            if viewModel.isRequired && String(last) != L10n.Strings.requiredFieldSymbol { displayedTitle.append(L10n.Strings.requiredFieldSymbol) }
-        }
-        
-        return Text(displayedTitle)
+        Text(viewModel.displayedTitle)
             .font(.system(.body, design: .default)
                     .weight(.bold))
     }
@@ -39,13 +31,13 @@ struct TextFieldView: View {
         Group {
             if viewModel.numbersOnly {
                 TextField(viewModel.placeholderText,
-                          text: $viewModel.text,
+                          text: $viewModel.inputText,
                           onCommit:  viewModel.handleTitleColor)
                     .keyboardType(.numberPad)
-                    .onReceive(Just(viewModel.text), perform: viewModel.handleTextReceive)
+                    .onReceive(Just(viewModel.inputText), perform: viewModel.handleTextReceive)
             }
             else {
-                TextField(viewModel.placeholderText, text: $viewModel.text, onCommit: { viewModel.handleTitleColor() })            .disableAutocorrection(LayoutMetrics.disableAutocorrection)
+                TextField(viewModel.placeholderText, text: $viewModel.inputText, onCommit: { viewModel.handleTitleColor() })            .disableAutocorrection(LayoutMetrics.disableAutocorrection)
                     .autocapitalization(viewModel.autocapitalizationType)
             }
         }
