@@ -13,10 +13,10 @@
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
 		4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */; };
 		4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */; };
-		4C19009C26822F770071366F /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19009B26822F770071366F /* TextBindingManager.swift */; };
 		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
 		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
 		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
+		4C713CC72683749800D984B3 /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CC62683749800D984B3 /* TextBindingManager.swift */; };
 		B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE12682759B002E12D0 /* CarouselView.swift */; };
 		B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE626836C0A002E12D0 /* Product.swift */; };
 		B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE826836C28002E12D0 /* ProductMock.swift */; };
@@ -34,11 +34,11 @@
 		4C0DDECB267CDED000B2B3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
-		4C19009B26822F770071366F /* TextBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
 		4C3DC5602680ED4700E5A297 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		4C3DC5672680F7CD00E5A297 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4C3DC5682680F7CD00E5A297 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		4C3DC56E2680F7FB00E5A297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C713CC62683749800D984B3 /* TextBindingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
 		740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EFD1C329974506B7B806C3 /* Pods-Jade-Mainframe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.debug.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.debug.xcconfig"; sourceTree = "<group>"; };
 		B2B3BDE12682759B002E12D0 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		4C19009A26822F300071366F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4C19009B26822F770071366F /* TextBindingManager.swift */,
+				4C713CC62683749800D984B3 /* TextBindingManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -307,6 +307,7 @@
 			files = (
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
 				B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */,
+				4C713CC72683749800D984B3 /* TextBindingManager.swift in Sources */,
 				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
 				B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
