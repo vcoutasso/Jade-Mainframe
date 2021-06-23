@@ -26,8 +26,8 @@ struct CarouselView: View {
                                         Produto( productTitle: "0fef", imageUrl: "0"),
                                         Produto( productTitle: "0fef", imageUrl: "0"),
                                         Produto( productTitle: "0fef", imageUrl: "0"),
-
     ]
+    let categorieTitle = "titulo"
     
    
     
@@ -38,7 +38,7 @@ struct CarouselView: View {
             
             
             VStack(alignment: .leading){
-                Text("titulo")
+                Text(categorieTitle)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
