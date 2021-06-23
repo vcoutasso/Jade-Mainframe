@@ -15,6 +15,7 @@ class TextFieldViewModel: ObservableObject {
     
     // MARK: - Published Variables
     @Published var titleColor: Color = .black
+    
     @Published var displayedTitle: String
     @Published var placeholderText: String
     @Published var isRequired: Bool
