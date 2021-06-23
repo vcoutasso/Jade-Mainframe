@@ -17,6 +17,9 @@
 		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
 		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
 		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
+		B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE12682759B002E12D0 /* CarouselView.swift */; };
+		B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE626836C0A002E12D0 /* Product.swift */; };
+		B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE826836C28002E12D0 /* ProductMock.swift */; };
 		C4674802267CE299002CB98D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4674801267CE299002CB98D /* README.md */; };
 		F38F8A32D13E83270366D7ED /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		4C3DC56E2680F7FB00E5A297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EFD1C329974506B7B806C3 /* Pods-Jade-Mainframe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.debug.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.debug.xcconfig"; sourceTree = "<group>"; };
+		B2B3BDE12682759B002E12D0 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		B2B3BDE626836C0A002E12D0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B2B3BDE826836C28002E12D0 /* ProductMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMock.swift; sourceTree = "<group>"; };
 		C4674801267CE299002CB98D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,9 +82,9 @@
 		4C0DDEC1267CDECF00B2B3BA /* Jade-Mainframe */ = {
 			isa = PBXGroup;
 			children = (
+				B2B3BDE526836BD2002E12D0 /* Data */,
 				4C3DC56D2680F7FB00E5A297 /* Localizable.strings */,
 				4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */,
-				4C0DDED6267CEA9E00B2B3BA /* Fixtures */,
 				4C0DDED1267CE83D00B2B3BA /* Resources */,
 				4C19009A26822F300071366F /* Shared */,
 				4C0DDED4267CE8C100B2B3BA /* Views */,
@@ -110,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
+				B2B3BDE12682759B002E12D0 /* CarouselView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */,
+				B2B3BDE826836C28002E12D0 /* ProductMock.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -162,6 +170,15 @@
 				0914DF64E6FEB7C81331838B /* Pods-Jade-Mainframe.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B2B3BDE526836BD2002E12D0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C0DDED6267CEA9E00B2B3BA /* Fixtures */,
+				B2B3BDE626836C0A002E12D0 /* Product.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D6BDE6BB41EC7F81CE865B48 /* Frameworks */ = {
@@ -289,11 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
-				4C19009C26822F770071366F /* TextBindingManager.swift in Sources */,
+				B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */,
 				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
+				B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
 				4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */,
 				4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */,
+				B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */,
 				4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
