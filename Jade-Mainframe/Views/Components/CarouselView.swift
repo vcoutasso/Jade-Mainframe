@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-private struct Produto: Identifiable {
+private struct Product: Identifiable {
     var id = UUID()
-    let productTitle, imageUrl: String
+    let productName, imageUrl: String
     
 }
 
@@ -17,15 +17,15 @@ struct CarouselView: View {
     
     // associar isso ao banco de dados
     // os parametros ainda devem ser decididos
-   private let products: [Produto] = [  Produto( productTitle: "0", imageUrl: "0"),
-                                        Produto( productTitle: "0fe", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
-                                        Produto( productTitle: "0fef", imageUrl: "0"),
+   private let products: [Product] = [  Product( productName: "0", imageUrl: "0"),
+                                        Product( productName: "0fe", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
+                                        Product( productName: "0fef", imageUrl: "0"),
     ]
     let categorieTitle = "titulo"
     
@@ -34,7 +34,7 @@ struct CarouselView: View {
     
     
     var body: some View {
-        NavigationView{
+        
             
             
             VStack(alignment: .leading){
@@ -46,12 +46,12 @@ struct CarouselView: View {
                         HStack(spacing: 20){
                             
                             ForEach(products){ item in
-                                ProductMiniView(productIdentification: item.productTitle, imageUrl: item.imageUrl)
+                                ProductMiniView(productIdentification: item.productName, imageUrl: item.imageUrl)
                             }
                     }
             }
         }
-    }
+    
 }
 
 struct CarouselView_Previews: PreviewProvider {
