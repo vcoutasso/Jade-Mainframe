@@ -18,6 +18,7 @@ struct CarouselView: View {
             Text(categoryTitle)
                 .font(.largeTitle)
                 .fontWeight(.bold)
+                // REVIEW: Should titles be allowed in multiple lines?
                 .multilineTextAlignment(.leading)
             
             ScrollView(.horizontal) {
@@ -50,6 +51,6 @@ struct CarouselView_Previews: PreviewProvider {
     static private let mockProduct: Product = .fixture()
     
     static var previews: some View {
-        CarouselView(products: [Product](repeating: mockProduct, count: 10), categoryTitle: "Lorem Ipsum")
+        CarouselView(products: [Product](repeating: mockProduct, count: 10), categoryTitle: "Lorem Ipsum sit dolor amet lalala ")
     }
 }
