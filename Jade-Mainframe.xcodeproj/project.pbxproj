@@ -23,6 +23,7 @@
 		B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE626836C0A002E12D0 /* Product.swift */; };
 		B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE826836C28002E12D0 /* ProductMock.swift */; };
 		B2B3BDEB2683E43A002E12D0 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */; };
+		B2E6FC092684C00B00B217DA /* priceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6FC072684BFF600B217DA /* priceFormatter.swift */; };
 		C4674802267CE299002CB98D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4674801267CE299002CB98D /* README.md */; };
 		F38F8A32D13E83270366D7ED /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		B2B3BDE626836C0A002E12D0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B2B3BDE826836C28002E12D0 /* ProductMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMock.swift; sourceTree = "<group>"; };
 		B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		B2E6FC072684BFF600B217DA /* priceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = priceFormatter.swift; path = "/Users/guilermebarciki/Desktop/ESSE/Jade-Mainframe/priceFormatter.swift"; sourceTree = "<absolute>"; };
 		C4674801267CE299002CB98D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +94,7 @@
 				4C3DC56D2680F7FB00E5A297 /* Localizable.strings */,
 				B2B3BDE526836BD2002E12D0 /* Data */,
 				4C0DDED1267CE83D00B2B3BA /* Resources */,
-				4C19009A26822F300071366F /* Shared */,
+				B2E6FC062684BE2100B217DA /* Shared */,
 				4C0DDED4267CE8C100B2B3BA /* Views */,
 				4C0DDEC2267CDECF00B2B3BA /* Jade_MainframeApp.swift */,
 				4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */,
@@ -156,13 +158,6 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
-		4C19009A26822F300071366F /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		4C3DC5662680F65100E5A297 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +183,15 @@
 				B2B3BDE626836C0A002E12D0 /* Product.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B2E6FC062684BE2100B217DA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B2E6FC072684BFF600B217DA /* priceFormatter.swift */,
+			);
+			name = Shared;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D6BDE6BB41EC7F81CE865B48 /* Frameworks */ = {
@@ -326,6 +330,7 @@
 				4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */,
 				4CD7BA812684AF59001E402A /* SearchBarViewModel.swift in Sources */,
 				B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */,
+				B2E6FC092684C00B00B217DA /* priceFormatter.swift in Sources */,
 				4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
