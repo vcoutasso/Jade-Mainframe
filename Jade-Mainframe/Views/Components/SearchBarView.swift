@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct SearchBarView: View {
-    
     @ObservedObject var viewModel: SearchBarViewModel = .init()
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 TextField(L10n.searchBarPlaceholderText, text: $viewModel.searchText)
                     .font(.system(.body, design: .default)
-                            .weight(.regular))
+                        .weight(.regular))
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding(LayoutMetrics.defaultPadding)
@@ -30,11 +29,11 @@ struct SearchBarView: View {
                     .background(Color(.white))
                     .cornerRadius(LayoutMetrics.cornerRadius)
                     .overlay(RoundedRectangle(cornerRadius: LayoutMetrics.cornerRadius)
-                                .stroke(Color(.systemGray6), lineWidth: LayoutMetrics.borderWidth))
+                        .stroke(Color(.systemGray6), lineWidth: LayoutMetrics.borderWidth))
             }
         }
     }
-    
+
     private enum LayoutMetrics {
         static let cornerRadius: CGFloat = 10
         static let searchTextPadding: CGFloat = 30

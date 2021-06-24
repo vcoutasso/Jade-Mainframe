@@ -1,6 +1,6 @@
 //
 //  priceFormatter.swift
-//  
+//
 //
 //  Created by Guilerme Barciki on 24/06/21.
 //
@@ -20,5 +20,3 @@ func priceFormatter(price: Double, locale: String) -> String {
 
     return numberFormatter.string(from: NSNumber(value: price)) ?? L10n.invalidPriceWarning
 }
-
-

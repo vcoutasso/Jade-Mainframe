@@ -12,5 +12,4 @@ struct Product: Identifiable {
     let productName: String
     let productPrice: Double
     let imageName: String
-    
 }
