@@ -14,23 +14,32 @@ struct SearchBarView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                TextField("Search", text: $searchText)
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                TextField(L10n.Strings.searchBarPlaceholderText, text: $searchText)
+                    .font(.system(.body, design: .default)
+                            .weight(.regular))
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
-                    .padding(10)
-                    .padding(.leading, 30)
+                    .padding(LayoutMetrics.defaultPadding)
+                    .padding(.leading, LayoutMetrics.searchTextPadding)
                     .overlay(
                         Image(systemName: "magnifyingglass")
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 10).foregroundColor(Color(.systemGray2))
+                            .padding(.leading, LayoutMetrics.defaultPadding)
+                            .foregroundColor(Color(.systemGray2))
                         
                     )
                     .background(Color(.white))
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    .cornerRadius(10)
+                    .cornerRadius(LayoutMetrics.cornerRadius)
+                    .overlay(RoundedRectangle(cornerRadius: LayoutMetrics.cornerRadius)
+                                .stroke(Color(.systemGray6), lineWidth: 2))
             }
         }
+    }
+    
+    private enum LayoutMetrics {
+        static let cornerRadius: CGFloat = 10
+        static let searchTextPadding: CGFloat = 30
+        static let defaultPadding: CGFloat = 10
     }
 }
 
@@ -40,6 +49,5 @@ struct SearchBarView_Previews: PreviewProvider {
     
     static var previews: some View {
         SearchBarView(searchText: $searchText)
-           //.preferredColorScheme(.dark)
     }
 }

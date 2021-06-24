@@ -14,6 +14,8 @@ internal enum L10n {
   internal enum Strings {
     /// *
     internal static let requiredFieldSymbol = L10n.tr("Localizable", "Strings.requiredFieldSymbol")
+    /// Buscar
+    internal static let searchBarPlaceholderText = L10n.tr("Localizable", "Strings.searchBarPlaceholderText")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

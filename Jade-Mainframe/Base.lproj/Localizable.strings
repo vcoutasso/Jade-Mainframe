@@ -8,3 +8,4 @@
 
 /* String constants */
 "Strings.requiredFieldSymbol" = "*";
+"Strings.searchBarPlaceholderText" = "Buscar";
