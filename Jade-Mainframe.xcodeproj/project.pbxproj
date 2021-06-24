@@ -461,7 +461,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Jade-Mainframe/Preview Content\"";
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = H7BM7N56V5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Jade-Mainframe/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -486,7 +486,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Jade-Mainframe/Preview Content\"";
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = H7BM7N56V5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Jade-Mainframe/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
