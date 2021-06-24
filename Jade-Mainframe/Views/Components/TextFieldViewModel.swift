@@ -45,8 +45,8 @@ class TextFieldViewModel: ObservableObject {
         
         // Title optionally adds a visual/textual indicator that the field is required and must be filled
         if let last = title.last {
-            if self.isRequired && String(last) != L10n.Strings.requiredFieldSymbol {
-                self.displayedTitle.append(L10n.Strings.requiredFieldSymbol)
+            if self.isRequired && String(last) != L10n.requiredFieldSymbol {
+                self.displayedTitle.append(L10n.requiredFieldSymbol)
             }
         }
     }

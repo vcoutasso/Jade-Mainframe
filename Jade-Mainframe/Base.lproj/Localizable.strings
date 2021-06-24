@@ -7,4 +7,5 @@
 */
 
 /* String constants */
-"Strings.requiredFieldSymbol" = "*";
+"requiredFieldSymbol" = "*";
+"searchBarPlaceholderText" = "Buscar";
