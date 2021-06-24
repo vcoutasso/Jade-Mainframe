@@ -11,6 +11,9 @@ class SearchBarViewModel: ObservableObject {
     // MARK: - Published variables
     @Published var searchText: String
     
+    // MARK: - Constants
+    let symbolName: String = "magnifyingglass"
+    
     // MARK: - Initialization
     init(searchText: String = "") {
         self.searchText = searchText

@@ -14,7 +14,7 @@ struct SearchBarView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                TextField(L10n.Strings.searchBarPlaceholderText, text: $viewModel.searchText)
+                TextField(L10n.searchBarPlaceholderText, text: $viewModel.searchText)
                     .font(.system(.body, design: .default)
                             .weight(.regular))
                     .autocapitalization(.none)
@@ -22,11 +22,10 @@ struct SearchBarView: View {
                     .padding(LayoutMetrics.defaultPadding)
                     .padding(.leading, LayoutMetrics.searchTextPadding)
                     .overlay(
-                        Image(systemName: "magnifyingglass")
+                        Image(systemName: viewModel.symbolName)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, LayoutMetrics.defaultPadding)
                             .foregroundColor(Color(.systemGray2))
-                        
                     )
                     .background(Color(.white))
                     .cornerRadius(LayoutMetrics.cornerRadius)
