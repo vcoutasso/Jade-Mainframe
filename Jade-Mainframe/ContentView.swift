@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TextFieldView.fixture()
-            
+        Text("É o bonde")
     }
 }
 

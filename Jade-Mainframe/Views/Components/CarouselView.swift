@@ -9,20 +9,20 @@ import SwiftUI
 
 struct CarouselView: View {
     
-    let products: [Product]
-    let categoryTitle: String
+    @ObservedObject var viewModel: CarouselViewModel
     
     var body: some View { 
         VStack(alignment: .leading) {
             
-            Text(categoryTitle)
+            Text(viewModel.categoryTitle)
                 .font(.largeTitle)
                 .fontWeight(.bold)
+                // REVIEW: Should titles be allowed in multiple lines?
                 .multilineTextAlignment(.leading)
             
             ScrollView(.horizontal) {
                 HStack(spacing: LayoutMetrics.horizontalSpacing) {
-                    ForEach(products) { product in
+                    ForEach(viewModel.products) { product in
                         productMiniView(product: product)
                     }
                 }
@@ -47,9 +47,11 @@ struct CarouselView: View {
 }
 
 struct CarouselView_Previews: PreviewProvider {
+    
     static private let mockProduct: Product = .fixture()
+    static private let viewModel: CarouselViewModel = .init(products: [Product](repeating: mockProduct, count: 10), categoryTitle: "Lipsum")
     
     static var previews: some View {
-        CarouselView(products: [Product](repeating: mockProduct, count: 10), categoryTitle: "Lorem Ipsum")
+        CarouselView(viewModel: viewModel)
     }
 }
