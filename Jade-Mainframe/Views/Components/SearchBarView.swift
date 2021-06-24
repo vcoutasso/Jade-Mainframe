@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SearchBarView: View {
     
-    @Binding var searchText: String
+    @ObservedObject var viewModel: SearchBarViewModel = .init()
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                TextField(L10n.Strings.searchBarPlaceholderText, text: $searchText)
+                TextField(L10n.Strings.searchBarPlaceholderText, text: $viewModel.searchText)
                     .font(.system(.body, design: .default)
                             .weight(.regular))
                     .autocapitalization(.none)
@@ -31,7 +31,7 @@ struct SearchBarView: View {
                     .background(Color(.white))
                     .cornerRadius(LayoutMetrics.cornerRadius)
                     .overlay(RoundedRectangle(cornerRadius: LayoutMetrics.cornerRadius)
-                                .stroke(Color(.systemGray6), lineWidth: 2))
+                                .stroke(Color(.systemGray6), lineWidth: LayoutMetrics.borderWidth))
             }
         }
     }
@@ -40,14 +40,12 @@ struct SearchBarView: View {
         static let cornerRadius: CGFloat = 10
         static let searchTextPadding: CGFloat = 30
         static let defaultPadding: CGFloat = 10
+        static let borderWidth: CGFloat = 2
     }
 }
 
 struct SearchBarView_Previews: PreviewProvider {
-    
-    @State static var searchText: String = ""
-    
     static var previews: some View {
-        SearchBarView(searchText: $searchText)
+        SearchBarView()
     }
 }
