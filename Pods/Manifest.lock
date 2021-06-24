@@ -1,16 +1,20 @@
 PODS:
+  - SwiftFormat/CLI (0.48.6)
   - SwiftGen (6.4.0)
 
 DEPENDENCIES:
+  - SwiftFormat/CLI
   - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   trunk:
+    - SwiftFormat
     - SwiftGen
 
 SPEC CHECKSUMS:
+  SwiftFormat: 835d432cbffc8916d3def6e37a01a10c516d8e24
   SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
 
-PODFILE CHECKSUM: 7357cab6328bec0d5f7d59109231b6a4932bbdc7
+PODFILE CHECKSUM: 9319f5c3770cd1f71244106e5c978122fe5ca01f
 
 COCOAPODS: 1.10.1

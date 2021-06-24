@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'Jade-Mainframe' do
     pod 'SwiftGen', '~> 6.0'
+    pod 'SwiftFormat/CLI'
 end
