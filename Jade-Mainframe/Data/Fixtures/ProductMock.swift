@@ -10,10 +10,11 @@ import Foundation
 #if DEBUG
 extension Product {
     static func fixture(
-        productName: String = "Product",
+        productName: String = "IPhone X",
+        productPrice: Int = 1299,
         imageName: String = ""
     ) -> Product {
-        .init(productName: productName, imageName: imageName)
+        .init(productName: productName, productPrice: productPrice, imageName: imageName)
     }
 }
 #endif
