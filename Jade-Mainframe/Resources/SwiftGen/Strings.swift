@@ -10,6 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// R$
+  internal static let currencySymbol = L10n.tr("Localizable", "currencySymbol")
+  /// Preço Inválido
+  internal static let invalidPriceWarning = L10n.tr("Localizable", "invalidPriceWarning")
+  /// pt_BR
+  internal static let locale = L10n.tr("Localizable", "locale")
   /// *
   internal static let requiredFieldSymbol = L10n.tr("Localizable", "requiredFieldSymbol")
   /// Buscar

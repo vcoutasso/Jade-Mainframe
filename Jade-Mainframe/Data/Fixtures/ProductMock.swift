@@ -11,7 +11,7 @@ import Foundation
 extension Product {
     static func fixture(
         productName: String = "IPhone X",
-        productPrice: Int = 1299,
+        productPrice: Double = 1299,
         imageName: String = ""
     ) -> Product {
         .init(productName: productName, productPrice: productPrice, imageName: imageName)
