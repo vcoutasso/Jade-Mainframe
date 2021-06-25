@@ -12,3 +12,8 @@
 "invalidPriceWarning" = "Preço Inválido";
 "currencySymbol" = "R$";
 "locale" = "pt_BR";
+
+"homeTabName" = "Home";
+"sellTabName" = "Vender";
+"profileTabName" = "Perfil";
+"favoritesTabName" = "Favoritos";

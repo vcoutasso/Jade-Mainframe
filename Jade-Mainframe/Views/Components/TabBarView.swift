@@ -10,22 +10,21 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
+            HomeView().tabItem {
+                Image(systemName: "house")
+                Text(L10n.homeTabName)
+            }
             RegisterSaleView().tabItem {
                 Image(systemName: "tag")
-                Text("Home")
+                Text(L10n.sellTabName)
             }
             FavoritesView().tabItem {
                 Image(systemName: "suit.heart")
-                Text("Favoritos")
+                Text(L10n.favoritesTabName)
             }
             ProfileView().tabItem {
                 Image(systemName: "person")
-                Text("Perfil")
+                Text(L10n.profileTabName)
             }
         }
     }

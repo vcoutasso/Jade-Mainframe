@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegisterSaleView: View {
     var body: some View {
-        Text("Vender")
+        Text(L10n.sellTabName)
     }
 }
 
