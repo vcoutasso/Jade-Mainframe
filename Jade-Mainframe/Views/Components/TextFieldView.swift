@@ -23,7 +23,7 @@ struct TextFieldView: View {
     private var fieldTitle: some View {
         Text(viewModel.displayedTitle)
             .font(.system(.body, design: .default)
-                .weight(.bold))
+                 .weight(.bold))
     }
 
     private var textField: some View {
@@ -35,7 +35,10 @@ struct TextFieldView: View {
                     .keyboardType(.numberPad)
                     .onReceive(Just(viewModel.inputText), perform: viewModel.handleTextReceive)
             } else {
-                TextField(viewModel.placeholderText, text: $viewModel.inputText, onCommit: { viewModel.handleTitleColor() }).disableAutocorrection(LayoutMetrics.disableAutocorrection)
+                TextField(viewModel.placeholderText,
+                          text: $viewModel.inputText,
+                          onCommit: viewModel.handleTitleColor)
+                    .disableAutocorrection(LayoutMetrics.disableAutocorrection)
                     .autocapitalization(viewModel.autocapitalizationType)
             }
         }
