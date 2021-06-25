@@ -209,7 +209,6 @@
 			buildConfigurationList = 4C0DDECE267CDED000B2B3BA /* Build configuration list for PBXNativeTarget "Jade-Mainframe" */;
 			buildPhases = (
 				3B0E44F961378DDB7211BF25 /* [CP] Check Pods Manifest.lock */,
-				4C14BD2D2685254E00A136F8 /* Pod Install */,
 				4C14BD2C2685210400A136F8 /* SwiftFormat */,
 				4C3DC5702680FBF000E5A297 /* SwiftGen */,
 				4C0DDEBB267CDECF00B2B3BA /* Sources */,
@@ -311,24 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\" \"--swiftversion\" \"5\"\n";
-		};
-		4C14BD2D2685254E00A136F8 /* Pod Install */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Pod Install";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "pod install --no-ansi\n";
 		};
 		4C3DC5702680FBF000E5A297 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
