@@ -1,27 +1,27 @@
-name: Swift
+name: CI
 
 on: 
-push:
-    branches:
-        - master
-        - development
-        - dev/github-actions
-pull_request:
-    branches:
-        - master
-        - development
-    jobs:
-        Test:
-            runs-on: macOS-latest
-            steps:
-                - uses: actions/checkout@v1
-                - name: List available Xcode versions
-                  run: ls /Applications | grep Xcode
-                - name: Select Xcode
-                  run: sudo xcode-select -switch /Applications/Xcode_12.5.app && /usr/bin/xcodebuild -version
-                - name: Install CocoaPods
-                  run: brew install cocoapods
-                - name: Install dependencies
-                  run: pod install
-                - name: Run unit tests
-                  run: xcodebuild -workspace Jade-Mainframe.xcworkspace -scheme Jade-Mainframe -destination platform\=iOS\ Simulator,OS\=14.5,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}
+    push:
+        branches:
+            - master
+            - development
+            - dev/github-actions
+    pull_request:
+        branches:
+            - master
+            - development
+jobs:
+    Test:
+        runs-on: macOS-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: List available Xcode versions
+              run: ls /Applications | grep Xcode
+            - name: Select Xcode
+              run: sudo xcode-select -switch /Applications/Xcode_12.5.app && /usr/bin/xcodebuild -version
+            - name: Install CocoaPods
+              run: brew install cocoapods
+            - name: Install dependencies
+              run: pod install
+            - name: Run unit tests
+              run: xcodebuild -workspace Jade-Mainframe.xcworkspace -scheme Jade-Mainframe -destination platform\=iOS\ Simulator,OS\=14.5,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}
