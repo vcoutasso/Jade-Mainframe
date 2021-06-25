@@ -20,7 +20,7 @@ jobs:
             - name: Select Xcode
               run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
             - name: Install CocoaPods
-              run: brew install cocoapods
+              run: sudo gem install cocoapods
             - name: Install dependencies
               run: pod install
             - name: Run unit tests
