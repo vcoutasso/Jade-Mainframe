@@ -22,8 +22,8 @@ struct TextFieldView: View {
 
     private var fieldTitle: some View {
         Text(viewModel.displayedTitle)
-            .font(.system(.body, design: .default))
-            .fontWeight(.bold)
+            .font(.system(.body, design: .default)
+                 .weight(.bold))
     }
 
     private var textField: some View {
