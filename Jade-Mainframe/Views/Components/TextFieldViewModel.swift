@@ -40,7 +40,13 @@ class TextFieldViewModel: ObservableObject {
 
     // MARK: - Initialization
 
-    init(title: String, placeholderText: String, isRequired: Bool, numbersOnly: Bool, autocapitalizationType: UITextAutocapitalizationType = .none) {
+    init(
+        title: String,
+        placeholderText: String,
+        isRequired: Bool,
+        numbersOnly: Bool,
+        autocapitalizationType: UITextAutocapitalizationType = .none
+    ) {
         displayedTitle = title
         self.placeholderText = placeholderText
         self.isRequired = isRequired
