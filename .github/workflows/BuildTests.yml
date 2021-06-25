@@ -18,7 +18,7 @@ jobs:
             - name: List available Xcode versions
               run: ls /Applications | grep Xcode
             - name: Select Xcode
-              run: sudo xcode-select -switch /Applications/Xcode_12.5.app && /usr/bin/xcodebuild -version
+              run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
             - name: Install CocoaPods
               run: brew install cocoapods
             - name: Install dependencies
