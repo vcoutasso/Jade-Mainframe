@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0DDEC3267CDECF00B2B3BA /* JadeMainframeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */; };
 		4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */; };
 		4C0DDEC7267CDED000B2B3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */; };
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
@@ -20,13 +19,14 @@
 		4C713CCB2683D23000D984B3 /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */; };
 		4C713CD22683E9FC00D984B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */; };
 		4C8E15D72686A26A005CD42E /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */; };
+		4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */; };
 		4CD7BA812684AF59001E402A /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */; };
 		4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA8526851499001E402A /* priceFormatter.swift */; };
+		6A388316CDAE6AD61411C484 /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */; };
 		B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F892686864900BADFF9 /* HomeView.swift */; };
 		B20F5F8C268686D300BADFF9 /* RegisterSaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F8B268686D300BADFF9 /* RegisterSaleView.swift */; };
 		B20F5F8E268686F100BADFF9 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F8D268686F100BADFF9 /* FavoritesView.swift */; };
 		B20F5F902686877000BADFF9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F8F2686877000BADFF9 /* ProfileView.swift */; };
-		6A388316CDAE6AD61411C484 /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */; };
 		B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE12682759B002E12D0 /* CarouselView.swift */; };
 		B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE626836C0A002E12D0 /* Product.swift */; };
 		B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE826836C28002E12D0 /* ProductMock.swift */; };
@@ -67,14 +67,12 @@
 		4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		4CD7BA8526851499001E402A /* priceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = priceFormatter.swift; sourceTree = "<group>"; };
-		740EC21700B2FF8B68842D7C /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81EFD1C329974506B7B806C3 /* Pods-Jade-Mainframe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.debug.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.debug.xcconfig"; sourceTree = "<group>"; };
+		7313D096267F199BCE9D5C5B /* Pods-Jade-Mainframe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.release.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.release.xcconfig"; sourceTree = "<group>"; };
+		78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20F5F892686864900BADFF9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B20F5F8B268686D300BADFF9 /* RegisterSaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSaleView.swift; sourceTree = "<group>"; };
 		B20F5F8D268686F100BADFF9 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		B20F5F8F2686877000BADFF9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		7313D096267F199BCE9D5C5B /* Pods-Jade-Mainframe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.release.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.release.xcconfig"; sourceTree = "<group>"; };
-		78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B3BDE12682759B002E12D0 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		B2B3BDE626836C0A002E12D0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B2B3BDE826836C28002E12D0 /* ProductMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMock.swift; sourceTree = "<group>"; };
@@ -456,8 +454,7 @@
 				B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */,
 				B20F5F902686877000BADFF9 /* ProfileView.swift in Sources */,
 				B2E6FC0D2686038300B217DA /* TabBarView.swift in Sources */,
-				4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */,
-				4C0DDEC3267CDECF00B2B3BA /* JadeMainframeApp.swift in Sources */,
+				4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
