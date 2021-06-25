@@ -1,3 +1,4 @@
+if: branch = development
 language: swift
 xcode_workspace: Jade-Mainframe.xcworkspace
 xcode_scheme: Jade-Mainframe
