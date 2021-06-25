@@ -65,7 +65,11 @@ struct CarouselView: View {
 
 struct CarouselView_Previews: PreviewProvider {
     private static let mockProduct: Product = .fixture()
-    private static let viewModel: CarouselViewModel = .init(products: [Product](repeating: mockProduct, count: 10), categoryTitle: "Adicionados Recentemente")
+
+    private static let viewModel: CarouselViewModel = .init(
+        products: [Product](repeating: mockProduct, count: 10),
+        categoryTitle: "Adicionados Recentemente"
+    )
 
     static var previews: some View {
         CarouselView(viewModel: viewModel)
