@@ -1,12 +1,17 @@
 name: Swift
 
 on: 
+push:
+    branches:
+        - master
+        - development
+        - dev/github-actions
 pull_request:
     branches:
-        - main
+        - master
         - development
     jobs:
-        Run_workspace_Tests:
+        Test:
             runs-on: macOS-latest
             steps:
                 - uses: actions/checkout@v1
