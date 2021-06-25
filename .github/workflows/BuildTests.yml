@@ -11,8 +11,8 @@ on:
             - master
             - development
 jobs:
-    Test:
-        runs-on: macOS-latest
+    Build:
+        runs-on: macOS-11
         steps:
             - uses: actions/checkout@v1
 
@@ -20,13 +20,10 @@ jobs:
               run: ls /Applications | grep Xcode
 
             - name: Select Xcode
-              run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
-
-            - name: Install dependencies
-              run: sudo gem install cocoapods xcpretty
+              run: sudo xcode-select -switch /Applications/Xcode_12.5.app && /usr/bin/xcodebuild -version
 
             - name: Install pods
               run: pod install
 
             - name: Run unit tests
-              run: xcodebuild -workspace Jade-Mainframe.xcworkspace -scheme Jade-Mainframe -destination platform\=iOS\ Simulator,OS\=14.4,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}
+              run: xcodebuild -workspace Jade-Mainframe.xcworkspace -scheme Jade-Mainframe -destination platform\=iOS\ Simulator,OS\=14.5,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}
