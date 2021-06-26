@@ -16,7 +16,7 @@ struct CarouselView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(viewModel.categoryTitle)
+            Text(viewModel.carousel.categoryTitle)
                 .font(.body)
                 .fontWeight(.medium)
                 .lineLimit(LayoutMetrics.titleLineLimit)
@@ -24,7 +24,7 @@ struct CarouselView: View {
 
             ScrollView(.horizontal) {
                 HStack(spacing: LayoutMetrics.horizontalSpacing) {
-                    ForEach(viewModel.products) { product in
+                    ForEach(viewModel.carousel.products) { product in
                         productCardView(product: product)
                     }
                 }
@@ -83,14 +83,11 @@ struct CarouselView: View {
 }
 
 struct CarouselView_Previews: PreviewProvider {
-    private static let mockProduct: Product = .fixture()
+    private static let mockCarousel: Carousel = .fixture()
 
-    private static let viewModel: CarouselManager = .init(
-        products: [Product](repeating: mockProduct, count: 10),
-        categoryTitle: "Adicionados Recentemente"
-    )
+    private static let mockViewModel: CarouselManager = .init(carousel: mockCarousel, locale: L10n.locale)
 
     static var previews: some View {
-        CarouselView(viewModel: viewModel)
+        CarouselView(viewModel: mockViewModel)
     }
 }

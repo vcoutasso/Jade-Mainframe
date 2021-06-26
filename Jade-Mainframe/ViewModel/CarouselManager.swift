@@ -10,15 +10,16 @@ import Foundation
 class CarouselManager: ObservableObject {
     // MARK: - Published variables
 
-    @Published var products: [Product]
-    @Published var categoryTitle: String
-    @Published var locale: String
+    @Published var carousel: Carousel
+
+    // MARK: - Constants
+
+    let locale: String
 
     // MARK: - Initialization
 
-    init(products: [Product], categoryTitle: String, locale: String = L10n.locale) {
-        self.products = products
-        self.categoryTitle = categoryTitle
+    init(carousel: Carousel, locale: String = L10n.locale) {
+        self.carousel = carousel
         self.locale = locale
     }
 

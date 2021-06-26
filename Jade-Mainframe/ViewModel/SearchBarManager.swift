@@ -10,7 +10,7 @@ import Foundation
 class SearchBarManager: ObservableObject {
     // MARK: - Published variables
 
-    @Published var searchText: String
+    @Published var searchBar: SearchBar
 
     // MARK: - Constants
 
@@ -19,6 +19,6 @@ class SearchBarManager: ObservableObject {
     // MARK: - Initialization
 
     init(searchText: String = "") {
-        self.searchText = searchText
+        searchBar = SearchBar(searchText: searchText)
     }
 }

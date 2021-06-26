@@ -10,16 +10,20 @@
 		4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */; };
 		4C0DDEC7267CDED000B2B3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */; };
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
-		4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */; };
-		4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */; };
+		4C0DDED8267CF08B00B2B3BA /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* FieldView.swift */; };
 		4C3CFB0E26862F93006AEEE2 /* JadeMainframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CFB0D26862F93006AEEE2 /* JadeMainframeTests.swift */; };
 		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
 		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
 		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
-		4C713CCB2683D23000D984B3 /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CCA2683D23000D984B3 /* TextFieldManager.swift */; };
+		4C713CCB2683D23000D984B3 /* FieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CCA2683D23000D984B3 /* FieldManager.swift */; };
 		4C713CD22683E9FC00D984B3 /* CarouselManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CD12683E9FC00D984B3 /* CarouselManager.swift */; };
 		4C8E15D72686A26A005CD42E /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E15D62686A26A005CD42E /* TabBarManager.swift */; };
 		4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */; };
+		4CB65409268764A1003B3AB2 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB65408268764A1003B3AB2 /* Carousel.swift */; };
+		4CB6540C26876756003B3AB2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6540B26876756003B3AB2 /* SearchBar.swift */; };
+		4CB6540E26876806003B3AB2 /* CarouselMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6540D26876806003B3AB2 /* CarouselMock.swift */; };
+		4CB6541026876974003B3AB2 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6540F26876974003B3AB2 /* Field.swift */; };
+		4CB6541226876C6C003B3AB2 /* FieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6541126876C6C003B3AB2 /* FieldMock.swift */; };
 		4CD7BA812684AF59001E402A /* SearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA802684AF59001E402A /* SearchBarManager.swift */; };
 		4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA8526851499001E402A /* priceFormatter.swift */; };
 		6A388316CDAE6AD61411C484 /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */; };
@@ -53,8 +57,7 @@
 		4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C0DDECB267CDED000B2B3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
+		4C0DDED7267CF08B00B2B3BA /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		4C3CFB0B26862F93006AEEE2 /* Jade-MainframeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jade-MainframeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3CFB0D26862F93006AEEE2 /* JadeMainframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeMainframeTests.swift; sourceTree = "<group>"; };
 		4C3CFB0F26862F93006AEEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,9 +65,14 @@
 		4C3DC5672680F7CD00E5A297 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4C3DC5682680F7CD00E5A297 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		4C3DC56E2680F7FB00E5A297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C713CCA2683D23000D984B3 /* TextFieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
+		4C713CCA2683D23000D984B3 /* FieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldManager.swift; sourceTree = "<group>"; };
 		4C713CD12683E9FC00D984B3 /* CarouselManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselManager.swift; sourceTree = "<group>"; };
 		4C8E15D62686A26A005CD42E /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		4CB65408268764A1003B3AB2 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		4CB6540B26876756003B3AB2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4CB6540D26876806003B3AB2 /* CarouselMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMock.swift; sourceTree = "<group>"; };
+		4CB6540F26876974003B3AB2 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		4CB6541126876C6C003B3AB2 /* FieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldMock.swift; sourceTree = "<group>"; };
 		4CD7BA802684AF59001E402A /* SearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarManager.swift; sourceTree = "<group>"; };
 		4CD7BA8526851499001E402A /* priceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = priceFormatter.swift; sourceTree = "<group>"; };
 		7313D096267F199BCE9D5C5B /* Pods-Jade-Mainframe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.release.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +136,8 @@
 				4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */,
 				4C3DC56D2680F7FB00E5A297 /* Localizable.strings */,
 				B2B3BDE526836BD2002E12D0 /* Model */,
-				4C0DDED4267CE8C100B2B3BA /* Views */,
-				4CBB673F2687523A0064C715 /* View Model */,
+				4C0DDED4267CE8C100B2B3BA /* View */,
+				4CBB673F2687523A0064C715 /* ViewModel */,
 				4C0DDED1267CE83D00B2B3BA /* Resources */,
 				4CD7BA842685146F001E402A /* Shared */,
 				4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */,
@@ -156,27 +164,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4C0DDED2267CE84300B2B3BA /* Components */ = {
+		4C0DDED2267CE84300B2B3BA /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				B2B3BDE12682759B002E12D0 /* CarouselView.swift */,
+				4C0DDED7267CF08B00B2B3BA /* FieldView.swift */,
 				B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */,
 				B2E6FC0C2686038300B217DA /* TabBarView.swift */,
-				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
 			);
-			path = Components;
+			path = Component;
 			sourceTree = "<group>";
 		};
-		4C0DDED4267CE8C100B2B3BA /* Views */ = {
+		4C0DDED4267CE8C100B2B3BA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4C0DDED2267CE84300B2B3BA /* Components */,
-				4C0DDED5267CE9D500B2B3BA /* Scenes */,
+				4C0DDED2267CE84300B2B3BA /* Component */,
+				4C0DDED5267CE9D500B2B3BA /* Scene */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		4C0DDED5267CE9D500B2B3BA /* Scenes */ = {
+		4C0DDED5267CE9D500B2B3BA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				B20F5F8D268686F100BADFF9 /* FavoritesView.swift */,
@@ -184,14 +192,15 @@
 				B20F5F8F2686877000BADFF9 /* ProfileView.swift */,
 				B20F5F8B268686D300BADFF9 /* SellingView.swift */,
 			);
-			path = Scenes;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		4C0DDED6267CEA9E00B2B3BA /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				4CB6540D26876806003B3AB2 /* CarouselMock.swift */,
+				4CB6541126876C6C003B3AB2 /* FieldMock.swift */,
 				B2B3BDE826836C28002E12D0 /* ProductMock.swift */,
-				4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -214,15 +223,15 @@
 			path = SwiftGen;
 			sourceTree = "<group>";
 		};
-		4CBB673F2687523A0064C715 /* View Model */ = {
+		4CBB673F2687523A0064C715 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				4C713CD12683E9FC00D984B3 /* CarouselManager.swift */,
+				4C713CCA2683D23000D984B3 /* FieldManager.swift */,
 				4CD7BA802684AF59001E402A /* SearchBarManager.swift */,
 				4C8E15D62686A26A005CD42E /* TabBarManager.swift */,
-				4C713CCA2683D23000D984B3 /* TextFieldManager.swift */,
 			);
-			path = "View Model";
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4CD7BA842685146F001E402A /* Shared */ = {
@@ -246,7 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				4C0DDED6267CEA9E00B2B3BA /* Fixtures */,
+				4CB65408268764A1003B3AB2 /* Carousel.swift */,
+				4CB6540F26876974003B3AB2 /* Field.swift */,
 				B2B3BDE626836C0A002E12D0 /* Product.swift */,
+				4CB6540B26876756003B3AB2 /* SearchBar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,23 +456,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8E15D72686A26A005CD42E /* TabBarManager.swift in Sources */,
-				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
+				4C0DDED8267CF08B00B2B3BA /* FieldView.swift in Sources */,
+				4CB6541026876974003B3AB2 /* Field.swift in Sources */,
 				B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */,
-				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
+				4CB6540E26876806003B3AB2 /* CarouselMock.swift in Sources */,
 				B20F5F8C268686D300BADFF9 /* SellingView.swift in Sources */,
 				B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */,
 				4C713CD22683E9FC00D984B3 /* CarouselManager.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
 				4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */,
+				4CB6540C26876756003B3AB2 /* SearchBar.swift in Sources */,
 				B20F5F8E268686F100BADFF9 /* FavoritesView.swift in Sources */,
-				4C713CCB2683D23000D984B3 /* TextFieldManager.swift in Sources */,
+				4C713CCB2683D23000D984B3 /* FieldManager.swift in Sources */,
 				B2B3BDEB2683E43A002E12D0 /* SearchBarView.swift in Sources */,
 				4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */,
+				4CB6541226876C6C003B3AB2 /* FieldMock.swift in Sources */,
 				4CD7BA812684AF59001E402A /* SearchBarManager.swift in Sources */,
 				B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */,
 				4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */,
 				B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */,
 				B20F5F902686877000BADFF9 /* ProfileView.swift in Sources */,
+				4CB65409268764A1003B3AB2 /* Carousel.swift in Sources */,
 				B2E6FC0D2686038300B217DA /* TabBarView.swift in Sources */,
 				4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */,
 			);
