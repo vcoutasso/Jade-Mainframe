@@ -1,0 +1,35 @@
+name: Jade-Mainframe
+
+settings:
+    DEVELOPMENT_TEAM: H7BM7N56V5
+
+options:
+    bundleIdPrefix: wonder-tram
+    deploymentTarget:
+        iOS: 14.0
+
+targets:
+    Jade-Mainframe:
+        type: application
+        platform: iOS
+        sources:
+            - path: Jade-Mainframe
+        scheme:
+            testTargets:
+                - Jade-MainframeTests
+        preBuildScripts:
+            - name: SwiftLint
+              script: |
+                "${PODS_ROOT}/SwiftLint/swiftlint"
+            - name : SwiftGen
+              script: |
+                "${PODS_ROOT}/SwiftGen/bin/swiftgen"
+
+    Jade-MainframeTests:
+        type: bundle.unit-test
+        platform: iOS
+        sources:
+            - path: Jade-MainframeTests
+
+
+

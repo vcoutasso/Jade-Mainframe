@@ -17,6 +17,12 @@ jobs:
             - name: Select Xcode
               run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
 
+            - name: Install xcodegen
+              run: brew install xcodegen
+
+            - name: Generate project files
+              run: xcodegen
+
             - name: Install pods
               run: pod install
 
