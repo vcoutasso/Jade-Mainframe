@@ -1,43 +1,55 @@
 //
-//  TextFieldMock.swift
+//  FieldMock.swift
 //  Jade-Mainframe
 //
-//  Created by Vinícius Couto on 18/06/21.
+//  Created by Vinícius Couto on 26/06/21.
 //
 
 import Foundation
 import SwiftUI
 
 #if DEBUG
-    extension TextFieldViewModel {
+    extension Field {
         static func fixture(
             title: String = "Description",
             placeholderText: String = "Product description",
             isRequired: Bool = false,
-            numbersOnly: Bool = false,
+            style: FieldStyle = .regular,
+            inputText: String = "",
+            titleColor: Color = .black,
+            maxLength: Int = FieldManager.maxStringLength,
             autocapitalizationType: UITextAutocapitalizationType = .none
-        ) -> TextFieldViewModel {
+        ) -> Field {
             .init(
                 title: title,
                 placeholderText: placeholderText,
                 isRequired: isRequired,
-                numbersOnly: numbersOnly,
+                style: style,
+                inputText: inputText,
+                titleColor: titleColor,
+                maxLength: maxLength,
                 autocapitalizationType: autocapitalizationType
             )
         }
 
-        static func fixtureRequired(
+        static func fixturePrice(
             title: String = "Price*",
             placeholderText: String = "Price (R$)",
             isRequired: Bool = true,
-            numbersOnly: Bool = true,
+            style: FieldStyle = .price,
+            inputText: String = "",
+            titleColor: Color = .black,
+            maxLength: Int = FieldManager.maxStringLength,
             autocapitalizationType: UITextAutocapitalizationType = .none
-        ) -> TextFieldViewModel {
+        ) -> Field {
             .init(
                 title: title,
                 placeholderText: placeholderText,
                 isRequired: isRequired,
-                numbersOnly: numbersOnly,
+                style: style,
+                inputText: inputText,
+                titleColor: titleColor,
+                maxLength: maxLength,
                 autocapitalizationType: autocapitalizationType
             )
         }
