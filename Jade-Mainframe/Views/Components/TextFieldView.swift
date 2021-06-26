@@ -19,10 +19,10 @@ struct TextFieldView: View {
         }
         .padding()
     }
-
+    
     private var fieldTitle: some View {
         Text(viewModel.displayedTitle)
-            .font(.system(.body, design: .default)
+            .font(Font.system(.body, design: .default)
                 .weight(.bold))
     }
 
