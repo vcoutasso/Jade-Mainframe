@@ -17,7 +17,13 @@ import SwiftUI
             numbersOnly: Bool = false,
             autocapitalizationType: UITextAutocapitalizationType = .none
         ) -> TextFieldViewModel {
-            .init(title: title, placeholderText: placeholderText, isRequired: isRequired, numbersOnly: numbersOnly, autocapitalizationType: autocapitalizationType)
+            .init(
+                title: title,
+                placeholderText: placeholderText,
+                isRequired: isRequired,
+                numbersOnly: numbersOnly,
+                autocapitalizationType: autocapitalizationType
+            )
         }
 
         static func fixtureRequired(
@@ -27,7 +33,13 @@ import SwiftUI
             numbersOnly: Bool = true,
             autocapitalizationType: UITextAutocapitalizationType = .none
         ) -> TextFieldViewModel {
-            .init(title: title, placeholderText: placeholderText, isRequired: isRequired, numbersOnly: numbersOnly, autocapitalizationType: autocapitalizationType)
+            .init(
+                title: title,
+                placeholderText: placeholderText,
+                isRequired: isRequired,
+                numbersOnly: numbersOnly,
+                autocapitalizationType: autocapitalizationType
+            )
         }
     }
 #endif

@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC2267CDECF00B2B3BA /* Jade_MainframeApp.swift */; };
 		4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */; };
 		4C0DDEC7267CDED000B2B3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */; };
 		4C0DDECA267CDED000B2B3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */; };
 		4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */; };
 		4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */; };
-		4C3CFB0E26862F93006AEEE2 /* Jade_MainframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CFB0D26862F93006AEEE2 /* Jade_MainframeTests.swift */; };
+		4C3CFB0E26862F93006AEEE2 /* JadeMainframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CFB0D26862F93006AEEE2 /* JadeMainframeTests.swift */; };
 		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
 		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
 		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
 		4C713CCB2683D23000D984B3 /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */; };
 		4C713CD22683E9FC00D984B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */; };
+		4C8E15D72686A26A005CD42E /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */; };
+		4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */; };
 		4CD7BA812684AF59001E402A /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */; };
 		4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA8526851499001E402A /* priceFormatter.swift */; };
 		6A388316CDAE6AD61411C484 /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */; };
+		B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F892686864900BADFF9 /* HomeView.swift */; };
+		B20F5F8C268686D300BADFF9 /* RegisterSaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F8B268686D300BADFF9 /* RegisterSaleView.swift */; };
+		B20F5F8E268686F100BADFF9 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F8D268686F100BADFF9 /* FavoritesView.swift */; };
+		B20F5F902686877000BADFF9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F8F2686877000BADFF9 /* ProfileView.swift */; };
 		B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE12682759B002E12D0 /* CarouselView.swift */; };
 		B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE626836C0A002E12D0 /* Product.swift */; };
 		B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDE826836C28002E12D0 /* ProductMock.swift */; };
 		B2B3BDEB2683E43A002E12D0 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */; };
+		B2E6FC0D2686038300B217DA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6FC0C2686038300B217DA /* TabBarView.swift */; };
 		C4674802267CE299002CB98D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4674801267CE299002CB98D /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +48,7 @@
 /* Begin PBXFileReference section */
 		04F1FBAC4DC0C9CDD1B06C45 /* Pods-Jade-Mainframe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.debug.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.debug.xcconfig"; sourceTree = "<group>"; };
 		4C0DDEBF267CDECF00B2B3BA /* Jade-Mainframe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jade-Mainframe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C0DDEC2267CDECF00B2B3BA /* Jade_MainframeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jade_MainframeApp.swift; sourceTree = "<group>"; };
+		4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeMainframeApp.swift; sourceTree = "<group>"; };
 		4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C0DDEC6267CDED000B2B3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C0DDEC9267CDED000B2B3BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -50,7 +56,7 @@
 		4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
 		4C3CFB0B26862F93006AEEE2 /* Jade-MainframeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jade-MainframeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C3CFB0D26862F93006AEEE2 /* Jade_MainframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jade_MainframeTests.swift; sourceTree = "<group>"; };
+		4C3CFB0D26862F93006AEEE2 /* JadeMainframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeMainframeTests.swift; sourceTree = "<group>"; };
 		4C3CFB0F26862F93006AEEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C3DC5602680ED4700E5A297 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		4C3DC5672680F7CD00E5A297 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -58,14 +64,20 @@
 		4C3DC56E2680F7FB00E5A297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModel.swift; sourceTree = "<group>"; };
 		4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		4CD7BA8526851499001E402A /* priceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = priceFormatter.swift; sourceTree = "<group>"; };
 		7313D096267F199BCE9D5C5B /* Pods-Jade-Mainframe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.release.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.release.xcconfig"; sourceTree = "<group>"; };
 		78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20F5F892686864900BADFF9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B20F5F8B268686D300BADFF9 /* RegisterSaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSaleView.swift; sourceTree = "<group>"; };
+		B20F5F8D268686F100BADFF9 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		B20F5F8F2686877000BADFF9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B2B3BDE12682759B002E12D0 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		B2B3BDE626836C0A002E12D0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B2B3BDE826836C28002E12D0 /* ProductMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMock.swift; sourceTree = "<group>"; };
 		B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		B2E6FC0C2686038300B217DA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C4674801267CE299002CB98D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +131,7 @@
 				4C0DDED1267CE83D00B2B3BA /* Resources */,
 				4CD7BA842685146F001E402A /* Shared */,
 				4C0DDED4267CE8C100B2B3BA /* Views */,
-				4C0DDEC2267CDECF00B2B3BA /* Jade_MainframeApp.swift */,
+				4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */,
 				4C0DDEC4267CDECF00B2B3BA /* ContentView.swift */,
 				4C0DDECB267CDED000B2B3BA /* Info.plist */,
 				4C0DDEC8267CDED000B2B3BA /* Preview Content */,
@@ -152,6 +164,8 @@
 				4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */,
 				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
 				4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */,
+				B2E6FC0C2686038300B217DA /* TabBarView.swift */,
+				4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -168,6 +182,10 @@
 		4C0DDED5267CE9D500B2B3BA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B20F5F892686864900BADFF9 /* HomeView.swift */,
+				B20F5F8B268686D300BADFF9 /* RegisterSaleView.swift */,
+				B20F5F8D268686F100BADFF9 /* FavoritesView.swift */,
+				B20F5F8F2686877000BADFF9 /* ProfileView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -184,7 +202,7 @@
 		4C3CFB0C26862F93006AEEE2 /* Jade-MainframeTests */ = {
 			isa = PBXGroup;
 			children = (
-				4C3CFB0D26862F93006AEEE2 /* Jade_MainframeTests.swift */,
+				4C3CFB0D26862F93006AEEE2 /* JadeMainframeTests.swift */,
 				4C3CFB0F26862F93006AEEE2 /* Info.plist */,
 			);
 			path = "Jade-MainframeTests";
@@ -241,7 +259,8 @@
 			buildConfigurationList = 4C0DDECE267CDED000B2B3BA /* Build configuration list for PBXNativeTarget "Jade-Mainframe" */;
 			buildPhases = (
 				A86D56AD5EC86055AA1A05B6 /* [CP] Check Pods Manifest.lock */,
-				4C14BD2C2685210400A136F8 /* SwiftFormat */,
+				4C8E15D526866FE2005CD42E /* SwiftFormat */,
+				4C3FEE4226866AE500447AF4 /* SwiftLint */,
 				4C3DC5702680FBF000E5A297 /* SwiftGen */,
 				4C0DDEBB267CDECF00B2B3BA /* Sources */,
 				4C0DDEBC267CDECF00B2B3BA /* Frameworks */,
@@ -333,24 +352,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C14BD2C2685210400A136F8 /* SwiftFormat */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftFormat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\" \"--swiftversion\" \"5\"\n";
-		};
 		4C3DC5702680FBF000E5A297 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,7 +368,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
+			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n";
+		};
+		4C3FEE4226866AE500447AF4 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		4C8E15D526866FE2005CD42E /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}\" \"--swiftversion\" \"5\"\n";
 		};
 		A86D56AD5EC86055AA1A05B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,20 +435,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8E15D72686A26A005CD42E /* TabBarViewModel.swift in Sources */,
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
 				B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */,
 				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
+				B20F5F8C268686D300BADFF9 /* RegisterSaleView.swift in Sources */,
 				B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */,
 				4C713CD22683E9FC00D984B3 /* CarouselViewModel.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
 				4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */,
+				B20F5F8E268686F100BADFF9 /* FavoritesView.swift in Sources */,
 				4C713CCB2683D23000D984B3 /* TextFieldViewModel.swift in Sources */,
 				B2B3BDEB2683E43A002E12D0 /* SearchBarView.swift in Sources */,
 				4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */,
 				4CD7BA812684AF59001E402A /* SearchBarViewModel.swift in Sources */,
 				B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */,
 				4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */,
-				4C0DDEC3267CDECF00B2B3BA /* Jade_MainframeApp.swift in Sources */,
+				B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */,
+				B20F5F902686877000BADFF9 /* ProfileView.swift in Sources */,
+				B2E6FC0D2686038300B217DA /* TabBarView.swift in Sources */,
+				4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3CFB0E26862F93006AEEE2 /* Jade_MainframeTests.swift in Sources */,
+				4C3CFB0E26862F93006AEEE2 /* JadeMainframeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

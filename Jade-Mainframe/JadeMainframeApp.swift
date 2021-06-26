@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Jade_MainframeApp: App {
+struct JadeMainframeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -4,6 +4,7 @@ use_frameworks!
 target 'Jade-Mainframe' do
     pod 'SwiftGen', '~> 6.0'
     pod 'SwiftFormat/CLI'
+    pod 'SwiftLint'
 end
 
 post_install do |installer|
