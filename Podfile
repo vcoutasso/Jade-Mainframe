@@ -1,4 +1,4 @@
-platform :ios, '14.5'
+platform :ios, '14.4'
 use_frameworks!
 
 target 'Jade-Mainframe' do
