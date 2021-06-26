@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct JadeMainframeApp: App {
     // MARK: - Body
+
     var body: some Scene {
         WindowGroup {
             ContentView()

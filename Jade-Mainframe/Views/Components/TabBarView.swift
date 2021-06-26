@@ -9,9 +9,11 @@ import SwiftUI
 
 struct TabBarView: View {
     // MARK: - Variables
+
     @ObservedObject var viewModel: TabBarViewModel
 
     // MARK: - Body
+
     var body: some View {
         TabView {
             HomeView().tabItem {

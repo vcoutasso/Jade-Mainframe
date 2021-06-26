@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Body
+
     var body: some View {
         Text("É o bonde")
     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     // MARK: - Body
+
     var body: some View {
         Text(L10n.profileTabName)
     }
