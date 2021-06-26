@@ -1,5 +1,5 @@
 //
-//  Stories.swift
+//  StoriesManager.swift
 //  Jade-Mainframe
 //
 //  Created by Guilerme Barciki on 26/06/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class StoriesViewModel: ObservableObject {
+class StoriesManager: ObservableObject {
     // MARK: - Published variables
 
     @Published var products: [Product]

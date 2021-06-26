@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StoriesView: View {
-    @ObservedObject var viewModel: StoriesViewModel
+    @ObservedObject var viewModel: StoriesManager
 
     var body: some View {
         VStack {
@@ -43,7 +43,7 @@ struct StoriesView: View {
 struct StoriesView_Previews: PreviewProvider {
     private static let mockProduct: Product = .fixture()
 
-    private static let viewModel: StoriesViewModel = .init(
+    private static let viewModel: StoriesManager = .init(
         products: [Product](repeating: mockProduct, count: 10)
     )
 

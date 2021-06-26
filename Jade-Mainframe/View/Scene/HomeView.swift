@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  HomeView.swift
 //  Jade-Mainframe
 //
 //  Created by Guilerme Barciki on 25/06/21.
@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct HomeView: View {
+    // MARK: - Body
+
     var body: some View {
-        Text(L10n.profileTabName)
+        Text(L10n.homeTabName)
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        HomeView()
     }
 }
