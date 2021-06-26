@@ -1,5 +1,5 @@
 //
-//  TextFieldViewModel.swift
+//  TextFieldManager.swift
 //  Jade-Mainframe
 //
 //  Created by Vinícius Couto on 23/06/21.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class TextFieldViewModel: ObservableObject {
+class TextFieldManager: ObservableObject {
     // MARK: - Constants
 
     private let maxNumberLength: Int = 10

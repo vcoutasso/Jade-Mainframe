@@ -10,7 +10,7 @@ import SwiftUI
 struct CarouselView: View {
     // MARK: - Variables
 
-    @ObservedObject var viewModel: CarouselViewModel
+    @ObservedObject var viewModel: CarouselManager
 
     // MARK: - Body
 
@@ -85,7 +85,7 @@ struct CarouselView: View {
 struct CarouselView_Previews: PreviewProvider {
     private static let mockProduct: Product = .fixture()
 
-    private static let viewModel: CarouselViewModel = .init(
+    private static let viewModel: CarouselManager = .init(
         products: [Product](repeating: mockProduct, count: 10),
         categoryTitle: "Adicionados Recentemente"
     )

@@ -11,7 +11,7 @@ import SwiftUI
 struct TextFieldView: View {
     // MARK: - Variables
 
-    @ObservedObject var viewModel: TextFieldViewModel
+    @ObservedObject var viewModel: TextFieldManager
 
     // MARK: - Body
 
@@ -63,8 +63,8 @@ struct TextFieldView: View {
 }
 
 struct TextField_Previews: PreviewProvider {
-    private static let mockViewModel: TextFieldViewModel = .fixture()
-    private static let mockRequiredViewModel: TextFieldViewModel = .fixtureRequired()
+    private static let mockViewModel: TextFieldManager = .fixture()
+    private static let mockRequiredViewModel: TextFieldManager = .fixtureRequired()
 
     static var previews: some View {
         VStack {

@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 #if DEBUG
-    extension TextFieldViewModel {
+    extension TextFieldManager {
         static func fixture(
             title: String = "Description",
             placeholderText: String = "Product description",
             isRequired: Bool = false,
             numbersOnly: Bool = false,
             autocapitalizationType: UITextAutocapitalizationType = .none
-        ) -> TextFieldViewModel {
+        ) -> TextFieldManager {
             .init(
                 title: title,
                 placeholderText: placeholderText,
@@ -32,7 +32,7 @@ import SwiftUI
             isRequired: Bool = true,
             numbersOnly: Bool = true,
             autocapitalizationType: UITextAutocapitalizationType = .none
-        ) -> TextFieldViewModel {
+        ) -> TextFieldManager {
             .init(
                 title: title,
                 placeholderText: placeholderText,

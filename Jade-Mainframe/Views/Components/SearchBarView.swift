@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchBarView: View {
     // MARK: - Variables
 
-    @ObservedObject var viewModel: SearchBarViewModel = .init()
+    @ObservedObject var viewModel: SearchBarManager
 
     // MARK: - Body
 
@@ -49,7 +49,9 @@ struct SearchBarView: View {
 }
 
 struct SearchBarView_Previews: PreviewProvider {
+    private static let mockViewModel: SearchBarManager = .init()
+
     static var previews: some View {
-        SearchBarView()
+        SearchBarView(viewModel: mockViewModel)
     }
 }

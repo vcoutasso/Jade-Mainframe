@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     // MARK: - Variables
 
-    @ObservedObject var viewModel: TabBarViewModel
+    @ObservedObject var viewModel: TabBarManager
 
     // MARK: - Body
 
@@ -37,9 +37,9 @@ struct TabBarView: View {
 }
 
 struct TabBarView_Previews: PreviewProvider {
-    private static let mockView: TabBarViewModel = .init()
+    private static let mockViewModel: TabBarManager = .init()
 
     static var previews: some View {
-        TabBarView(viewModel: mockView)
+        TabBarView(viewModel: mockViewModel)
     }
 }

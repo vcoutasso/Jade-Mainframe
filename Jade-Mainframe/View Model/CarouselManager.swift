@@ -1,5 +1,5 @@
 //
-//  CarouselViewModel.swift
+//  CarouselManager.swift
 //  Jade-Mainframe
 //
 //  Created by Vinícius Couto on 23/06/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CarouselViewModel: ObservableObject {
+class CarouselManager: ObservableObject {
     // MARK: - Published variables
 
     @Published var products: [Product]

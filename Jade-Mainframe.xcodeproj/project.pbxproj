@@ -16,11 +16,11 @@
 		4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5672680F7CD00E5A297 /* Assets.swift */; };
 		4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC5682680F7CD00E5A297 /* Strings.swift */; };
 		4C3DC56F2680F7FB00E5A297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DC56D2680F7FB00E5A297 /* Localizable.strings */; };
-		4C713CCB2683D23000D984B3 /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */; };
-		4C713CD22683E9FC00D984B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */; };
-		4C8E15D72686A26A005CD42E /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */; };
+		4C713CCB2683D23000D984B3 /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CCA2683D23000D984B3 /* TextFieldManager.swift */; };
+		4C713CD22683E9FC00D984B3 /* CarouselManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C713CD12683E9FC00D984B3 /* CarouselManager.swift */; };
+		4C8E15D72686A26A005CD42E /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E15D62686A26A005CD42E /* TabBarManager.swift */; };
 		4C8E15D82686A4DC005CD42E /* JadeMainframeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DDEC2267CDECF00B2B3BA /* JadeMainframeApp.swift */; };
-		4CD7BA812684AF59001E402A /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */; };
+		4CD7BA812684AF59001E402A /* SearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA802684AF59001E402A /* SearchBarManager.swift */; };
 		4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7BA8526851499001E402A /* priceFormatter.swift */; };
 		6A388316CDAE6AD61411C484 /* Pods_Jade_Mainframe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */; };
 		B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F5F892686864900BADFF9 /* HomeView.swift */; };
@@ -62,10 +62,10 @@
 		4C3DC5672680F7CD00E5A297 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4C3DC5682680F7CD00E5A297 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		4C3DC56E2680F7FB00E5A297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModel.swift; sourceTree = "<group>"; };
-		4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
-		4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
-		4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		4C713CCA2683D23000D984B3 /* TextFieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
+		4C713CD12683E9FC00D984B3 /* CarouselManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselManager.swift; sourceTree = "<group>"; };
+		4C8E15D62686A26A005CD42E /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		4CD7BA802684AF59001E402A /* SearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarManager.swift; sourceTree = "<group>"; };
 		4CD7BA8526851499001E402A /* priceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = priceFormatter.swift; sourceTree = "<group>"; };
 		7313D096267F199BCE9D5C5B /* Pods-Jade-Mainframe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jade-Mainframe.release.xcconfig"; path = "Target Support Files/Pods-Jade-Mainframe/Pods-Jade-Mainframe.release.xcconfig"; sourceTree = "<group>"; };
 		78B46F41EEAD4E825284D0B6 /* Pods_Jade_Mainframe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jade_Mainframe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,10 +217,10 @@
 		4CBB673F2687523A0064C715 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */,
-				4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */,
-				4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */,
-				4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */,
+				4C713CD12683E9FC00D984B3 /* CarouselManager.swift */,
+				4CD7BA802684AF59001E402A /* SearchBarManager.swift */,
+				4C8E15D62686A26A005CD42E /* TabBarManager.swift */,
+				4C713CCA2683D23000D984B3 /* TextFieldManager.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -443,20 +443,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8E15D72686A26A005CD42E /* TabBarViewModel.swift in Sources */,
+				4C8E15D72686A26A005CD42E /* TabBarManager.swift in Sources */,
 				4C0DDED8267CF08B00B2B3BA /* TextFieldView.swift in Sources */,
 				B2B3BDE726836C0A002E12D0 /* Product.swift in Sources */,
 				4C0DDEDA267CF6D900B2B3BA /* TextFieldMock.swift in Sources */,
 				B20F5F8C268686D300BADFF9 /* SellingView.swift in Sources */,
 				B2B3BDE926836C28002E12D0 /* ProductMock.swift in Sources */,
-				4C713CD22683E9FC00D984B3 /* CarouselViewModel.swift in Sources */,
+				4C713CD22683E9FC00D984B3 /* CarouselManager.swift in Sources */,
 				4C0DDEC5267CDECF00B2B3BA /* ContentView.swift in Sources */,
 				4C3DC5692680F7CD00E5A297 /* Assets.swift in Sources */,
 				B20F5F8E268686F100BADFF9 /* FavoritesView.swift in Sources */,
-				4C713CCB2683D23000D984B3 /* TextFieldViewModel.swift in Sources */,
+				4C713CCB2683D23000D984B3 /* TextFieldManager.swift in Sources */,
 				B2B3BDEB2683E43A002E12D0 /* SearchBarView.swift in Sources */,
 				4C3DC56A2680F7CD00E5A297 /* Strings.swift in Sources */,
-				4CD7BA812684AF59001E402A /* SearchBarViewModel.swift in Sources */,
+				4CD7BA812684AF59001E402A /* SearchBarManager.swift in Sources */,
 				B2B3BDE22682759B002E12D0 /* CarouselView.swift in Sources */,
 				4CD7BA8626851499001E402A /* priceFormatter.swift in Sources */,
 				B20F5F8A2686864900BADFF9 /* HomeView.swift in Sources */,
