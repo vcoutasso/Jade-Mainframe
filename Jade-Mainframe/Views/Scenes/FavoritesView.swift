@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    // MARK: - Body
     var body: some View {
         Text(L10n.favoritesTabName)
     }

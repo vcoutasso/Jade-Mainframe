@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SearchBarView: View {
+    // MARK: - Variables
     @ObservedObject var viewModel: SearchBarViewModel = .init()
 
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -34,6 +36,7 @@ struct SearchBarView: View {
         }
     }
 
+    // MARK: - Layout Metrics
     private enum LayoutMetrics {
         static let cornerRadius: CGFloat = 10
         static let searchTextPadding: CGFloat = 30

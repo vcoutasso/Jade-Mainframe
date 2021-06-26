@@ -9,8 +9,10 @@ import Combine
 import SwiftUI
 
 struct TextFieldView: View {
+    // MARK: - Variables
     @ObservedObject var viewModel: TextFieldViewModel
 
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
             fieldTitle
@@ -20,6 +22,7 @@ struct TextFieldView: View {
         .padding()
     }
 
+    // MARK: - Private Views
     private var fieldTitle: some View {
         Text(viewModel.displayedTitle)
             .font(Font.system(.body, design: .default)
@@ -48,6 +51,7 @@ struct TextFieldView: View {
         .cornerRadius(LayoutMetrics.cornerRadius)
     }
 
+    // MARK: - Layout Metrics
     private enum LayoutMetrics {
         static let disableAutocorrection: Bool = true
         static let cornerRadius: CGFloat = 10

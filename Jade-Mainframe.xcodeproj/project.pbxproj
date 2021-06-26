@@ -159,14 +159,10 @@
 		4C0DDED2267CE84300B2B3BA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */,
-				4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */,
 				B2B3BDE12682759B002E12D0 /* CarouselView.swift */,
-				4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */,
-				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
-				4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */,
+				B2B3BDEA2683E43A002E12D0 /* SearchBarView.swift */,
 				B2E6FC0C2686038300B217DA /* TabBarView.swift */,
-				4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */,
+				4C0DDED7267CF08B00B2B3BA /* TextFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -183,10 +179,10 @@
 		4C0DDED5267CE9D500B2B3BA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B20F5F892686864900BADFF9 /* HomeView.swift */,
-				B20F5F8B268686D300BADFF9 /* SellingView.swift */,
 				B20F5F8D268686F100BADFF9 /* FavoritesView.swift */,
+				B20F5F892686864900BADFF9 /* HomeView.swift */,
 				B20F5F8F2686877000BADFF9 /* ProfileView.swift */,
+				B20F5F8B268686D300BADFF9 /* SellingView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,8 +190,8 @@
 		4C0DDED6267CEA9E00B2B3BA /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */,
 				B2B3BDE826836C28002E12D0 /* ProductMock.swift */,
+				4C0DDED9267CF6D900B2B3BA /* TextFieldMock.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -221,6 +217,10 @@
 		4CBB673F2687523A0064C715 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C713CD12683E9FC00D984B3 /* CarouselViewModel.swift */,
+				4CD7BA802684AF59001E402A /* SearchBarViewModel.swift */,
+				4C8E15D62686A26A005CD42E /* TabBarViewModel.swift */,
+				4C713CCA2683D23000D984B3 /* TextFieldViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";

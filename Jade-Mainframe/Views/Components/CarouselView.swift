@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct CarouselView: View {
+    // MARK: - Variables
     @ObservedObject var viewModel: CarouselViewModel
 
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
             Text(viewModel.categoryTitle)
@@ -28,6 +30,7 @@ struct CarouselView: View {
         }.padding(.leading, 10)
     }
 
+    // MARK: - Private methods
     private func productMiniView(product: Product) -> some View {
         ZStack {
             Rectangle()
@@ -54,6 +57,7 @@ struct CarouselView: View {
         }
     }
 
+    // MARK: - Layout Metrics
     private enum LayoutMetrics {
         static let horizontalSpacing: CGFloat = 0
         static let miniProductWidth: CGFloat = 135
