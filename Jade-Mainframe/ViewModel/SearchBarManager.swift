@@ -1,5 +1,5 @@
 //
-//  SearchBarViewModel.swift
+//  SearchBarManager.swift
 //  Jade-Mainframe
 //
 //  Created by Vinícius Couto on 24/06/21.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-class SearchBarViewModel: ObservableObject {
+class SearchBarManager: ObservableObject {
     // MARK: - Published variables
 
-    @Published var searchText: String
+    @Published var searchBar: SearchBar
 
     // MARK: - Constants
 
@@ -19,6 +19,6 @@ class SearchBarViewModel: ObservableObject {
     // MARK: - Initialization
 
     init(searchText: String = "") {
-        self.searchText = searchText
+        searchBar = SearchBar(searchText: searchText)
     }
 }

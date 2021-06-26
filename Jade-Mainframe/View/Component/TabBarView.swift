@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @ObservedObject var viewModel: TabBarViewModel
+    // MARK: - Variables
+
+    @ObservedObject var viewModel: TabBarManager
+
+    // MARK: - Body
 
     var body: some View {
         TabView {
@@ -17,8 +21,8 @@ struct TabBarView: View {
                 Text(L10n.homeTabName)
             }
             RegisterSaleView().tabItem {
-                Image(systemName: viewModel.sellSymbolName)
-                Text(L10n.sellTabName)
+                Image(systemName: viewModel.sellingSymbolName)
+                Text(L10n.sellingTabName)
             }
             FavoritesView().tabItem {
                 Image(systemName: viewModel.favoritesSymbolName)
@@ -33,9 +37,9 @@ struct TabBarView: View {
 }
 
 struct TabBarView_Previews: PreviewProvider {
-    private static let mockView: TabBarViewModel = .init()
+    private static let mockViewModel: TabBarManager = .init()
 
     static var previews: some View {
-        TabBarView(viewModel: mockView)
+        TabBarView(viewModel: mockViewModel)
     }
 }
