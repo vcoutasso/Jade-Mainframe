@@ -17,8 +17,8 @@ struct TabBarView: View {
                 Text(L10n.homeTabName)
             }
             RegisterSaleView().tabItem {
-                Image(systemName: viewModel.sellSymbolName)
-                Text(L10n.sellTabName)
+                Image(systemName: viewModel.sellingSymbolName)
+                Text(L10n.sellingTabName)
             }
             FavoritesView().tabItem {
                 Image(systemName: viewModel.favoritesSymbolName)

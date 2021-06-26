@@ -1,5 +1,5 @@
 //
-//  RegisterSaleView.swift
+//  SellingView.swift
 //  Jade-Mainframe
 //
 //  Created by Guilerme Barciki on 25/06/21.
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegisterSaleView: View {
     var body: some View {
-        Text(L10n.sellTabName)
+        Text(L10n.sellingTabName)
     }
 }
 

@@ -11,7 +11,7 @@ class TabBarViewModel: ObservableObject {
     // MARK: - Constants
 
     let homeSymbolName: String = "house"
-    let sellSymbolName: String = "tag"
+    let sellingSymbolName: String = "tag"
     let favoritesSymbolName: String = "suit.heart"
     let profileSymbolName: String = "person"
 }
