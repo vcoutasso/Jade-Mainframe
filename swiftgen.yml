@@ -1,10 +1,18 @@
+input_dir: Jade-Mainframe/Resources/
+output_dir: Jade-Mainframe/Generated/
 strings:
-  inputs: Jade-Mainframe/Base.lproj
+  inputs: Base.lproj
+  filter: .+\.strings$
   outputs:
     - templateName: structured-swift5
-      output: Jade-Mainframe/Resources/SwiftGen/Strings.swift
+      output: Strings.swift
+      params:
+          enumName: Strings
 xcassets:
-  inputs: Jade-Mainframe/Assets.xcassets
+  inputs: Assets.xcassets
   outputs:
     - templateName: swift5
-      output: Jade-Mainframe/Resources/SwiftGen/Assets.swift
+      output: Assets.swift
+      params:
+          enumName: Assets
+          allValues: true

@@ -44,8 +44,8 @@ class FieldManager: ObservableObject {
 
         // Title optionally adds a visual/textual indicator that the field is required and must be filled
         if let last = title.last {
-            if field.isRequired, String(last) != L10n.requiredFieldSymbol {
-                displayedTitle.append(L10n.requiredFieldSymbol)
+            if field.isRequired, String(last) != Strings.requiredFieldSymbol {
+                displayedTitle.append(Strings.requiredFieldSymbol)
             }
         }
     }

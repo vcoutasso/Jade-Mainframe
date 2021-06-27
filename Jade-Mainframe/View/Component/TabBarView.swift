@@ -18,19 +18,19 @@ struct TabBarView: View {
         TabView {
             HomeView().tabItem {
                 Image(systemName: viewModel.homeSymbolName)
-                Text(L10n.homeTabName)
+                Text(Strings.homeTabName)
             }
             RegisterSaleView().tabItem {
                 Image(systemName: viewModel.sellingSymbolName)
-                Text(L10n.sellingTabName)
+                Text(Strings.sellingTabName)
             }
             FavoritesView().tabItem {
                 Image(systemName: viewModel.favoritesSymbolName)
-                Text(L10n.favoritesTabName)
+                Text(Strings.favoritesTabName)
             }
             ProfileView().tabItem {
                 Image(systemName: viewModel.profileSymbolName)
-                Text(L10n.profileTabName)
+                Text(Strings.profileTabName)
             }
         }
     }

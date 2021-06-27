@@ -55,7 +55,7 @@ struct CarouselView: View {
                 VStack(alignment: .leading) {
                     Text(product.productName).font(.footnote)
                         .foregroundColor(Color(.systemGray2))
-                    Text("\(L10n.currencySymbol) \(viewModel.formattedPrice(value: product.productPrice))")
+                    Text("\(Strings.currencySymbol) \(viewModel.formattedPrice(value: product.productPrice))")
                         .font(.callout)
                         .foregroundColor(.black)
                 }
@@ -85,7 +85,7 @@ struct CarouselView: View {
 struct CarouselView_Previews: PreviewProvider {
     private static let mockCarousel: Carousel = .fixture()
 
-    private static let mockViewModel: CarouselManager = .init(carousel: mockCarousel, locale: L10n.locale)
+    private static let mockViewModel: CarouselManager = .init(carousel: mockCarousel, locale: Strings.locale)
 
     static var previews: some View {
         CarouselView(viewModel: mockViewModel)

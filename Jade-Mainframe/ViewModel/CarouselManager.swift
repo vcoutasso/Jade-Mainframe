@@ -18,7 +18,7 @@ class CarouselManager: ObservableObject {
 
     // MARK: - Initialization
 
-    init(carousel: Carousel, locale: String = L10n.locale) {
+    init(carousel: Carousel, locale: String = Strings.locale) {
         self.carousel = carousel
         self.locale = locale
     }

@@ -18,5 +18,5 @@ func priceFormatter(price: Double, locale: String) -> String {
 
     numberFormatter.numberStyle = .decimal
 
-    return numberFormatter.string(from: NSNumber(value: price)) ?? L10n.invalidPriceWarning
+    return numberFormatter.string(from: NSNumber(value: price)) ?? Strings.invalidPriceWarning
 }
