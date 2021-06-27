@@ -11,7 +11,7 @@ struct ProfileView: View {
     // MARK: - Body
 
     var body: some View {
-        Text(L10n.profileTabName)
+        Text(Strings.profileTabName)
     }
 }
 

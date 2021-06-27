@@ -19,7 +19,7 @@ struct BannerView: View {
     var body: some View {
         TabView(selection: $currentIndex) {
             ForEach(0 ..< numberOfImages) { num in
-                Image("banner \(num)")
+                Image(Assets.allImages[num].name)
                     .frame(width: LayoutMetrics.bannertWidth, height: LayoutMetrics.bannerHeight, alignment: .center)
                     .padding(LayoutMetrics.bannerPadding)
             }

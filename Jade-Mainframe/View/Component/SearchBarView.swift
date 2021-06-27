@@ -17,7 +17,7 @@ struct SearchBarView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                TextField(L10n.searchBarPlaceholderText, text: $viewModel.searchBar.searchText)
+                TextField(Strings.searchBarPlaceholderText, text: $viewModel.searchBar.searchText)
                     .font(Font.system(.body, design: .default)
                         .weight(.regular))
                     .autocapitalization(.none)
