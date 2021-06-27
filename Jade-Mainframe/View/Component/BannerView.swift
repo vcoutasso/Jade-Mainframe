@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct BannerView: View {
+    // MARK: - Variables
+
     private var numberOfImages = 3
     private let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     @State private var currentIndex = 0
+
+    // MARK: - Body
+
     var body: some View {
         TabView(selection: $currentIndex) {
             ForEach(0 ..< numberOfImages) { num in
                 Image("banner \(num)")
-                    .frame(width: 362, height: 102, alignment: .center)
-                    .padding(14)
+                    .frame(width: LayoutMetrics.bannertWidth, height: LayoutMetrics.bannerHeight, alignment: .center)
+                    .padding(LayoutMetrics.bannerPadding)
             }
         }.tabViewStyle(PageTabViewStyle())
             .onReceive(timer, perform: { _ in
@@ -26,6 +31,14 @@ struct BannerView: View {
                 }
             })
     }
+}
+
+// MARK: - Layout Metrics
+
+private enum LayoutMetrics {
+    static let bannerPadding: CGFloat = 14
+    static let bannertWidth: CGFloat = 135
+    static let bannerHeight: CGFloat = 82
 }
 
 struct BannerView_Previews: PreviewProvider {
