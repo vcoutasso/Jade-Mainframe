@@ -24,6 +24,9 @@ internal enum Assets {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal enum Colors {
     internal static let backgroundBlue = ColorAsset(name: "Colors/backgroundBlue")
+    internal static let moreSymbolBlue = ColorAsset(name: "Colors/moreSymbolBlue")
+    internal static let storyGradientBottom = ColorAsset(name: "Colors/storyGradientBottom")
+    internal static let storyGradientTop = ColorAsset(name: "Colors/storyGradientTop")
   }
   internal enum Images {
     internal enum Banner {
@@ -37,6 +40,9 @@ internal enum Assets {
   internal static let allColors: [ColorAsset] = [
     accentColor,
     Colors.backgroundBlue,
+    Colors.moreSymbolBlue,
+    Colors.storyGradientBottom,
+    Colors.storyGradientTop,
   ]
   internal static let allImages: [ImageAsset] = [
     Images.Banner.banner0,

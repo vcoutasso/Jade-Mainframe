@@ -17,24 +17,54 @@ struct StoriesView: View {
                     ForEach(viewModel.products) { product in
                         productStoriesView(product: product)
                     }
+                    seeMore
                 }
             }
         }
     }
 
-    private func productStoriesView(product: Product) -> some View {
+    private var seeMore: some View {
         VStack {
-            Image(product.imageName).frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
+            Image(systemName: viewModel.moreSymbolName)
+                .font(Font.system(.title2, design: .default)
+                    .weight(.bold))
+                .foregroundColor(Color(Assets.Colors.moreSymbolBlue.color))
+                .frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
                 .background(Color(.systemGray6))
                 .clipShape(Circle())
 
-            Text(product.productName)
+            Text(verbatim: Strings.moreCategories)
+        }
+        .padding(LayoutMetrics.allPading)
+        .padding(.bottom)
+    }
 
-        }.padding(6)
-            .padding(.bottom)
+    private func productStoriesView(product: Product) -> some View {
+        VStack {
+            Image(product.imageName)
+                .frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
+                .background(Color(.systemGray6))
+                .clipShape(Circle())
+                .overlay(Circle()
+                    .stroke(LinearGradient(
+                        gradient: Gradient(colors: [
+                            Color(Assets.Colors.storyGradientTop.color),
+                            Color(Assets.Colors.storyGradientBottom.color),
+                        ]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    )
+                )
+
+            Text(product.productName)
+        }
+        .padding(LayoutMetrics.allPading)
+        .padding(.bottom)
     }
 
     private enum LayoutMetrics {
+        static let allPading: CGFloat = 6
         static let circleRadius: CGFloat = 69
         static let horizontalSpacing: CGFloat = 0
     }
