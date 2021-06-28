@@ -10,9 +10,9 @@ import SwiftUI
 struct BannerView: View {
     // MARK: - Variables
 
+    @State private var currentIndex = 0
     private var numberOfImages = 3
     private let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    @State private var currentIndex = 0
 
     // MARK: - Body
 
@@ -20,8 +20,9 @@ struct BannerView: View {
         TabView(selection: $currentIndex) {
             ForEach(0 ..< numberOfImages) { num in
                 Image(Assets.allImages[num].name)
-                    .frame(width: LayoutMetrics.bannertWidth, height: LayoutMetrics.bannerHeight, alignment: .center)
-                    .padding(LayoutMetrics.bannerPadding)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: UIScreen.main.bounds.width)
             }
         }.tabViewStyle(PageTabViewStyle())
             .onReceive(timer, perform: { _ in
@@ -30,6 +31,7 @@ struct BannerView: View {
                         numberOfImages - 1 ? currentIndex + 1 : 0
                 }
             })
+            .scaledToFit()
     }
 }
 
@@ -37,8 +39,8 @@ struct BannerView: View {
 
 private enum LayoutMetrics {
     static let bannerPadding: CGFloat = 14
-    static let bannertWidth: CGFloat = 135
-    static let bannerHeight: CGFloat = 82
+    static let bannerWidth: CGFloat = 390
+    static let bannerHeight: CGFloat = 137
 }
 
 struct BannerView_Previews: PreviewProvider {
