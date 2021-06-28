@@ -1,11 +1,13 @@
 //
-//  priceFormatter.swift
+//  Utils.swift
+//  Jade-Mainframe
 //
-//
-//  Created by Guilerme Barciki on 24/06/21.
+//  Created by Vinícius Couto on 28/06/21.
 //
 
 import Foundation
+
+// MARK: - Functions
 
 func priceFormatter(price: Double, locale: String) -> String {
     let numberFormatter = NumberFormatter()

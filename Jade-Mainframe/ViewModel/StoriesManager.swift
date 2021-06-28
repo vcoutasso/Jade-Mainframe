@@ -12,6 +12,8 @@ class StoriesManager: ObservableObject {
 
     @Published var products: [Product]
 
+    let moreSymbolName: String = "plus"
+
     // MARK: - Inistilization
 
     init(products: [Product]) {

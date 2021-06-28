@@ -22,6 +22,12 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Assets {
   internal static let accentColor = ColorAsset(name: "AccentColor")
+  internal enum Colors {
+    internal static let backgroundBlue = ColorAsset(name: "Colors/backgroundBlue")
+    internal static let moreSymbolBlue = ColorAsset(name: "Colors/moreSymbolBlue")
+    internal static let storyGradientBottom = ColorAsset(name: "Colors/storyGradientBottom")
+    internal static let storyGradientTop = ColorAsset(name: "Colors/storyGradientTop")
+  }
   internal enum Images {
     internal enum Banner {
       internal static let banner0 = ImageAsset(name: "Images/Banner/banner-0")
@@ -33,6 +39,10 @@ internal enum Assets {
   // swiftlint:disable trailing_comma
   internal static let allColors: [ColorAsset] = [
     accentColor,
+    Colors.backgroundBlue,
+    Colors.moreSymbolBlue,
+    Colors.storyGradientBottom,
+    Colors.storyGradientTop,
   ]
   internal static let allImages: [ImageAsset] = [
     Images.Banner.banner0,

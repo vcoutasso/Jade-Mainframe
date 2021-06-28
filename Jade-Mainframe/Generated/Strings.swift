@@ -20,6 +20,8 @@ internal enum Strings {
   internal static let invalidPriceWarning = Strings.tr("Localizable", "invalidPriceWarning")
   /// pt_BR
   internal static let locale = Strings.tr("Localizable", "locale")
+  /// + categorias
+  internal static let moreCategories = Strings.tr("Localizable", "moreCategories")
   /// Perfil
   internal static let profileTabName = Strings.tr("Localizable", "profileTabName")
   /// *

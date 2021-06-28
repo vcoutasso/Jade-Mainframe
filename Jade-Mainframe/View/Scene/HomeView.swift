@@ -8,10 +8,59 @@
 import SwiftUI
 
 struct HomeView: View {
+    // MARK: - Variables
+
+    var carousels: [Carousel] = [.fixture(), .fixture(), .fixture()]
+
+    var searchBarManager: SearchBarManager = .init()
+    var storiesManager: StoriesManager = .init(products: [.fixture()])
+
     // MARK: - Body
 
     var body: some View {
-        Text(Strings.homeTabName)
+        VStack(spacing: 0) {
+            headerView
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    storiesView
+                    bannerView
+                    carouselListView
+                }
+            }
+        }
+    }
+
+    // MARK: - Private View Variables
+
+    private var headerView: some View {
+        GeometryReader { geometry in
+            ZStack {
+                Color(Assets.Colors.backgroundBlue.color)
+                    .ignoresSafeArea(edges: .top)
+
+                HStack {
+                    Spacer()
+                    SearchBarView(viewModel: searchBarManager)
+                    Spacer()
+                }
+            }
+            .frame(width: geometry.size.width, height: geometry.size.height)
+        }
+        .frame(height: UIScreen.main.bounds.height / 10)
+    }
+
+    private var storiesView: some View {
+        StoriesView(viewModel: storiesManager)
+    }
+
+    private var bannerView: some View {
+        BannerView()
+    }
+
+    private var carouselListView: some View {
+        ForEach(carousels) { carousel in
+            CarouselView(viewModel: .init(carousel: carousel))
+        }
     }
 }
 
