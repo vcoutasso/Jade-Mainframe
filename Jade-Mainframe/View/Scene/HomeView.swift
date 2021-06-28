@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
-    // MARK: - Body
+    // MARK: - Variables
 
     var carousels: [Carousel] = [.fixture(), .fixture(), .fixture()]
+
+    var searchBarManager: SearchBarManager = .init()
+    var storiesManager: StoriesManager = .init(products: [.fixture()])
+
+    // MARK: - Body
 
     var body: some View {
         VStack(spacing: 0) {
@@ -25,6 +30,8 @@ struct HomeView: View {
         }
     }
 
+    // MARK: - Private View Variables
+
     private var headerView: some View {
         GeometryReader { geometry in
             ZStack {
@@ -33,7 +40,7 @@ struct HomeView: View {
 
                 HStack {
                     Spacer()
-                    SearchBarView(viewModel: .init())
+                    SearchBarView(viewModel: searchBarManager)
                     Spacer()
                 }
             }
@@ -43,7 +50,7 @@ struct HomeView: View {
     }
 
     private var storiesView: some View {
-        StoriesView(viewModel: .init(products: [.fixture()]))
+        StoriesView(viewModel: storiesManager)
     }
 
     private var bannerView: some View {
