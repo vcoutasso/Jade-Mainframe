@@ -12,7 +12,7 @@ struct StoriesView: View {
 
     var body: some View {
         VStack {
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: LayoutMetrics.horizontalSpacing) {
                     ForEach(viewModel.products) { product in
                         productStoriesView(product: product)

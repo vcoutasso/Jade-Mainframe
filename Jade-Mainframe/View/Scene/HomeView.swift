@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 0) {
             headerView
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     storiesView
                     bannerView

@@ -22,7 +22,7 @@ struct CarouselView: View {
                 .lineLimit(LayoutMetrics.titleLineLimit)
                 .offset(y: LayoutMetrics.titleVerticalOffset)
 
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: LayoutMetrics.horizontalSpacing) {
                     ForEach(viewModel.carousel.products) { product in
                         productCardView(product: product)
