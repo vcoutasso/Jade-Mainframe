@@ -13,26 +13,33 @@ struct HomeView: View {
     var carousels: [Carousel] = [.fixture(), .fixture(), .fixture()]
 
     var body: some View {
-        ScrollView {
-            VStack {
-                headerView
-                storiesView
-                bannerView
-                carouselListView
+        VStack(spacing: 0) {
+            headerView
+            ScrollView {
+                VStack {
+                    storiesView
+                    bannerView
+                    carouselListView
+                }
             }
         }
     }
 
     private var headerView: some View {
-        ZStack {
-            Color(Assets.Colors.backgroundBlue.color)
-                .ignoresSafeArea(edges: .top)
-            HStack {
-                Spacer()
-                SearchBarView(viewModel: .init())
-                Spacer()
+        GeometryReader { geometry in
+            ZStack {
+                Color(Assets.Colors.backgroundBlue.color)
+                    .ignoresSafeArea(edges: .top)
+
+                HStack {
+                    Spacer()
+                    SearchBarView(viewModel: .init())
+                    Spacer()
+                }
             }
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
+        .frame(height: UIScreen.main.bounds.height / 10)
     }
 
     private var storiesView: some View {
