@@ -19,7 +19,6 @@ struct ListView: View {
                 .font(.title2)
                 .padding(.leading)
             List {
-                // lineComponent(lineContent: viewModel.lineContent)
                 ForEach(viewModel.content.list) { content in
                     lineComponent(lineContent: content)
                 }
