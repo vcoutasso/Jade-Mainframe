@@ -16,10 +16,11 @@ struct ListView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(viewModel.title)
-                .font(.title2)
+                .font(.headline)
+                .fontWeight(.regular)
                 .padding(.leading)
+                .foregroundColor(Color(.systemGray))
             List {
-                // lineComponent(lineContent: viewModel.lineContent)
                 ForEach(viewModel.content.list) { content in
                     lineComponent(lineContent: content)
                 }
@@ -40,8 +41,8 @@ struct ListView: View {
 }
 
 struct ListView_Previews: PreviewProvider {
-    private static let mockList: ListContent = .fixture(title: "testao")
-    private static let mockViewModel: ListManager = .init(title: "teste", content: mockList)
+    private static let mockList: ListContent = .fixture()
+    private static let mockViewModel: ListManager = .init(title: "COMPRA E VENDA", content: mockList)
     static var previews: some View {
         ListView(viewModel: mockViewModel)
     }

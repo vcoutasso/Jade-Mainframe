@@ -10,11 +10,10 @@ import Foundation
 #if DEBUG
     extension ListContent {
         static func fixture(
-            title: String,
             list: [LineContent] = [LineContent(iconURL: "pencil", description: "blabla"),
                                    LineContent(iconURL: "pencil", description: "kkkkk")]
         ) -> ListContent {
-            .init(title: title, list: list)
+            .init(list: list)
         }
     }
 

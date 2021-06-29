@@ -9,6 +9,6 @@ import Foundation
 
 struct ListContent: Identifiable {
     var id = UUID()
-    let title: String
+
     let list: [LineContent]
 }
