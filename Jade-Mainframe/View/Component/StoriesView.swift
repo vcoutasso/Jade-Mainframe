@@ -25,15 +25,19 @@ struct StoriesView: View {
 
     private var seeMore: some View {
         VStack {
-            Image(systemName: viewModel.moreSymbolName)
-                .font(Font.system(.title2, design: .default)
-                    .weight(.bold))
-                .foregroundColor(Color(Assets.Colors.moreSymbolBlue.color))
-                .frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
-                .background(Color(.systemGray6))
-                .clipShape(Circle())
+            ZStack {
+                Image("")
+                    .frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
+                    .background(Color(.systemGray6))
+                    .clipShape(Circle())
 
-            Text(verbatim: Strings.moreCategories)
+                Image(systemName: viewModel.moreSymbolName)
+                    .font(Font.system(.title2, design: .default)
+                        .weight(.bold))
+                    .foregroundColor(Color(Assets.Colors.moreSymbolBlue.color))
+            }
+
+            Text(Strings.moreCategories)
         }
         .padding(LayoutMetrics.allPading)
         .padding(.bottom)
