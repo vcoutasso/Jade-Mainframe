@@ -6,39 +6,43 @@
 //
 
 import SwiftUI
-let teste = ListContent(iconURL: "pencil", description: "blablabla")
-let teste2: [ListContent] = [ListContent(iconURL: "pencil", description: "blablabla"),
-                             ListContent(iconURL: "pencil", description: "blablabla"),
-                             ListContent(iconURL: "pencil", description: "blablabla")]
 struct ListView: View {
     // MARK: - Variables
 
+    @ObservedObject var viewModel: ListManager
+
+    // MARK: - Body
+
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Título da lista")
+            Text(viewModel.title)
                 .font(.title2)
                 .padding(.leading)
             List {
-                listComponent(listContent: teste)
-                ForEach(teste2) { content in
-                    listComponent(listContent: content)
+                // lineComponent(lineContent: viewModel.lineContent)
+                ForEach(viewModel.content.list) { content in
+                    lineComponent(lineContent: content)
                 }
             }.offset(y: -10)
         }
     }
 
-    private func listComponent(listContent: ListContent) -> some View {
+    private func lineComponent(lineContent: LineContent) -> some View {
         HStack {
-            Image(systemName: listContent.iconURL)
-            Text(listContent.description)
+            Image(systemName: lineContent.iconURL)
+                .foregroundColor(Color(.systemGray))
+            Text(lineContent.description)
             Spacer()
-            Image(systemName: listContent.arrowIcon)
+            Image(systemName: lineContent.arrowIcon)
+                .foregroundColor(Color(.systemGray))
         }
     }
 }
 
 struct ListView_Previews: PreviewProvider {
+    private static let mockList: ListContent = .fixture(title: "testao")
+    private static let mockViewModel: ListManager = .init(title: "teste", content: mockList)
     static var previews: some View {
-        ListView()
+        ListView(viewModel: mockViewModel)
     }
 }
