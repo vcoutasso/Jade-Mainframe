@@ -10,7 +10,7 @@ import Foundation
 class CarouselManager: ObservableObject {
     // MARK: - Published variables
 
-    @Published var carousel: Carousel
+    @Published var carousels: [Carousel]
 
     // MARK: - Constants
 
@@ -18,8 +18,8 @@ class CarouselManager: ObservableObject {
 
     // MARK: - Initialization
 
-    init(carousel: Carousel, locale: String = Strings.locale) {
-        self.carousel = carousel
+    init(carousels: [Carousel], locale: String = Strings.locale) {
+        self.carousels = carousels
         self.locale = locale
     }
 }

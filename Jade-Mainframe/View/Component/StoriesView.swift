@@ -27,17 +27,17 @@ struct StoriesView: View {
         VStack {
             ZStack {
                 Image("")
-                    .frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
+                    .frame(width: LayoutMetrics.circleDiameter, height: LayoutMetrics.circleDiameter)
                     .background(Color(.systemGray6))
                     .clipShape(Circle())
 
                 Image(systemName: viewModel.moreSymbolName)
                     .font(Font.system(.title2, design: .default)
                         .weight(.bold))
-                    .foregroundColor(Color(Assets.Colors.moreSymbolBlue.color))
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
             }
 
-            Text(Strings.moreCategories)
+            descriptionView(text: Strings.moreCategories)
         }
         .padding(LayoutMetrics.allPading)
         .padding(.bottom)
@@ -46,8 +46,8 @@ struct StoriesView: View {
     private func productStoriesView(product: Product) -> some View {
         VStack {
             Image(product.imageName)
-                .frame(width: LayoutMetrics.circleRadius, height: LayoutMetrics.circleRadius)
-                .background(Color(.systemGray6))
+                .frame(width: LayoutMetrics.circleDiameter, height: LayoutMetrics.circleDiameter)
+                .background(Color(.white))
                 .clipShape(Circle())
                 .overlay(Circle()
                     .stroke(LinearGradient(
@@ -57,19 +57,27 @@ struct StoriesView: View {
                         ]),
                         startPoint: .top,
                         endPoint: .bottom
-                    )
-                    )
+                    ),
+                    lineWidth: LayoutMetrics.strokeLineWidth)
                 )
 
-            Text(product.productName)
+            descriptionView(text: product.productName)
         }
         .padding(LayoutMetrics.allPading)
         .padding(.bottom)
     }
 
+    private func descriptionView(text: String) -> some View {
+        Text(text)
+            .font(Font.system(.caption2, design: .default)
+                .weight(.regular))
+            .foregroundColor(Color(Assets.Colors.TecoPalette.mediumDarkGray.color))
+    }
+
     private enum LayoutMetrics {
         static let allPading: CGFloat = 6
-        static let circleRadius: CGFloat = 69
+        static let circleDiameter: CGFloat = 69
+        static let strokeLineWidth: CGFloat = 2
         static let horizontalSpacing: CGFloat = 0
     }
 }

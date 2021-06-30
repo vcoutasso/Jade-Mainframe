@@ -9,10 +9,16 @@ import Foundation
 
 #if DEBUG
     extension Carousel {
-        private static let mockProduct: Product = .fixture()
         static func fixture(
-            products: [Product] = [Product](repeating: mockProduct, count: 10),
+            products: [Product] = [Product](repeating: .fixture(), count: 10),
             categoryTitle: String = "Adicionados Recentemente"
+        ) -> Carousel {
+            .init(products: products, categoryTitle: categoryTitle)
+        }
+
+        static func fixtureDiscount(
+            products: [Product] = [Product](repeating: .fixtureDiscount(), count: 10),
+            categoryTitle: String = "Em Promoção"
         ) -> Carousel {
             .init(products: products, categoryTitle: categoryTitle)
         }
