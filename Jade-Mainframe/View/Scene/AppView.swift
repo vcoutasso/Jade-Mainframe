@@ -11,6 +11,7 @@ struct AppView: View {
     // MARK: - Variables
 
     @ObservedObject var homeViewManager: HomeManager
+    @ObservedObject var profileViewManager: ProfileManager
 
     var tabBarManager: TabBarManager = .init()
 
@@ -30,7 +31,7 @@ struct AppView: View {
                 Image(systemName: tabBarManager.favoritesSymbolName)
                 Text(Strings.favoritesTabName)
             }
-            ProfileView().tabItem {
+            ProfileView(viewModel: profileViewManager).tabItem {
                 Image(systemName: tabBarManager.profileSymbolName)
                 Text(Strings.profileTabName)
             }
@@ -47,7 +48,9 @@ struct TabBarView_Previews: PreviewProvider {
         )
     )
 
+    private static let mockProfile: ProfileManager = .init(profile: .fixture())
+
     static var previews: some View {
-        AppView(homeViewManager: mockHome)
+        AppView(homeViewManager: mockHome, profileViewManager: mockProfile)
     }
 }
