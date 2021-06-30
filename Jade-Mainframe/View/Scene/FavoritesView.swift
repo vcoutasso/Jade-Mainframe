@@ -15,7 +15,10 @@ struct FavoritesView: View {
     var body: some View {
         VStack {
             // REVIEW: What is down huddle?
+            FavoriteCardView(phoneModel: "IPhone 12", phoneSpace: "128GB", phonePrice: 4980)
+            FavoriteCardView(phoneModel: "IPhone 12", phoneSpace: "128GB", phonePrice: 4980)
             downHuddle
+            Spacer()
         }
     }
 
@@ -33,7 +36,7 @@ struct FavoritesView: View {
                         \(Strings.callToTheWatchList) \
                         \(Text(Strings.readMore)
                             .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)))
-                        """)
+                        """).lineLimit(3)
                     }
                     addButtom
                 }
