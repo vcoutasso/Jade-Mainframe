@@ -20,22 +20,28 @@ struct ListView: View {
                 .fontWeight(.regular)
                 .padding(.leading)
                 .foregroundColor(Color(.systemGray))
-            List {
+            VStack {
                 ForEach(viewModel.content.list) { content in
                     lineComponent(lineContent: content)
+                    Divider()
                 }
-            }.offset(y: -10)
+            }.padding()
         }
     }
 
     private func lineComponent(lineContent: LineContent) -> some View {
         HStack {
-            Image(systemName: lineContent.iconURL)
-                .foregroundColor(Color(.systemGray))
-            Text(lineContent.description)
-            Spacer()
-            Image(systemName: lineContent.arrowIcon)
-                .foregroundColor(Color(.systemGray))
+            HStack {
+                Image(systemName: lineContent.iconURL)
+                    .foregroundColor(Color(.systemGray))
+                    .font(.title2).padding(.trailing)
+            }.frame(width: 30, height: 30, alignment: .center).padding(.leading, 5)
+            HStack(alignment: .firstTextBaseline) {
+                Text(lineContent.description)
+                Spacer()
+                Image(systemName: lineContent.arrowIcon)
+                    .foregroundColor(Color(.systemGray))
+            }
         }
     }
 }
