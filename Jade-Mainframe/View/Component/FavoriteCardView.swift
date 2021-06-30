@@ -28,7 +28,7 @@ struct FavoriteCardView: View {
             .background(RoundedRectangle(cornerRadius: 10)
                 .frame(width: 376, height: 129, alignment: .center)
                 .foregroundColor(Color(.systemGray6)))
-            .padding()
+            .padding([.leading, .trailing])
     }
 
     private var binocularIconStroke: some View {
