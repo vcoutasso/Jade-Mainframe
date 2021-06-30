@@ -40,7 +40,7 @@ internal enum Strings {
   internal static let profileTabName = Strings.tr("Localizable", "profileTabName")
   /// *
   internal static let requiredFieldSymbol = Strings.tr("Localizable", "requiredFieldSymbol")
-  /// Buscar
+  /// Pesquisar no Teco
   internal static let searchBarPlaceholderText = Strings.tr("Localizable", "searchBarPlaceholderText")
   /// Vender
   internal static let sellingTabName = Strings.tr("Localizable", "sellingTabName")

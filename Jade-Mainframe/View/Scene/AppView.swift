@@ -38,6 +38,7 @@ struct AppView: View {
                 Text(Strings.profileTabName)
             }
         }
+        .accentColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
     }
 }
 

@@ -23,7 +23,8 @@ struct HomeView: View {
             ScrollView(showsIndicators: false) {
                 VStack {
                     storiesView
-                    bannerView
+                    /* DEPRECATED (for now at least) */
+                    // bannerView
                     carouselListView
                 }
             }
@@ -35,7 +36,7 @@ struct HomeView: View {
     private var headerView: some View {
         GeometryReader { geometry in
             ZStack {
-                Color(Assets.Colors.backgroundBlue.color)
+                Color(Assets.Colors.TecoPalette.lightGray.color)
                     .ignoresSafeArea(edges: .top)
 
                 HStack {

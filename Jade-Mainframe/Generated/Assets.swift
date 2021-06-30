@@ -23,8 +23,17 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 internal enum Assets {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal enum Colors {
-    internal static let backgroundBlue = ColorAsset(name: "Colors/backgroundBlue")
-    internal static let moreSymbolBlue = ColorAsset(name: "Colors/moreSymbolBlue")
+    internal enum TecoPalette {
+      internal static let darkBlue = ColorAsset(name: "Colors/TecoPalette/darkBlue")
+      internal static let darkGray = ColorAsset(name: "Colors/TecoPalette/darkGray")
+      internal static let discountRed = ColorAsset(name: "Colors/TecoPalette/discountRed")
+      internal static let lightBlue = ColorAsset(name: "Colors/TecoPalette/lightBlue")
+      internal static let lightGray = ColorAsset(name: "Colors/TecoPalette/lightGray")
+      internal static let mediumDarkGray = ColorAsset(name: "Colors/TecoPalette/mediumDarkGray")
+      internal static let mediumGray = ColorAsset(name: "Colors/TecoPalette/mediumGray")
+      internal static let mediumLightGray = ColorAsset(name: "Colors/TecoPalette/mediumLightGray")
+      internal static let tecoPink = ColorAsset(name: "Colors/TecoPalette/tecoPink")
+    }
     internal static let storyGradientBottom = ColorAsset(name: "Colors/storyGradientBottom")
     internal static let storyGradientTop = ColorAsset(name: "Colors/storyGradientTop")
   }
@@ -39,8 +48,15 @@ internal enum Assets {
   // swiftlint:disable trailing_comma
   internal static let allColors: [ColorAsset] = [
     accentColor,
-    Colors.backgroundBlue,
-    Colors.moreSymbolBlue,
+    Colors.TecoPalette.darkBlue,
+    Colors.TecoPalette.darkGray,
+    Colors.TecoPalette.discountRed,
+    Colors.TecoPalette.lightBlue,
+    Colors.TecoPalette.lightGray,
+    Colors.TecoPalette.mediumDarkGray,
+    Colors.TecoPalette.mediumGray,
+    Colors.TecoPalette.mediumLightGray,
+    Colors.TecoPalette.tecoPink,
     Colors.storyGradientBottom,
     Colors.storyGradientTop,
   ]

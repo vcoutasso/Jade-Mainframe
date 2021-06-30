@@ -10,8 +10,17 @@ import Foundation
 #if DEBUG
     extension Product {
         static func fixture(
-            productName: String = "IPhone X",
+            productName: String = "iPhone X",
             productPrice: Double = 1299,
+            imageName: String = ""
+        ) -> Product {
+            .init(productName: productName, productPrice: productPrice, imageName: imageName)
+        }
+
+        static func fixtureDiscount(
+            productName: String = "iPhone 12",
+            productPrice: Double = 3899,
+            productDiscount _: Double = 900,
             imageName: String = ""
         ) -> Product {
             .init(productName: productName, productPrice: productPrice, imageName: imageName)

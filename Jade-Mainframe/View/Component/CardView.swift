@@ -41,7 +41,7 @@ struct CardView: View {
                         """)
                             .font(.caption2)
                             .strikethrough()
-                            .foregroundColor(.red)
+                            .foregroundColor(Color(Assets.Colors.TecoPalette.discountRed.color))
                     }
 
                     Text("""
@@ -72,6 +72,9 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(product: .fixture(), locale: Strings.locale)
+        VStack {
+            CardView(product: .fixture(), locale: Strings.locale)
+            CardView(product: .fixtureDiscount(), locale: Strings.locale)
+        }
     }
 }
