@@ -12,9 +12,11 @@ struct ProfileView: View {
 
     var body: some View {
         VStack {
+            UserView().padding()
             comprasVendas
             conta
             institucional
+            Spacer()
         }
     }
 
