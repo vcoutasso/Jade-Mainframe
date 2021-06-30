@@ -6,36 +6,42 @@
 //
 
 import SwiftUI
-struct ListView: View {
+
+struct SettingsGroupView: View {
     // MARK: - Variables
 
-    @ObservedObject var viewModel: ListManager
+    let groupTitle: String
+    let options: [SettingsEntry]
 
     // MARK: - Body
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(viewModel.title)
+            Text(groupTitle)
                 .font(.headline)
                 .fontWeight(.regular)
                 .padding(.leading)
                 .foregroundColor(Color(.systemGray))
             VStack {
-                ForEach(viewModel.content.list) { content in
-                    lineComponent(lineContent: content)
+                ForEach(options) { option in
+                    lineComponent(lineContent: option)
                     Divider()
                 }
             }.padding()
         }
     }
 
-    private func lineComponent(lineContent: LineContent) -> some View {
+    private func lineComponent(lineContent: SettingsEntry) -> some View {
         HStack {
             HStack {
-                Image(systemName: lineContent.iconURL)
+                Image(systemName: lineContent.iconName)
                     .foregroundColor(Color(.systemGray))
-                    .font(.title2).padding(.trailing)
-            }.frame(width: 30, height: 30, alignment: .center).padding(.leading, 5)
+                    .font(.title2)
+                    .padding(.trailing)
+            }
+            .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .center)
+            .padding(.leading, LayoutMetrics.leadingPaddding)
+
             HStack(alignment: .firstTextBaseline) {
                 Text(lineContent.description)
                 Spacer()
@@ -44,12 +50,18 @@ struct ListView: View {
             }
         }
     }
+
+    private enum LayoutMetrics {
+        static let frameWidth: CGFloat = 30
+        static let frameHeight: CGFloat = 30
+        static let leadingPaddding: CGFloat = 5
+    }
 }
 
 struct ListView_Previews: PreviewProvider {
-    private static let mockList: ListContent = .fixture()
-    private static let mockViewModel: ListManager = .init(title: "COMPRA E VENDA", content: mockList)
+    private static let mockList: [SettingsEntry] = [.fixture(), .fixture()]
+
     static var previews: some View {
-        ListView(viewModel: mockViewModel)
+        SettingsGroupView(groupTitle: "COMPRA E VENDA", options: mockList)
     }
 }

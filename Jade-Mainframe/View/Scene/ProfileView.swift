@@ -10,34 +10,44 @@ import SwiftUI
 struct ProfileView: View {
     // MARK: - Body
 
+    @ObservedObject var viewModel: ProfileManager = .init()
+
     var body: some View {
         VStack {
-            UserView().padding()
-            comprasVendas
-            conta
-            institucional
-            Spacer()
+            UserView()
+                .padding()
+
+            ScrollView {
+                buyAndSell
+                account
+                institutional
+            }
         }
     }
 
-    private var comprasVendas: some View {
-        let comprasVendas = ListContent(list: [
-            LineContent(iconURL: "bag", description: "Produtos anunciados"),
-            LineContent(iconURL: "creditcard", description: "Formas de pagamento"),
-        ])
-        return ListView(viewModel: ListManager(title: "COMPRA E VENDA", content: comprasVendas))
+    private var buyAndSell: some View {
+        SettingsGroupView(groupTitle: Strings.buyAndSell.uppercased(),
+                          options: [
+                              SettingsEntry(iconName: viewModel.announcedProductsSymbolName,
+                                            description: Strings.announcedProducts),
+                              SettingsEntry(iconName: viewModel.paymentMethodsSymbolName,
+                                            description: Strings.paymentMethods),
+                          ])
     }
 
-    private var conta: some View {
-        let conta = ListContent(list: [LineContent(iconURL: "gearshape.2", description: "Configurações"),
-                                       LineContent(iconURL: "questionmark.circle", description: "Central de ajuda")])
-        return ListView(viewModel: ListManager(title: "Conta", content: conta))
+    private var account: some View {
+        SettingsGroupView(groupTitle: Strings.account.uppercased(),
+                          options: [
+                              SettingsEntry(iconName: viewModel.settingsSymbolName, description: Strings.settings),
+                              SettingsEntry(iconName: viewModel.helpCenterSymbolName, description: Strings.helpCenter),
+                          ])
     }
 
-    private var institucional: some View {
-        let institucional = ListContent(list: [LineContent(iconURL: "info.circle", description: "Sobre nós")])
-        return ListView(viewModel: ListManager(title:
-            "INSTITUCIONAL", content: institucional))
+    private var institutional: some View {
+        SettingsGroupView(groupTitle: Strings.institutional.uppercased(),
+                          options: [
+                              SettingsEntry(iconName: viewModel.aboutUsSymbolName, description: Strings.aboutUs),
+                          ])
     }
 }
 

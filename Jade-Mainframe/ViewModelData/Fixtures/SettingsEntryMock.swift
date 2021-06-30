@@ -1,5 +1,5 @@
 //
-//  ListMock.swift
+//  SettingsEntryMock.swift
 //  Jade-Mainframe
 //
 //  Created by Guilerme Barciki on 29/06/21.
@@ -8,12 +8,12 @@
 import Foundation
 
 #if DEBUG
-    extension LineContent {
+    extension SettingsEntry {
         static func fixture(
-            iconURL: String = "pencil",
+            iconName: String = "pencil",
             description: String = "blablabla"
-        ) -> LineContent {
-            .init(iconURL: iconURL,
+        ) -> SettingsEntry {
+            .init(iconName: iconName,
                   description: description)
         }
     }
