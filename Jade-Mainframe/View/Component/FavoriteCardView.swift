@@ -35,12 +35,12 @@ struct FavoriteCardView: View {
         return Image(systemName: "binoculars")
             .font(.system(size: 22))
             .background(Circle().stroke().frame(width: 38, height: 38, alignment: .center))
-            .foregroundColor(Color(Assets.Colors.moreSymbolBlue.color))
+            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
     }
 
     private var heartIcon: some View {
         return Image(systemName: "heart.circle.fill").font(.system(size: 38))
-            .foregroundColor(Color(Assets.Colors.moreSymbolBlue.color))
+            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
     }
 }
 
