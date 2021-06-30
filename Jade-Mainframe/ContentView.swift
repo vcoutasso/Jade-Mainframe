@@ -17,10 +17,14 @@ struct ContentView: View {
         )
     )
 
+    private var mockFavorites: FavoritesManager = .init()
+
     private var mockProfile: ProfileManager = .init(profile: .fixture())
 
     var body: some View {
-        AppView(homeViewManager: mockHome, profileViewManager: mockProfile)
+        AppView(homeViewManager: mockHome,
+                favoritesViewManager: mockFavorites,
+                profileViewManager: mockProfile)
     }
 }
 

@@ -14,10 +14,14 @@ internal enum Strings {
   internal static let aboutUs = Strings.tr("Localizable", "aboutUs")
   /// Conta
   internal static let account = Strings.tr("Localizable", "account")
+  /// Adicionar produtos desejados
+  internal static let addProducts = Strings.tr("Localizable", "addProducts")
   /// Produtos anunciados
   internal static let announcedProducts = Strings.tr("Localizable", "announcedProducts")
   /// Compra e Venda
   internal static let buyAndSell = Strings.tr("Localizable", "buyAndSell")
+  /// Cansado de procurar? A gente fica de olho e te avisa quando achar.
+  internal static let callToTheWatchList = Strings.tr("Localizable", "callToTheWatchList")
   /// R$
   internal static let currencySymbol = Strings.tr("Localizable", "currencySymbol")
   /// Favoritos
@@ -38,6 +42,8 @@ internal enum Strings {
   internal static let paymentMethods = Strings.tr("Localizable", "paymentMethods")
   /// Perfil
   internal static let profileTabName = Strings.tr("Localizable", "profileTabName")
+  /// Saiba mais
+  internal static let readMore = Strings.tr("Localizable", "readMore")
   /// *
   internal static let requiredFieldSymbol = Strings.tr("Localizable", "requiredFieldSymbol")
   /// Pesquisar no Teco
@@ -46,6 +52,8 @@ internal enum Strings {
   internal static let sellingTabName = Strings.tr("Localizable", "sellingTabName")
   /// Configurações
   internal static let settings = Strings.tr("Localizable", "settings")
+  /// ficar de olho
+  internal static let watchList = Strings.tr("Localizable", "watchList")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
