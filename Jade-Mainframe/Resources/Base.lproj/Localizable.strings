@@ -8,7 +8,7 @@
 
 /* String constants */
 "requiredFieldSymbol" = "*";
-"searchBarPlaceholderText" = "Buscar";
+"searchBarPlaceholderText" = "Pesquisar no Teco";
 "invalidPriceWarning" = "Preço Inválido";
 "currencySymbol" = "R$";
 "locale" = "pt_BR";
@@ -28,3 +28,9 @@
 "helpCenter" = "Central de ajuda";
 "institutional" = "Institucional";
 "aboutUs" = "Sobre nós";
+
+"watchList" = "ficar de olho";
+"callToTheWatchList" = "Cansado de procurar? A gente fica de olho e te avisa quando achar.";
+"readMore" = "Saiba mais";
+"addProducts" = "Adicionar produtos desejados";
+

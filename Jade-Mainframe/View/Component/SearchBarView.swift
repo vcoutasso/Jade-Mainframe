@@ -16,35 +16,35 @@ struct SearchBarView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                TextField(Strings.searchBarPlaceholderText, text: $viewModel.searchBar.searchText)
-                    .font(Font.system(.body, design: .default)
-                        .weight(.regular))
-                    .autocapitalization(.none)
-                    .disableAutocorrection(true)
-                    .padding(LayoutMetrics.defaultPadding)
-                    .padding(.leading, LayoutMetrics.searchTextPadding)
-                    .overlay(
-                        Image(systemName: viewModel.symbolName)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, LayoutMetrics.defaultPadding)
-                            .foregroundColor(Color(.systemGray2))
-                    )
-                    .background(Color(.white))
-                    .cornerRadius(LayoutMetrics.cornerRadius)
-                    .overlay(RoundedRectangle(cornerRadius: LayoutMetrics.cornerRadius)
-                        .stroke(Color(.systemGray6), lineWidth: LayoutMetrics.borderWidth))
-            }
+            TextField(Strings.searchBarPlaceholderText, text: $viewModel.searchBar.searchText)
+                .font(Font.system(.body, design: .default)
+                    .weight(.regular))
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .padding(LayoutMetrics.allPadding)
+                .padding(.leading, LayoutMetrics.searchTextPadding - LayoutMetrics.allPadding)
+                .overlay(
+                    Image(systemName: viewModel.symbolName)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, LayoutMetrics.iconPadding)
+                )
+                .background(Color(.white))
+                .cornerRadius(LayoutMetrics.cornerRadius)
+                .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .center)
+                .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
         }
     }
 
     // MARK: - Layout Metrics
 
     private enum LayoutMetrics {
+        static let frameWidth: CGFloat = 362
+        static let frameHeight: CGFloat = 34
         static let cornerRadius: CGFloat = 10
-        static let searchTextPadding: CGFloat = 30
-        static let defaultPadding: CGFloat = 10
-        static let borderWidth: CGFloat = 2
+        static let searchTextPadding: CGFloat = 38
+        static let allPadding: CGFloat = 10
+        static let iconPadding: CGFloat = 9
+        static let horizontalPadding: CGFloat = 14
     }
 }
 

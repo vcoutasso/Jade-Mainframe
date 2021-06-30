@@ -18,16 +18,17 @@ struct SettingsGroupView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(groupTitle)
-                .font(.headline)
+                .font(.body)
                 .fontWeight(.regular)
                 .padding(.leading)
-                .foregroundColor(Color(.systemGray))
+                .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
             VStack {
                 ForEach(options) { option in
                     lineComponent(lineContent: option)
                     Divider()
                 }
-            }.padding()
+            }
+            .padding()
         }
     }
 
@@ -35,8 +36,8 @@ struct SettingsGroupView: View {
         HStack {
             HStack {
                 Image(systemName: lineContent.iconName)
-                    .foregroundColor(Color(.systemGray))
-                    .font(.title2)
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
+                    .font(.title3)
                     .padding(.trailing)
             }
             .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .center)
@@ -44,9 +45,11 @@ struct SettingsGroupView: View {
 
             HStack(alignment: .firstTextBaseline) {
                 Text(lineContent.description)
+                    .font(.body)
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.darkGray.color))
                 Spacer()
                 Image(systemName: lineContent.arrowIcon)
-                    .foregroundColor(Color(.systemGray))
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
             }
         }
     }

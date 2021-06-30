@@ -8,23 +8,35 @@
 import SwiftUI
 
 struct UserView: View {
+    let profile: Profile
+
     var body: some View {
         HStack {
             Circle()
-                .frame(width: 106, height: 106, alignment: .center)
+                .frame(width: LayoutMetrics.circleDiamater, height: LayoutMetrics.circleDiamater, alignment: .center)
                 .padding()
+
             VStack(alignment: .leading) {
-                Text("Joãozinho Pedro")
-                Text("joaozinho.p@icloud.com")
-                    .foregroundColor(Color(.systemGray))
-                    .font(.subheadline)
+                Text(profile.name)
+                    .font(Font.system(.title3, design: .default)
+                        .weight(.regular))
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.darkGray.color))
+
+                Text(profile.email)
+                    .font(Font.system(.callout, design: .default)
+                        .weight(.regular))
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
             }
         }
+    }
+
+    private enum LayoutMetrics {
+        static let circleDiamater: CGFloat = 106
     }
 }
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
+        UserView(profile: .fixture())
     }
 }

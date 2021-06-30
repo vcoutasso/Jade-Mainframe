@@ -10,11 +10,11 @@ import SwiftUI
 struct ProfileView: View {
     // MARK: - Body
 
-    @ObservedObject var viewModel: ProfileManager = .init()
+    @ObservedObject var viewModel: ProfileManager
 
     var body: some View {
         VStack {
-            UserView()
+            UserView(profile: viewModel.profile)
                 .padding()
 
             ScrollView {
@@ -52,7 +52,9 @@ struct ProfileView: View {
 }
 
 struct ProfileView_Previews: PreviewProvider {
+    private static let mockModel: ProfileManager = .init(profile: .fixture())
+
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewModel: mockModel)
     }
 }
