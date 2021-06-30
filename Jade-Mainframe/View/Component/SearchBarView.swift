@@ -21,7 +21,8 @@ struct SearchBarView: View {
                     .weight(.regular))
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
-                .padding(.leading, LayoutMetrics.searchTextPadding)
+                .padding(LayoutMetrics.allPadding)
+                .padding(.leading, LayoutMetrics.searchTextPadding - LayoutMetrics.allPadding)
                 .overlay(
                     Image(systemName: viewModel.symbolName)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -41,6 +42,7 @@ struct SearchBarView: View {
         static let frameHeight: CGFloat = 34
         static let cornerRadius: CGFloat = 10
         static let searchTextPadding: CGFloat = 38
+        static let allPadding: CGFloat = 10
         static let iconPadding: CGFloat = 9
         static let horizontalPadding: CGFloat = 14
     }

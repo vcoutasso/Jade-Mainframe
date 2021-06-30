@@ -10,30 +10,27 @@ import SwiftUI
 struct AppView: View {
     // MARK: - Variables
 
-    @ObservedObject var tabBarManager: TabBarManager
+    @ObservedObject var homeViewManager: HomeManager
 
-    var homeView = HomeView()
-    var registerSaleView = RegisterSaleView()
-    var favoritesView = FavoritesView()
-    var profileView = ProfileView()
+    var tabBarManager: TabBarManager = .init()
 
     // MARK: - Body
 
     var body: some View {
         TabView {
-            homeView.tabItem {
+            HomeView(viewModel: homeViewManager).tabItem {
                 Image(systemName: tabBarManager.homeSymbolName)
                 Text(Strings.homeTabName)
             }
-            registerSaleView.tabItem {
+            RegisterSaleView().tabItem {
                 Image(systemName: tabBarManager.sellingSymbolName)
                 Text(Strings.sellingTabName)
             }
-            favoritesView.tabItem {
+            FavoritesView().tabItem {
                 Image(systemName: tabBarManager.favoritesSymbolName)
                 Text(Strings.favoritesTabName)
             }
-            profileView.tabItem {
+            ProfileView().tabItem {
                 Image(systemName: tabBarManager.profileSymbolName)
                 Text(Strings.profileTabName)
             }
@@ -43,9 +40,14 @@ struct AppView: View {
 }
 
 struct TabBarView_Previews: PreviewProvider {
-    private static let mockViewModel: TabBarManager = .init()
+    private static var mockHome: HomeManager = .init(
+        searchBar: SearchBarManager(),
+        stories: StoriesManager(products: [.fixture(), .fixtureDiscount()]),
+        carousel: CarouselManager(carousels: [.fixture(), .fixtureDiscount()]
+        )
+    )
 
     static var previews: some View {
-        AppView(tabBarManager: mockViewModel)
+        AppView(homeViewManager: mockHome)
     }
 }

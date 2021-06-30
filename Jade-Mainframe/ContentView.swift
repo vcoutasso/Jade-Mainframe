@@ -10,8 +10,15 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - Body
 
+    private var mockHome: HomeManager = .init(
+        searchBar: SearchBarManager(),
+        stories: StoriesManager(products: [.fixture(), .fixtureDiscount()]),
+        carousel: CarouselManager(carousels: [.fixture(), .fixtureDiscount()]
+        )
+    )
+
     var body: some View {
-        AppView(tabBarManager: .init())
+        AppView(homeViewManager: mockHome)
     }
 }
 

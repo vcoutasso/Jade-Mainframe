@@ -10,10 +10,7 @@ import SwiftUI
 struct HomeView: View {
     // MARK: - Variables
 
-    var carousels: [Carousel] = [.fixture(), .fixture(), .fixture()]
-
-    var searchBarManager: SearchBarManager = .init()
-    var storiesManager: StoriesManager = .init(products: [.fixture()])
+    @ObservedObject var viewModel: HomeManager
 
     // MARK: - Body
 
@@ -41,7 +38,7 @@ struct HomeView: View {
 
                 HStack {
                     Spacer()
-                    SearchBarView(viewModel: searchBarManager)
+                    SearchBarView(viewModel: viewModel.searchBar)
                     Spacer()
                 }
             }
@@ -51,7 +48,7 @@ struct HomeView: View {
     }
 
     private var storiesView: some View {
-        StoriesView(viewModel: storiesManager)
+        StoriesView(viewModel: viewModel.stories)
     }
 
     private var bannerView: some View {
@@ -59,14 +56,19 @@ struct HomeView: View {
     }
 
     private var carouselListView: some View {
-        ForEach(carousels) { carousel in
-            CarouselView(viewModel: .init(carousel: carousel))
-        }
+        CarouselView(viewModel: viewModel.carousel)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
+    private static var mockModel: HomeManager = .init(
+        searchBar: SearchBarManager(),
+        stories: StoriesManager(products: [.fixture(), .fixtureDiscount()]),
+        carousel: CarouselManager(carousels: [.fixture(), .fixtureDiscount()]
+        )
+    )
+
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: mockModel)
     }
 }
