@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct LineContent: Identifiable {
+struct SettingsEntry: Identifiable {
     var id = UUID()
-    let iconURL: String
+    let iconName: String
     let description: String
     let arrowIcon: String = "chevron.right"
 }
