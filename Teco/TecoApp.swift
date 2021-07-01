@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct JadeMainframeApp: App {
+struct TecoApp: App {
     // MARK: - Body
 
     var body: some Scene {

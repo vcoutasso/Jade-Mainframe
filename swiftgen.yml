@@ -1,5 +1,5 @@
-input_dir: Jade-Mainframe/Resources/
-output_dir: Jade-Mainframe/Generated/
+input_dir: Teco/Resources/
+output_dir: Teco/Generated/
 strings:
   inputs: Base.lproj
   filter: .+\.strings$
