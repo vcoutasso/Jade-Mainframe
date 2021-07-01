@@ -35,6 +35,7 @@ struct CardView: View {
                     \(priceFormatter(price: product.price!, locale: locale))
                     """)
                         .font(Font.system(size: LayoutMetrics.oldPriceSize, weight: .regular, design: .default))
+
                         .strikethrough()
                         .foregroundColor(Color(Assets.Colors.TecoPalette.discountRed.color))
                 }
