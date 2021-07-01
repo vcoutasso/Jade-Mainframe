@@ -15,8 +15,9 @@ struct FavoritesView: View {
     var body: some View {
         VStack {
             // REVIEW: What is down huddle?
-            FavoriteCardView(phoneModel: "IPhone 12", phoneSpace: "128GB", phonePrice: 4980)
-            FavoriteCardView(phoneModel: "IPhone 12", phoneSpace: "128GB", phonePrice: 4980)
+            ForEach(viewModel.favoritedItems) { favorite in
+                FavoriteCardView(viewModel: .init(favorite: favorite))
+            }
             downHuddle
             Spacer()
         }
@@ -36,7 +37,8 @@ struct FavoritesView: View {
                         \(Strings.callToTheWatchList) \
                         \(Text(Strings.readMore)
                             .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)))
-                        """).lineLimit(3)
+                        """)
+                            .lineLimit(3)
                     }
                     addButtom
                 }
@@ -78,7 +80,7 @@ struct FavoritesView: View {
 }
 
 struct FavoritesView_Previews: PreviewProvider {
-    private static var mockModel: FavoritesManager = .init()
+    private static var mockModel: FavoritesManager = .init(favoritedItems: [.fixture(), .fixtureWatched()])
 
     static var previews: some View {
         FavoritesView(viewModel: mockModel)

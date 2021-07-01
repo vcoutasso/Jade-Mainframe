@@ -42,14 +42,15 @@ struct AppView: View {
 }
 
 struct TabBarView_Previews: PreviewProvider {
-    private static var mockHome: HomeManager = .init(
+    private static let mockHome: HomeManager = .init(
         searchBar: SearchBarManager(),
         stories: StoriesManager(products: [.fixture(), .fixtureDiscount()]),
         carousel: CarouselManager(carousels: [.fixture(), .fixtureDiscount()]
         )
     )
 
-    private static let mockFavorites: FavoritesManager = .init()
+    private static let mockFavorites: FavoritesManager = .init(favoritedItems: [.fixture(), .fixtureWatched()]
+    )
 
     private static let mockProfile: ProfileManager = .init(profile: .fixture())
 

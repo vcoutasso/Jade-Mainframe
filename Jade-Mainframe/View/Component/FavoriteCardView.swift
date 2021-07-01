@@ -8,41 +8,39 @@
 import SwiftUI
 
 struct FavoriteCardView: View {
-    let phoneModel: String
-    let phoneSpace: String
-    let phonePrice: Double
+    @ObservedObject var viewModel: FavoriteCardManager
+
     var body: some View {
         HStack(spacing: 20) {
-            Rectangle().frame(width: LayoutMetrics.cardSize, height: LayoutMetrics.cardSize)
+            Rectangle()
+                .frame(width: LayoutMetrics.cardSize, height: LayoutMetrics.cardSize)
                 .cornerRadius(LayoutMetrics.cornerRadius)
                 .offset(x: LayoutMetrics.cardOffSet)
+
             VStack(alignment: .leading, spacing: 10) {
-                Text("\(phoneModel) \(phoneSpace)")
-                Text("R$\(priceFormatter(price: phonePrice, locale: Strings.locale))")
+                Text(viewModel.item.announcementName)
+                Text("""
+                \(Strings.currencySymbol) \
+                \(priceFormatter(price: viewModel.item.productPrice,
+                                 locale: Strings.locale))
+                """)
                 HStack {
                     Spacer()
-                    heartIcon
-                    binocularIconStroke
-                }.offset(x: LayoutMetrics.iconsOffSet)
-            }.padding(.top)
-                .offset(x: LayoutMetrics.cardOffSet)
-        }.padding(10)
-            .background(RoundedRectangle(cornerRadius: LayoutMetrics.cornerRadius)
-                .frame(width: LayoutMetrics.cardWidth, height: LayoutMetrics.cardHeight, alignment: .center)
-                .foregroundColor(Color(.systemGray6)))
-            .padding([.leading, .trailing])
-    }
 
-    private var binocularIconStroke: some View {
-        return Image(systemName: "binoculars")
-            .font(.system(size: 22))
-            .background(Circle().stroke().frame(width: 38, height: 38, alignment: .center))
-            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
-    }
+                    Image(viewModel.heartImageName)
 
-    private var heartIcon: some View {
-        return Image(systemName: "heart.circle.fill").font(.system(size: 38))
-            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
+                    Image(viewModel.binocularsImageName)
+                }
+                .offset(x: LayoutMetrics.iconsOffSet)
+            }
+            .padding(.top)
+            .offset(x: LayoutMetrics.cardOffSet)
+        }
+        .padding(10)
+        .background(RoundedRectangle(cornerRadius: LayoutMetrics.cornerRadius)
+            .frame(width: LayoutMetrics.cardWidth, height: LayoutMetrics.cardHeight, alignment: .center)
+            .foregroundColor(Color(.systemGray6)))
+        .padding([.leading, .trailing])
     }
 
     // MARK: - Layout Metrics
@@ -60,6 +58,6 @@ struct FavoriteCardView: View {
 
 struct FavoriteCardView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteCardView(phoneModel: "IPhone 12", phoneSpace: "128gb", phonePrice: 1234.00)
+        FavoriteCardView(viewModel: .init(favorite: .fixture()))
     }
 }

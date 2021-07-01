@@ -9,6 +9,6 @@ import Foundation
 
 struct Profile: Identifiable {
     let id = UUID()
-    var name: String
-    var email: String
+    let name: String
+    let email: String
 }
