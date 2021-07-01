@@ -35,12 +35,15 @@ struct SelectedProductDetails: View {
     private var productModelAndPrice: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("\(viewModel.product.productName) (amz)").font(TecoFonts.titleSelectedProductFont)
+                Text("\(viewModel.product.model!) (amz)").font(TecoFonts.titleSelectedProductFont)
                 Spacer()
                 favoriteIcon.offset(x: -10)
             }
             VStack(alignment: .leading) {
-                Text("\(priceFormatter(price: viewModel.product.productPrice - viewModel.product.productDiscount, locale: Strings.locale))")
+                Text("""
+                \(priceFormatter(price: viewModel.product.price! - viewModel.product.discount!,
+                                 locale: Strings.locale))
+                """)
                     .strikethrough()
                     .foregroundColor(Color(Assets
                             .Colors
@@ -48,7 +51,7 @@ struct SelectedProductDetails: View {
                             .mediumDarkGray
                             .color))
                     .font(TecoFonts.discountSelectedProductFont)
-                Text("\(priceFormatter(price: viewModel.product.productPrice, locale: Strings.locale))")
+                Text("\(priceFormatter(price: viewModel.product.price!, locale: Strings.locale))")
                     .font(TecoFonts.priceSelectedProductFont)
             }
         }
@@ -57,12 +60,14 @@ struct SelectedProductDetails: View {
     private var productDescription: some View {
         VStack(alignment: .leading) {
             Text("Descrição").font(TecoFonts.subTitleSelectedProductFont)
+
+            // precisa colocar este parametro no Product
             Text("innjnkj").foregroundColor(Color(Assets
                     .Colors
                     .TecoPalette
                     .mediumGray
                     .color))
-                                .font(TecoFonts.descriptionSelectedProductFont) // precisa colocar este parametro no Product
+                                .font(TecoFonts.descriptionSelectedProductFont)
         }
     }
 
