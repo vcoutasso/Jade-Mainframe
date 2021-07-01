@@ -65,11 +65,13 @@ struct CloudKitAvailableModels {
 
     // MARK: - fetching from CloudKit
 
-    static func fetch(completion: @escaping (Result<Product, Error>) -> Void) {
+    static func fetch(tableName: String, completion: @escaping (Result<[Product], Error>) -> Void) {
         let pred = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "name", ascending: false)
-        let query = CKQuery(recordType: RecordType.AvailableModels, predicate: pred)
+        let query = CKQuery(recordType: tableName, predicate: pred)
         query.sortDescriptors = [sort]
+
+        var data: [Product] = .init()
 
         let operation = CKQueryOperation(query: query)
         operation.resultsLimit = 50
@@ -86,13 +88,16 @@ struct CloudKitAvailableModels {
                                      price: 0.0, discount: 0.0, screenState: "", batteryState: "",
                                      backCamera: "", frontalCamera: "", acessories: "", description: "",
                                      invoice: "", images: images)
-                completion(.success(result))
+                data.append(result)
             }
         }
         operation.queryCompletionBlock = { /* cursor */ _, err in
             DispatchQueue.main.async {
                 if let err = err {
                     completion(.failure(err))
+                    return
+                } else {
+                    completion(.success(data))
                     return
                 }
             }

@@ -10,7 +10,11 @@ import Foundation
 class CarouselManager: ObservableObject {
     // MARK: - Published variables
 
-    @Published var carousels: [Carousel]
+    @Published var carousels: [Carousel] {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
     // MARK: - Constants
 
@@ -21,5 +25,15 @@ class CarouselManager: ObservableObject {
     init(carousels: [Carousel], locale: String = Strings.locale) {
         self.carousels = carousels
         self.locale = locale
+    }
+
+    func handleFetchProduct() {
+        for idx in 0 ..< carousels.count {
+            ProductService().fetchProduct(table: carousels[idx].categoryTitle) { products in
+                self.carousels[idx].products = products
+            }
+        }
+
+        objectWillChange.send()
     }
 }

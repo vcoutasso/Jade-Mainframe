@@ -13,10 +13,19 @@ class StoriesManager: ObservableObject {
     @Published var products: [Product]
 
     let moreSymbolName: String = "plus"
+    let service: StoriesService = .init()
 
     // MARK: - Inistilization
 
     init(products: [Product]) {
         self.products = products
+    }
+
+    func handleFetchProduct() {
+        service.fetchProduct(table: "AvailableModels") { products in
+            self.products = products
+        }
+
+        objectWillChange.send()
     }
 }

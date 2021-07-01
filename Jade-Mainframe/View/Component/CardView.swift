@@ -17,7 +17,9 @@ struct CardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Image(uiImage: product.images?.first ?? UIImage(named: "Images/12")!)
+            Image(uiImage: product.images?.first ?? Assets.Images._12.image)
+                .resizable()
+                .scaledToFill()
                 .frame(width: LayoutMetrics.miniProductWidth, height: LayoutMetrics.miniProductHeight)
                 .background(Color(.systemGray6))
                 .cornerRadius(LayoutMetrics.innerCornerRadius)

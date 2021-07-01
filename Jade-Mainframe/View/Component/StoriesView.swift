@@ -48,7 +48,9 @@ struct StoriesView: View {
 
     private func productStoriesView(product: Product) -> some View {
         VStack {
-            Image(uiImage: product.images?.first ?? UIImage(named: "Images/12")!)
+            Image(uiImage: product.images?.first ?? Assets.Images._12.image)
+                .resizable()
+                .scaledToFill()
                 .frame(width: LayoutMetrics.circleDiameter, height: LayoutMetrics.circleDiameter)
                 .background(Color(.white))
                 .clipShape(Circle())

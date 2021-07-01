@@ -38,7 +38,7 @@ struct HomeView: View {
 
                 HStack {
                     Spacer()
-                    SearchBarView(viewModel: viewModel.searchBar)
+                    SearchBarView(viewModel: viewModel.searchBarViewModel)
                     Spacer()
                 }
             }
@@ -48,7 +48,7 @@ struct HomeView: View {
     }
 
     private var storiesView: some View {
-        StoriesView(viewModel: viewModel.stories)
+        StoriesView(viewModel: viewModel.storiesViewModel)
     }
 
     private var bannerView: some View {
@@ -56,7 +56,7 @@ struct HomeView: View {
     }
 
     private var carouselListView: some View {
-        CarouselView(viewModel: viewModel.carousel)
+        CarouselView(viewModel: viewModel.carouselViewModel)
     }
 }
 
