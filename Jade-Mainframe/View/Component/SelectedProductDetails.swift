@@ -21,8 +21,8 @@ struct SelectedProductDetails: View {
                 productDescription.padding(.bottom)
                 aboutProduct.padding(.bottom)
                 technicalSheet.padding(.bottom)
-            }.padding(.trailing, 70)
-        }
+            }
+        }.frame(width: 346)
     }
 
     // MARK: - Private variables
@@ -35,8 +35,9 @@ struct SelectedProductDetails: View {
     private var productModelAndPrice: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("\(viewModel.product.productName) (armazenamento)")
-                favoriteIcon
+                Text("\(viewModel.product.productName) (amz)").font(TecoFonts.titleSelectedProductFont)
+                Spacer()
+                favoriteIcon.offset(x: -10)
             }
             VStack(alignment: .leading) {
                 Text("\(priceFormatter(price: viewModel.product.productPrice - viewModel.product.productDiscount, locale: Strings.locale))")
@@ -46,19 +47,22 @@ struct SelectedProductDetails: View {
                             .TecoPalette
                             .mediumDarkGray
                             .color))
+                    .font(TecoFonts.discountSelectedProductFont)
                 Text("\(priceFormatter(price: viewModel.product.productPrice, locale: Strings.locale))")
+                    .font(TecoFonts.priceSelectedProductFont)
             }
         }
     }
 
     private var productDescription: some View {
         VStack(alignment: .leading) {
-            Text("Descrição")
-            Text("blabljhbhjkl \n hba").foregroundColor(Color(Assets
+            Text("Descrição").font(TecoFonts.subTitleSelectedProductFont)
+            Text("innjnkj").foregroundColor(Color(Assets
                     .Colors
                     .TecoPalette
                     .mediumGray
-                    .color)) // precisa colocar este parametro no Product
+                    .color))
+                                .font(TecoFonts.descriptionSelectedProductFont) // precisa colocar este parametro no Product
         }
     }
 
@@ -70,6 +74,7 @@ struct SelectedProductDetails: View {
         ]
         return VStack(alignment: .leading, spacing: 0) {
             Text("Sobre este aparelho")
+                .font(TecoFonts.subTitleSelectedProductFont)
             ForEach(lines) { line in
                 HStack(spacing: 5) {
                     VStack {
@@ -86,6 +91,7 @@ struct SelectedProductDetails: View {
                                     .Colors
                                     .TecoPalette.mediumDarkGray
                                     .color))
+                            .font(TecoFonts.lineSelectedProductFont)
                     }
                 }
             }
@@ -96,6 +102,7 @@ struct SelectedProductDetails: View {
                             .Colors
                             .TecoPalette.mediumDarkGray
                             .color))
+                    .font(TecoFonts.lineSelectedProductFont)
             }
         }
     }
@@ -126,6 +133,7 @@ struct SelectedProductDetails: View {
                                     .Colors
                                     .TecoPalette.mediumDarkGray
                                     .color))
+                            .font(TecoFonts.lineSelectedProductFont)
                     }
                 }
             }
