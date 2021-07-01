@@ -15,19 +15,17 @@ struct ProductPageInfoView: View {
     // MARK: - body
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                header
-                    .padding(.bottom)
-                productDescription
-                    .padding(.bottom)
-                aboutProduct
-                    .padding(.bottom)
-                technicalSheet
-                    .padding(.bottom)
-            }
-            .padding([.leading, .trailing])
+        VStack(alignment: .leading) {
+            header
+                .padding(.bottom)
+            productDescription
+                .padding(.bottom)
+            aboutProduct
+                .padding(.bottom)
+            technicalSheet
+                .padding(.bottom)
         }
+        .padding([.leading, .trailing])
     }
 
     // MARK: - Private variables
@@ -108,10 +106,10 @@ struct ProductPageInfoView: View {
         VStack(alignment: .leading) {
             Text(Strings.technicalSheet)
 
-            rowView(icon: "clock.arrow.circlepath", title: "Tempo de uso:", text: "")
-            rowView(icon: "doc.text", title: "Nota fiscal:", text: product.invoice ?? "")
+            rowView(icon: "camera", title: "Câmera traseira:", text: product.backCamera ?? "")
+            rowView(icon: "camera", title: "Câmera frontal:", text: product.frontalCamera ?? "")
             rowView(icon: "cpu", title: "Memória interna", text: product.memory ?? "")
-            rowView(icon: "cpu", title: "Memória RAM", text: product.memoryRAM ?? "")
+            rowView(icon: "cpu", title: "Memória RAM:", text: product.memoryRAM ?? "")
         }
     }
 

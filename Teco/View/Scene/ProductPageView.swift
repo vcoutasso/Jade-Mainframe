@@ -11,7 +11,7 @@ struct ProductPageView: View {
     let product: Product
 
     var body: some View {
-        VStack {
+        ScrollView {
             ProductPageHeaderView(product: product)
 
             ProductPageInfoView(product: product)
