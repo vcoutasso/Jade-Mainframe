@@ -10,6 +10,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
+  /// Sobre este produto
+  internal static let aboutProduct = Strings.tr("Localizable", "aboutProduct")
   /// Sobre nós
   internal static let aboutUs = Strings.tr("Localizable", "aboutUs")
   /// Conta
@@ -24,6 +26,8 @@ internal enum Strings {
   internal static let callToTheWatchList = Strings.tr("Localizable", "callToTheWatchList")
   /// R$
   internal static let currencySymbol = Strings.tr("Localizable", "currencySymbol")
+  /// Descrição
+  internal static let description = Strings.tr("Localizable", "description")
   /// Favoritos
   internal static let favoritesTabName = Strings.tr("Localizable", "favoritesTabName")
   /// Central de ajuda
@@ -52,6 +56,8 @@ internal enum Strings {
   internal static let sellingTabName = Strings.tr("Localizable", "sellingTabName")
   /// Configurações
   internal static let settings = Strings.tr("Localizable", "settings")
+  /// Ficha técnica
+  internal static let technicalSheet = Strings.tr("Localizable", "technicalSheet")
   /// ficar de olho
   internal static let watchList = Strings.tr("Localizable", "watchList")
 }

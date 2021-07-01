@@ -4,19 +4,15 @@
 //
 //  Created by Guilerme Barciki on 01/07/21.
 //
-
 import SwiftUI
-let titleFont = Font.system(.body, design: .default)
-    .weight(.bold)
 
-struct Fonts: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).font(titleFont)
-    }
-}
+enum TecoFonts {
+    // MARK: - SelectedProductView
 
-struct Fonts_Previews: PreviewProvider {
-    static var previews: some View {
-        Fonts()
-    }
+    static let titleSelectedProductFont = Font.system(size: 24, weight: .regular, design: .default)
+    static let discountSelectedProductFont = Font.system(size: 18, weight: .medium, design: .default)
+    static let priceSelectedProductFont = Font.system(size: 28, weight: .medium, design: .default)
+    static let subTitleSelectedProductFont = Font.system(size: 16, weight: .medium, design: .default)
+    static let descriptionSelectedProductFont = Font.system(size: 16, weight: .regular, design: .default)
+    static let lineSelectedProductFont = Font.system(size: 18, weight: .regular, design: .default)
 }

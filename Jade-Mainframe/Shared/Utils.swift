@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // MARK: - Functions
 
@@ -23,15 +24,14 @@ func priceFormatter(price: Double, locale: String) -> String {
     return numberFormatter.string(from: NSNumber(value: price)) ?? Strings.invalidPriceWarning
 }
 
-import SwiftUI
+// MARK: - Structs
 
-enum TecoFonts {
-    // MARK: - SelectedProductView
+struct RoundedCorner: Shape {
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
 
-    static let titleSelectedProductFont = Font.system(size: 24, weight: .regular, design: .default)
-    static let discountSelectedProductFont = Font.system(size: 18, weight: .medium, design: .default)
-    static let priceSelectedProductFont = Font.system(size: 28, weight: .medium, design: .default)
-    static let subTitleSelectedProductFont = Font.system(size: 16, weight: .medium, design: .default)
-    static let descriptionSelectedProductFont = Font.system(size: 16, weight: .regular, design: .default)
-    static let lineSelectedProductFont = Font.system(size: 18, weight: .regular, design: .default)
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
 }
