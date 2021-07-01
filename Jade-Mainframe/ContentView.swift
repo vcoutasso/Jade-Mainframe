@@ -12,8 +12,11 @@ struct ContentView: View {
 
     private var mockHome: HomeManager = .init(
         searchBar: SearchBarManager(),
-        stories: StoriesManager(products: [.fixture(), .fixtureDiscount()]),
-        carousel: CarouselManager(carousels: [.fixture(), .fixtureDiscount()]
+        stories: StoriesManager(products: []),
+        carousel: CarouselManager(carousels: [
+            Carousel(products: [], categoryTitle: "Descontos"),
+            Carousel(products: [], categoryTitle: "Adicionados Recentemente"),
+        ]
         )
     )
 

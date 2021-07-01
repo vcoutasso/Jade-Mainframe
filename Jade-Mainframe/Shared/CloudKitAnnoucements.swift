@@ -118,7 +118,6 @@ struct CloudKitAnnoucements {
                         images.append(UIImage(data: data as Data)!)
                     }
                 }
-                print(images)
                 let result = Product(recordID: recordID, model: model, memory: memory,
                                      memoryRAM: memoryRAM, price: price, discount: discount,
                                      screenState: screenState, batteryState: batteryState, backCamera: backCamera,

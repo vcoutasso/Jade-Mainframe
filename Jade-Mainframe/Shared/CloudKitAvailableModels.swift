@@ -39,29 +39,29 @@ struct CloudKitAvailableModels {
 
     // MARK: - saving to CloudKit
 
-    static func save(item: AvailableModel, completion: @escaping (Result<AvailableModel, Error>) -> Void) {
-        let itemRecord = CKRecord(recordType: RecordType.AvailableModels)
-        itemRecord["name"] = item.name as CKRecordValue
-        CKContainer.default().publicCloudDatabase.save(itemRecord) { record, err in
-            DispatchQueue.main.async {
-                if let err = err {
-                    completion(.failure(err))
-                    return
-                }
-                guard let record = record else {
-                    completion(.failure(CloudKitHelperError.recordFailure))
-                    return
-                }
-                let recordID = record.recordID
-                guard let name = record["name"] as? String else { return }
-                guard let memories = record["memory"] as? [CKRecord.Reference] else { return }
-                guard let colors = record["color"] as? [CKRecord.Reference] else { return }
-                let model = AvailableModel(recordID: recordID, memoryOptions: memories,
-                                           colorOptions: colors, name: name)
-                completion(.success(model))
-            }
-        }
-    }
+//    static func save(item: AvailableModel, completion: @escaping (Result<AvailableModel, Error>) -> Void) {
+//        let itemRecord = CKRecord(recordType: RecordType.AvailableModels)
+//        itemRecord["name"] = item.name as CKRecordValue
+//        CKContainer.default().publicCloudDatabase.save(itemRecord) { record, err in
+//            DispatchQueue.main.async {
+//                if let err = err {
+//                    completion(.failure(err))
+//                    return
+//                }
+//                guard let record = record else {
+//                    completion(.failure(CloudKitHelperError.recordFailure))
+//                    return
+//                }
+//                let recordID = record.recordID
+//                guard let name = record["name"] as? String else { return }
+//                guard let memories = record["memory"] as? [CKRecord.Reference] else { return }
+//                guard let colors = record["color"] as? [CKRecord.Reference] else { return }
+//                let model = AvailableModel(recordID: recordID, memoryOptions: memories,
+//                                           colorOptions: colors, name: name)
+//                completion(.success(model))
+//            }
+//        }
+//    }
 
     // MARK: - fetching from CloudKit
 
@@ -131,60 +131,60 @@ struct CloudKitAvailableModels {
 
     // MARK: - delete from CloudKit
 
-    static func delete(recordID: CKRecord.ID, completion: @escaping (Result<CKRecord.ID, Error>) -> Void) {
-        CKContainer.default().publicCloudDatabase.delete(withRecordID: recordID) { recordID, err in
-            DispatchQueue.main.async {
-                if let err = err {
-                    completion(.failure(err))
-                    return
-                }
-                guard let recordID = recordID else {
-                    completion(.failure(CloudKitHelperError.recordIDFailure))
-                    return
-                }
-                completion(.success(recordID))
-            }
-        }
-    }
+//    static func delete(recordID: CKRecord.ID, completion: @escaping (Result<CKRecord.ID, Error>) -> Void) {
+//        CKContainer.default().publicCloudDatabase.delete(withRecordID: recordID) { recordID, err in
+//            DispatchQueue.main.async {
+//                if let err = err {
+//                    completion(.failure(err))
+//                    return
+//                }
+//                guard let recordID = recordID else {
+//                    completion(.failure(CloudKitHelperError.recordIDFailure))
+//                    return
+//                }
+//                completion(.success(recordID))
+//            }
+//        }
+//    }
 
     // MARK: - modify in CloudKit
 
-    static func modify(item: AvailableModel, completion: @escaping (Result<AvailableModel, Error>) -> Void) {
-        guard let recordID = item.recordID else { return }
-        CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { record, err in
-            if let err = err {
-                DispatchQueue.main.async {
-                    completion(.failure(err))
-                }
-                return
-            }
-            guard let record = record else {
-                DispatchQueue.main.async {
-                    completion(.failure(CloudKitHelperError.recordFailure))
-                }
-                return
-            }
-            record["name"] = item.name as CKRecordValue
-
-            CKContainer.default().publicCloudDatabase.save(record) { record, err in
-                DispatchQueue.main.async {
-                    if let err = err {
-                        completion(.failure(err))
-                        return
-                    }
-                    guard let record = record else {
-                        completion(.failure(CloudKitHelperError.recordFailure))
-                        return
-                    }
-                    let recordID = record.recordID
-                    guard let name = record["name"] as? String else { return }
-                    guard let memories = record["memory"] as? [CKRecord.Reference] else { return }
-                    guard let colors = record["color"] as? [CKRecord.Reference] else { return }
-                    let model = AvailableModel(recordID: recordID, memoryOptions: memories,
-                                               colorOptions: colors, name: name)
-                    completion(.success(model))
-                }
-            }
-        }
-    }
+//    static func modify(item: AvailableModel, completion: @escaping (Result<AvailableModel, Error>) -> Void) {
+//        guard let recordID = item.recordID else { return }
+//        CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { record, err in
+//            if let err = err {
+//                DispatchQueue.main.async {
+//                    completion(.failure(err))
+//                }
+//                return
+//            }
+//            guard let record = record else {
+//                DispatchQueue.main.async {
+//                    completion(.failure(CloudKitHelperError.recordFailure))
+//                }
+//                return
+//            }
+//            record["name"] = item.name as CKRecordValue
+//
+//            CKContainer.default().publicCloudDatabase.save(record) { record, err in
+//                DispatchQueue.main.async {
+//                    if let err = err {
+//                        completion(.failure(err))
+//                        return
+//                    }
+//                    guard let record = record else {
+//                        completion(.failure(CloudKitHelperError.recordFailure))
+//                        return
+//                    }
+//                    let recordID = record.recordID
+//                    guard let name = record["name"] as? String else { return }
+//                    guard let memories = record["memory"] as? [CKRecord.Reference] else { return }
+//                    guard let colors = record["color"] as? [CKRecord.Reference] else { return }
+//                    let model = AvailableModel(recordID: recordID, memoryOptions: memories,
+//                                               colorOptions: colors, name: name)
+//                    completion(.success(model))
+//                }
+//            }
+//        }
+//    }
 }
