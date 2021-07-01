@@ -5,35 +5,52 @@
 //  Created by Guilerme Barciki on 23/06/21.
 //
 
+import CloudKit
 import Foundation
+import SwiftUI
 
 #if DEBUG
     extension Product {
         static func fixture(
-            productName: String = "iPhone X",
-            productPrice: Double = 1299,
-            imageName: String = ""
+            model: String = "iPhone 12",
+            memory: String = "128 GB",
+            memoryRAM: String = "12 GB",
+            price: Double = 5329.0,
+            discount: Double = 0.2,
+            screenState: String = "Precisando de troca de tela",
+            batteryState: String = "Acima de 80%",
+            backCamera: String = "12 Mpx",
+            frontalCamera: String = "12 Mpx",
+            acessories: String = "Não",
+            description: String = "Descrição",
+            invoice: String = "Sim",
+            images: [UIImage] = []
         ) -> Product {
-            .init(
-                productName: productName,
-                productPrice: productPrice,
-                productDiscount: 0,
-                imageName: imageName
-            )
+            .init(model: model, memory: memory, memoryRAM: memoryRAM,
+                  price: price, discount: discount, screenState: screenState,
+                  batteryState: batteryState, backCamera: backCamera, frontalCamera: frontalCamera,
+                  acessories: acessories, description: description, invoice: invoice, images: images)
         }
 
         static func fixtureDiscount(
-            productName: String = "iPhone 12",
-            productPrice: Double = 3899,
-            productDiscount: Double = 900,
-            imageName: String = ""
+            model: String = "iPhone 12",
+            memory: String = "128 GB",
+            memoryRAM: String = "12 GB",
+            price: Double = 5329.0,
+            discount: Double = 0.2,
+            screenState: String = "Precisando de troca de tela",
+            batteryState: String = "Acima de 80%",
+            backCamera: String = "12 Mpx",
+            frontalCamera: String = "12 Mpx",
+            acessories: String = "Não",
+            description: String = "Descrição",
+            invoice: String = "Sim",
+            images: [UIImage] = []
         ) -> Product {
-            .init(
-                productName: productName,
-                productPrice: productPrice,
-                productDiscount: productDiscount,
-                imageName: imageName
-            )
+            .init(model: model, memory: memory, memoryRAM: memoryRAM,
+                  price: price, discount: discount, screenState: screenState,
+                  batteryState: batteryState, backCamera: backCamera, frontalCamera: frontalCamera,
+                  acessories: acessories, description: description, invoice: invoice, images: images)
         }
     }
 #endif

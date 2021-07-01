@@ -45,7 +45,7 @@ struct StoriesView: View {
 
     private func productStoriesView(product: Product) -> some View {
         VStack {
-            Image(product.imageName)
+            Image(uiImage: product.images?.first ?? UIImage(named: "Images/12")!)
                 .frame(width: LayoutMetrics.circleDiameter, height: LayoutMetrics.circleDiameter)
                 .background(Color(.white))
                 .clipShape(Circle())
@@ -61,7 +61,7 @@ struct StoriesView: View {
                     lineWidth: LayoutMetrics.strokeLineWidth)
                 )
 
-            descriptionView(text: product.productName)
+            descriptionView(text: product.model!)
         }
         .padding(LayoutMetrics.allPading)
         .padding(.bottom)

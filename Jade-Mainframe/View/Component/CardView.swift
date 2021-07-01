@@ -17,20 +17,20 @@ struct CardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Image(product.imageName)
+            Image(uiImage: product.images?.first ?? UIImage(named: "Images/12")!)
                 .frame(width: LayoutMetrics.miniProductWidth, height: LayoutMetrics.miniProductHeight)
                 .background(Color(.systemGray6))
                 .cornerRadius(LayoutMetrics.innerCornerRadius)
 
             VStack(alignment: .leading) {
-                Text(product.productName)
+                Text(product.model!)
                     .font(.caption)
                     .foregroundColor(Color(Assets.Colors.TecoPalette.mediumLightGray.color))
 
-                if product.productDiscount > 0 {
+                if product.discount! > 0 {
                     Text("""
                     \(Strings.currencySymbol) \
-                    \(priceFormatter(price: product.productPrice, locale: locale))
+                    \(priceFormatter(price: product.price!, locale: locale))
                     """)
                         .font(Font.system(size: LayoutMetrics.oldPriceSize, weight: .regular, design: .default))
                         .strikethrough()
@@ -39,7 +39,7 @@ struct CardView: View {
 
                 Text("""
                 \(Strings.currencySymbol) \
-                \(priceFormatter(price: product.productPrice - product.productDiscount, locale: locale))
+                \(priceFormatter(price: product.price! - product.discount!, locale: locale))
                 """)
                     .font(.subheadline)
                     .foregroundColor(Color(Assets.Colors.TecoPalette.darkGray.color))

@@ -26,6 +26,18 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear {
+            // MARK: - fetch annoucements from CloudKit
+
+            CloudKitAnnoucements.fetch { result in
+                switch result {
+                case let .success(newItem):
+                    viewModel.carousel.carousels[1].products.append(newItem)
+                case let .failure(err):
+                    print(err)
+                }
+            }
+        }
     }
 
     // MARK: - Private View Variables
