@@ -48,45 +48,41 @@ struct SelectedProductDetails: View {
     }
 
     private var aboutProduct: some View {
-        VStack(alignment: .leading) {
+        let lines: [IconAndText] = [IconAndText(systemName: "clock.arrow.circlepath", text: "Tempo de uso:"),
+                                    IconAndText(systemName: "doc.text", text: "Nota fiscal:"),
+                                    IconAndText(systemName: "airpodspro", text: "Acessórios:"),
+                                    IconAndText(systemName: "iphone", text: "Precisando troca de tela:")]
+        return VStack(alignment: .leading) {
             Text("Sobre este aparelho")
-            HStack {
-                Image(systemName: "clock.arrow.circlepath")
-                Text("Tempo de uso:")
-            }
-            HStack {
-                Image(systemName: "doc.text")
-                Text("Nota fiscal:")
-            }
-            HStack {
-                Image(systemName: "airpodspro")
-                Text("Acessórios:")
-            }
-            HStack {
-                Image(systemName: "iphone")
-                Text("Precisando troca de tela:")
+            ForEach(lines) { line in
+                HStack(spacing: 5) {
+                    VStack {
+                        Image(systemName: line.systemName).frame(width: 25, height: 30, alignment: .center)
+                    }
+                    VStack(alignment: .leading) {
+                        Text(line.text)
+                    }
+                }
             }
         }
     }
 
     private var technicalSheet: some View {
-        VStack(alignment: .leading) {
-            Text("Ficha Técnica")
-            HStack {
-                Image(systemName: "camera")
-                Text("Câmera traseira:")
-            }
-            HStack {
-                Image(systemName: "camera")
-                Text("Câmera frontal:")
-            }
-            HStack {
-                Image(systemName: "cpu")
-                Text("Memória interna:")
-            }
-            HStack {
-                Image(systemName: "cpu")
-                Text("Memória RAM:")
+        let lines: [IconAndText] = [IconAndText(systemName: "clock.arrow.circlepath", text: "Tempo de uso:"),
+                                    IconAndText(systemName: "doc.text", text: "Nota fiscal:"),
+                                    IconAndText(systemName: "cpu", text: "Memória interna:"),
+                                    IconAndText(systemName: "cpu", text: "Memória RAM:")]
+        return VStack(alignment: .leading) {
+            Text("Sobre este aparelho")
+            ForEach(lines) { line in
+                HStack(spacing: 5) {
+                    VStack {
+                        Image(systemName: line.systemName).frame(width: 25, height: 30, alignment: .center)
+                    }
+                    VStack(alignment: .leading) {
+                        Text(line.text)
+                    }
+                }
             }
         }
     }
@@ -97,4 +93,10 @@ struct SelectedProductDetails: View {
             SelectedProductDetails(viewModel: mockViewModel)
         }
     }
+}
+
+struct IconAndText: Identifiable {
+    var id = UUID()
+    let systemName: String
+    let text: String
 }
