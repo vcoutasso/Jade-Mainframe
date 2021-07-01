@@ -1,24 +1,25 @@
-name: Jade-Mainframe
+name: Teco
 
 settings:
     DEVELOPMENT_TEAM: HQJF9G685U
 
 options:
-    bundleIdPrefix: wonder-team
+    bundleIdPrefix: com.wonder-team
     deploymentTarget:
         iOS: 14.0
 
 targets:
-    Jade-Mainframe:
+    Teco:
         type: application
         platform: iOS
         settings:
-            CODE_SIGN_ENTITLEMENTS: Jade-Mainframe/Jade-Mainframe.entitlements
+            CODE_SIGN_ENTITLEMENTS: Teco/Teco.entitlements
+            PRODUCT_BUNDLE_IDENTIFIER: wonder-team.Jade-Mainframe
         sources:
-            - path: Jade-Mainframe
+            - path: Teco
         scheme:
             testTargets:
-                - Jade-MainframeTests
+                - TecoTests
         preBuildScripts:
             - name: SwiftLint
               script: |
@@ -27,11 +28,11 @@ targets:
               script: |
                 "${PODS_ROOT}/SwiftGen/bin/swiftgen"
 
-    Jade-MainframeTests:
+    TecoTests:
         type: bundle.unit-test
         platform: iOS
         sources:
-            - path: Jade-MainframeTests
+            - path: TecoTests
 
 
 

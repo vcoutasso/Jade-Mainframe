@@ -27,4 +27,4 @@ jobs:
               run: pod install
 
             - name: Build and run unit tests
-              run: xcodebuild -workspace Jade-Mainframe.xcworkspace -scheme Jade-Mainframe -destination platform\=iOS\ Simulator,OS\=14.4,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}
+              run: xcodebuild -workspace Teco.xcworkspace -scheme Teco -destination platform\=iOS\ Simulator,OS\=14.4,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}

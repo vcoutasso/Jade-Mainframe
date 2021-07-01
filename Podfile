@@ -1,7 +1,7 @@
 platform :ios, '14.4'
 use_frameworks!
 
-target 'Jade-Mainframe' do
+target 'Teco' do
     pod 'SwiftGen', '~> 6.0'
     pod 'SwiftFormat/CLI'
     pod 'SwiftLint'
