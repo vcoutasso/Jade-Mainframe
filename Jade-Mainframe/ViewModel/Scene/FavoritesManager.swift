@@ -8,7 +8,17 @@
 import Foundation
 
 class FavoritesManager: ObservableObject {
+    // MARK: - Published Variables
+
+    @Published var favoritedItems: [FavoritedItem]
+
     // MARK: - Constants
 
     var watchListSymbolName: String = "binoculars"
+
+    // MARK: - Initialization
+
+    init(favoritedItems: [FavoritedItem]) {
+        self.favoritedItems = favoritedItems
+    }
 }
