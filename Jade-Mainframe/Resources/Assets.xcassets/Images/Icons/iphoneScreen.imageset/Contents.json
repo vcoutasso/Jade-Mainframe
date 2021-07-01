@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "IphoneScreem.png",
+      "filename" : "iphoneScreen.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iphoneScreen@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "iphoneScreen@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
