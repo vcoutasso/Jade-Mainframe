@@ -17,7 +17,7 @@ struct ContentView: View {
         )
     )
 
-    private var mockFavorites: FavoritesManager = .init()
+    private var mockFavorites: FavoritesManager = .init(favoritedItems: [.fixture(), .fixtureWatched()])
 
     private var mockProfile: ProfileManager = .init(profile: .fixture())
 

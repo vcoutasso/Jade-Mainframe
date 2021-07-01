@@ -38,10 +38,11 @@ internal enum Assets {
     internal static let storyGradientTop = ColorAsset(name: "Colors/storyGradientTop")
   }
   internal enum Images {
-    internal enum Banner {
-      internal static let banner0 = ImageAsset(name: "Images/Banner/banner-0")
-      internal static let banner1 = ImageAsset(name: "Images/Banner/banner-1")
-      internal static let banner2 = ImageAsset(name: "Images/Banner/banner-2")
+    internal enum Icons {
+      internal static let binoculars = ImageAsset(name: "Images/Icons/binoculars")
+      internal static let filledBinoculars = ImageAsset(name: "Images/Icons/filledBinoculars")
+      internal static let filledHeart = ImageAsset(name: "Images/Icons/filledHeart")
+      internal static let heart = ImageAsset(name: "Images/Icons/heart")
     }
   }
 
@@ -61,9 +62,10 @@ internal enum Assets {
     Colors.storyGradientTop,
   ]
   internal static let allImages: [ImageAsset] = [
-    Images.Banner.banner0,
-    Images.Banner.banner1,
-    Images.Banner.banner2,
+    Images.Icons.binoculars,
+    Images.Icons.filledBinoculars,
+    Images.Icons.filledHeart,
+    Images.Icons.heart,
   ]
   // swiftlint:enable trailing_comma
 }
