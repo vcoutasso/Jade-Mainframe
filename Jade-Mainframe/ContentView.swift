@@ -28,6 +28,31 @@ struct ContentView: View {
         AppView(homeViewManager: mockHome,
                 favoritesViewManager: mockFavorites,
                 profileViewManager: mockProfile)
+            .onAppear {
+                // MARK: - fetch annoucements from CloudKit
+
+                CloudKitAnnoucements.fetch { result in
+                    switch result {
+                    case let .success(newItem):
+                        if newItem.discount! > 0 {
+                            mockHome.carousel.carousels[0].products.append(newItem)
+                        } else {
+                            mockHome.carousel.carousels[1].products.append(newItem)
+                        }
+                    case let .failure(err):
+                        print(err)
+                    }
+                }
+                CloudKitAvailableModels.fetch { result in
+                    switch result {
+                    case let .success(newItem):
+                        print(newItem)
+                        mockHome.stories.products.append(newItem)
+                    case let .failure(err):
+                        print(err)
+                    }
+                }
+            }
     }
 }
 

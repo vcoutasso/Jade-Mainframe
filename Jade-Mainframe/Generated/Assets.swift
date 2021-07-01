@@ -38,6 +38,7 @@ internal enum Assets {
     internal static let storyGradientTop = ColorAsset(name: "Colors/storyGradientTop")
   }
   internal enum Images {
+    internal static let _12 = ImageAsset(name: "Images/12")
     internal enum Icons {
       internal static let binoculars = ImageAsset(name: "Images/Icons/binoculars")
       internal static let filledBinoculars = ImageAsset(name: "Images/Icons/filledBinoculars")
@@ -62,6 +63,7 @@ internal enum Assets {
     Colors.storyGradientTop,
   ]
   internal static let allImages: [ImageAsset] = [
+    Images._12,
     Images.Icons.binoculars,
     Images.Icons.filledBinoculars,
     Images.Icons.filledHeart,

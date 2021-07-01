@@ -24,22 +24,6 @@ struct AppView: View {
                 Image(systemName: tabBarManager.homeSymbolName)
                 Text(Strings.homeTabName)
             }
-            .onAppear {
-                // MARK: - fetch annoucements from CloudKit
-
-                CloudKitAnnoucements.fetch { result in
-                    switch result {
-                    case let .success(newItem):
-                        if newItem.discount! > 0 {
-                            homeViewManager.carousel.carousels[0].products.append(newItem)
-                        } else {
-                            homeViewManager.carousel.carousels[1].products.append(newItem)
-                        }
-                    case let .failure(err):
-                        print(err)
-                    }
-                }
-            }
             RegisterSaleView().tabItem {
                 Image(systemName: tabBarManager.sellingSymbolName)
                 Text(Strings.sellingTabName)

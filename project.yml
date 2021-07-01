@@ -1,10 +1,10 @@
 name: Jade-Mainframe
 
 settings:
-    DEVELOPMENT_TEAM: H7BM7N56V5
+    DEVELOPMENT_TEAM: HQJF9G685U
 
 options:
-    bundleIdPrefix: wonder-tram
+    bundleIdPrefix: wonder-team
     deploymentTarget:
         iOS: 14.0
 
@@ -12,6 +12,8 @@ targets:
     Jade-Mainframe:
         type: application
         platform: iOS
+        settings:
+            CODE_SIGN_ENTITLEMENTS: Jade-Mainframe/Jade-Mainframe.entitlements
         sources:
             - path: Jade-Mainframe
         scheme:

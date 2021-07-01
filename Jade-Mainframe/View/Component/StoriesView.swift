@@ -21,19 +21,9 @@ struct StoriesView: View {
                 }
             }
         }
-        .onAppear {
-            // MARK: - fetch available models from CloudKit
-
-            CloudKitAvailableModels.fetch { result in
-                switch result {
-                case let .success(newItem):
-                    print(newItem)
-                    viewModel.products.append(newItem)
-                case let .failure(err):
-                    print(err)
-                }
-            }
-        }
+//        .onAppear {
+//            // MARK: - fetch available models from CloudKit
+//
     }
 
     private var seeMore: some View {
