@@ -65,24 +65,28 @@ struct CloudKitAvailableModels {
 
     // MARK: - fetching from CloudKit
 
-    static func fetch(completion: @escaping (Result<AvailableModel, Error>) -> Void) {
+    static func fetch(completion: @escaping (Result<Product, Error>) -> Void) {
         let pred = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "name", ascending: false)
         let query = CKQuery(recordType: RecordType.AvailableModels, predicate: pred)
         query.sortDescriptors = [sort]
 
         let operation = CKQueryOperation(query: query)
-        operation.desiredKeys = ["name", "color", "memory"]
         operation.resultsLimit = 50
         operation.recordFetchedBlock = { record in
             DispatchQueue.main.async {
                 let recordID = record.recordID
                 guard let name = record["name"] as? String else { return }
-                guard let memories = record["memory"] as? [CKRecord.Reference] else { return }
-                guard let colors = record["color"] as? [CKRecord.Reference] else { return }
-                let model = AvailableModel(recordID: recordID, memoryOptions: memories,
-                                           colorOptions: colors, name: name)
-                completion(.success(model))
+                guard let image = record["image"] as? CKAsset else { return }
+                var images: [UIImage] = []
+                if let data = NSData(contentsOf: image.fileURL!) {
+                    images.append(UIImage(data: data as Data)!)
+                }
+                let result = Product(recordID: recordID, model: name, memory: "", memoryRAM: "",
+                                     price: 0.0, discount: 0.0, screenState: "", batteryState: "",
+                                     backCamera: "", frontalCamera: "", acessories: "", description: "",
+                                     invoice: "", images: images)
+                completion(.success(result))
             }
         }
         operation.queryCompletionBlock = { /* cursor */ _, err in
