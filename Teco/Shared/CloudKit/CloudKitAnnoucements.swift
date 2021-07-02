@@ -114,6 +114,7 @@ struct CloudKitAnnoucements {
                 let acessories = record["acessories"] as String?
                 let description = record["description"] as String?
                 let invoice = record["invoice"] as String?
+                let useTime = record["useTime"] as String?
                 let recordImages = record["images"] as [CKAsset]?
                 var images: [UIImage] = []
                 for image in recordImages! {
@@ -125,7 +126,7 @@ struct CloudKitAnnoucements {
                                      memoryRAM: memoryRAM, price: price, discount: discount,
                                      screenState: screenState, batteryState: batteryState, backCamera: backCamera,
                                      frontalCamera: frontalCamera, acessories: acessories, description: description,
-                                     invoice: invoice, images: images)
+                                     invoice: invoice, useTime: useTime, images: images)
                 data.append(result)
             }
         }
@@ -134,7 +135,8 @@ struct CloudKitAnnoucements {
                 if let err = err {
                     completion(.failure(err))
                     return
-                } else {
+                }
+                else {
                     completion(.success(data))
                     return
                 }
