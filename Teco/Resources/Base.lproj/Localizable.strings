@@ -13,7 +13,7 @@
 "currencySymbol" = "R$";
 "locale" = "pt_BR";
 
-"homeTabName" = "Home";
+"homeTabName" = "Início";
 "sellingTabName" = "Vender";
 "profileTabName" = "Perfil";
 "favoritesTabName" = "Favoritos";
