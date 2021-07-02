@@ -23,10 +23,10 @@ struct ToggleGroupView: View {
 
             HStack {
                 Spacer()
-                groupInformation()
+                groupInformation().frame(width: 351)
                 Spacer()
             }
-        }
+        }.padding()
     }
 
     private func groupInformation() -> some View {
@@ -39,16 +39,18 @@ struct ToggleGroupView: View {
                 } label: {
                     Text(filters[filterIdx].name)
                         .foregroundColor(Color(Teco.Assets.Colors.TecoPalette.mediumDarkGray.name))
-                        .font(Font.system(size: 16, weight: .semibold, design: .default))
+                        .font(Font.system(size: 16, weight: .regular, design: .default))
                 }
-                .padding()
+                .padding([.leading, .trailing]).offset(y: 3)
 
                 Divider().background(Color(.systemGray2))
             }
         }
         .accentColor(Color(.systemGray))
         .background(Color(.systemGray6))
-        .cornerRadius(8)
+        .cornerRadius(20)
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke())
+        .foregroundColor(Color(.systemGray3))
     }
 
     private func disclosureGroupItem(value: Int, index: Int) -> some View {
@@ -57,7 +59,7 @@ struct ToggleGroupView: View {
             HStack {
                 HStack {
                     Toggle(isOn: $filters[value].selected[index]) {
-                        Text(filters[value].availables[index])
+                        Text(filters[value].availables[index]).foregroundColor(.black)
                     }
                 }
                 .padding(2)
@@ -69,7 +71,7 @@ struct ToggleGroupView: View {
     // MARK: - Layout Metrics
 
     private enum LayoutMetrics {
-        static let frameWidth: CGFloat = 362
+        static let frameWidth: CGFloat = 351
         static let frameHeight: CGFloat = 34
         static let cornerRadius: CGFloat = 10
         static let searchTextPadding: CGFloat = 38
