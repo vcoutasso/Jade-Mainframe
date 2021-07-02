@@ -12,13 +12,16 @@ struct PriceRangeTextField: View {
     @State private var maxPrice: String = ""
     var body: some View {
         VStack(alignment: .leading) {
-            minPriceTextField.offset(y: 2)
-            Divider().foregroundColor(Color(.systemGray2))
+            minPriceTextField
+                .offset(y: 2)
+            Divider()
+                .foregroundColor(Color(.systemGray2))
             maxPriceTextField
-        }.frame(width: 351, height: 82).background(RoundedRectangle(cornerRadius: 20)
+        }
+        .frame(width: 351, height: 82).background(RoundedRectangle(cornerRadius: 20)
             .foregroundColor(Color(.systemGray6)))
-                    .overlay(RoundedRectangle(cornerRadius: 20).stroke())
-                    .foregroundColor(Color(.systemGray3))
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke())
+        .foregroundColor(Color(.systemGray3))
     }
 
     private var minPriceTextField: some View {
@@ -41,6 +44,7 @@ struct PriceRangeTextField: View {
                 "",
                 text: $minPrice
             )
+            .offset(x: -8)
             .foregroundColor(.black)
             .multilineTextAlignment(.trailing)
             .frame(width: 75, height: 23, alignment: .center)
@@ -72,6 +76,7 @@ struct PriceRangeTextField: View {
                 "",
                 text: $maxPrice
             )
+            .offset(x: -8)
             .foregroundColor(.black)
             .multilineTextAlignment(.trailing)
             .frame(width: 75, height: 23, alignment: .leading)

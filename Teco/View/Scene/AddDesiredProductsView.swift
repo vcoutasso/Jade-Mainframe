@@ -39,8 +39,9 @@ struct AddDesiredProductsView: View {
                 }
                 .padding(.top)
                 PriceRangeTextField()
-                moreButton
+//                moreButton
                 confirmButtom
+                Spacer()
             }
         }
 //        .navigationTitle(Strings.goBack)

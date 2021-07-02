@@ -31,6 +31,7 @@ struct HomeView: View {
                 .offset(y: 45)
             }
             .navigationTitle(Strings.goBack)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
     }
