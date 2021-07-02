@@ -18,6 +18,8 @@ struct HomeView: View {
         NavigationView {
             VStack(spacing: 0) {
                 headerView
+                    .padding(.top)
+
                 ScrollView(showsIndicators: false) {
                     VStack {
                         storiesView
@@ -26,6 +28,7 @@ struct HomeView: View {
                         carouselListView
                     }
                 }
+                .offset(y: 45)
             }
             .navigationTitle(Strings.goBack)
             .navigationBarHidden(true)

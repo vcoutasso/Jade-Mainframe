@@ -131,7 +131,7 @@ struct ProductPageInfoView: View {
             Text(Strings.seller)
 
             HStack {
-                Image("")
+                Image("Images/Icons/avatar")
                     .frame(width: 58, height: 58)
 
                 VStack(alignment: .leading) {

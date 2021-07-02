@@ -29,7 +29,7 @@ struct CarouselView: View {
                         ForEach(carousel.products) { product in
                             NavigationLink(destination: ProductPageView(viewModel: .init(product: product)), label: {
                                 if searchModel.searchBar.searchText != "" {
-                                    if product.model!.contains(searchModel.searchBar.searchText) {
+                                    if product.model!.lowercased().contains(searchModel.searchBar.searchText.lowercased()) {
                                         CardView(product: product, locale: viewModel.locale)
                                             .padding(LayoutMetrics.cardPadding)
                                     }

@@ -12,7 +12,7 @@ struct UserView: View {
 
     var body: some View {
         HStack {
-            Circle()
+            Image("Images/Icons/avatar")
                 .frame(width: LayoutMetrics.circleDiamater, height: LayoutMetrics.circleDiamater, alignment: .center)
                 .padding()
 

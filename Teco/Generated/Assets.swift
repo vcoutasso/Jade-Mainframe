@@ -43,11 +43,13 @@ internal enum Assets {
       internal static let bannerCansado = ImageAsset(name: "Images/Banners/bannerCansado")
     }
     internal enum Icons {
+      internal static let avatar = ImageAsset(name: "Images/Icons/avatar")
       internal static let binoculars = ImageAsset(name: "Images/Icons/binoculars")
       internal static let filledBinoculars = ImageAsset(name: "Images/Icons/filledBinoculars")
       internal static let filledHeart = ImageAsset(name: "Images/Icons/filledHeart")
       internal static let heart = ImageAsset(name: "Images/Icons/heart")
       internal static let iphoneScreen = ImageAsset(name: "Images/Icons/iphoneScreen")
+      internal static let logo = ImageAsset(name: "Images/Icons/logo")
     }
     internal enum Splash {
       internal static let notFound = ImageAsset(name: "Images/Splash/NotFound")
@@ -72,11 +74,13 @@ internal enum Assets {
   internal static let allImages: [ImageAsset] = [
     Images._12,
     Images.Banners.bannerCansado,
+    Images.Icons.avatar,
     Images.Icons.binoculars,
     Images.Icons.filledBinoculars,
     Images.Icons.filledHeart,
     Images.Icons.heart,
     Images.Icons.iphoneScreen,
+    Images.Icons.logo,
     Images.Splash.notFound,
   ]
   // swiftlint:enable trailing_comma
