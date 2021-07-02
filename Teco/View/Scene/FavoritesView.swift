@@ -16,10 +16,14 @@ struct FavoritesView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            ScrollView {
                 // REVIEW: What is down huddle?
                 ForEach(userFavorites.favorites) { favorite in
-                    FavoriteCardView(viewModel: .init(favorite: favorite))
+                    NavigationLink(destination: ProductPageView(
+                        viewModel: .init(product: favorite.product, isFavorite: true)),
+                    label: {
+                        FavoriteCardView(viewModel: .init(favorite: favorite))
+                    })
                 }
                 downHuddle
                 Spacer()

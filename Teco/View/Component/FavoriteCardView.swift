@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FavoriteCardView: View {
+    @EnvironmentObject var userFavorites: FavoritesData
+
     @ObservedObject var viewModel: FavoriteCardManager
 
     var body: some View {
@@ -29,9 +31,19 @@ struct FavoriteCardView: View {
                 HStack {
                     Spacer()
 
-                    Image(viewModel.heartImageName)
+                    Button(action: {
+                               viewModel.handleFavoriteToggle(userFavorites: userFavorites)
+                           },
+                           label: {
+                               Image(viewModel.heartImageName)
+                           })
 
-                    Image(viewModel.binocularsImageName)
+                    Button(action: {
+                               viewModel.handleBinocularToggle()
+                           },
+                           label: {
+                               Image(uiImage: viewModel.isWatched ? Assets.Images.Icons.filledBinoculars.image : Assets.Images.Icons.binoculars.image)
+                           })
                 }
                 .offset(x: LayoutMetrics.iconsOffSet)
             }
