@@ -60,7 +60,7 @@ struct HomeView: View {
     }
 
     private var carouselListView: some View {
-        CarouselView(viewModel: viewModel.carouselViewModel)
+        CarouselView(searchModel: viewModel.searchBarViewModel, viewModel: viewModel.carouselViewModel)
     }
 }
 
