@@ -1,1 +1,2 @@
 --exclude */Generated/*
+--elseposition next-line

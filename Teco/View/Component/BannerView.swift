@@ -24,14 +24,15 @@ struct BannerView: View {
                     .scaledToFit()
                     .frame(width: UIScreen.main.bounds.width)
             }
-        }.tabViewStyle(PageTabViewStyle())
-            .onReceive(timer, perform: { _ in
-                withAnimation {
-                    currentIndex = currentIndex <
-                        numberOfImages - 1 ? currentIndex + 1 : 0
-                }
-            })
-            .scaledToFit()
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .onReceive(timer, perform: { _ in
+            withAnimation {
+                currentIndex = currentIndex <
+                    numberOfImages - 1 ? currentIndex + 1 : 0
+            }
+        })
+        .scaledToFit()
     }
 }
 

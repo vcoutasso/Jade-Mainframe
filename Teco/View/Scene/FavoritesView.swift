@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    // MARK: - Body
+    @EnvironmentObject var userFavorites: FavoritesData
 
     @ObservedObject var viewModel: FavoritesManager
+
+    // MARK: - Body
 
     var body: some View {
         VStack {
             // REVIEW: What is down huddle?
-            ForEach(viewModel.favoritedItems) { favorite in
+            ForEach(userFavorites.favorites) { favorite in
                 FavoriteCardView(viewModel: .init(favorite: favorite))
             }
             downHuddle
@@ -28,16 +30,16 @@ struct FavoritesView: View {
             Spacer()
             VStack(alignment: .leading) {
                 Text(Strings.watchList)
-                    .padding(.bottom, 5)
+                    .padding([.top, .bottom], 10)
                     .foregroundColor(Color(.darkGray))
                 VStack {
                     HStack {
                         binocularIconFill
                         Text("""
                         \(Strings.callToTheWatchList) \
-                        \(Text(Strings.readMore)
+                        \(Text(Strings.readMore).font(TecoFonts.readMore)
                             .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)))
-                        """)
+                        """).font(TecoFonts.callToWatchList)
                             .lineLimit(3)
                     }
                     addButtom
@@ -75,7 +77,7 @@ struct FavoritesView: View {
             .padding([.leading, .trailing], 10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(lineWidth: 2))
-            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)).padding(.top)
+            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)).padding(.top, 20)
     }
 }
 

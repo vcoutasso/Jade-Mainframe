@@ -10,30 +10,34 @@ import SwiftUI
 struct ProductPageInfoView: View {
     // MARK: - Variables
 
-    var product: Product
+    @EnvironmentObject var userFavorites: FavoritesData
+
+    @ObservedObject var viewModel: ProductPageManager
+
+    var product: Product {
+        viewModel.product
+    }
 
     // MARK: - body
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                header
-                    .padding(.bottom)
-                productDescription
-                    .padding(.bottom)
-                aboutProduct
-                    .padding(.bottom)
-                technicalSheet
-                    .padding(.bottom)
-            }
-            .padding([.leading, .trailing])
+        VStack(alignment: .leading) {
+            header
+                .padding(.bottom)
+            productDescription
+                .padding(.bottom)
+            aboutProduct
+                .padding(.bottom)
+            technicalSheet
+                .padding(.bottom)
         }
+        .padding([.leading, .trailing])
     }
 
     // MARK: - Private variables
 
     private var favoriteIcon: some View {
-        Image(Assets.Images.Icons.heart.name)
+        Image(viewModel.isFavorite ? Assets.Images.Icons.filledHeart.name : Assets.Images.Icons.heart.name)
     }
 
     private var header: some View {
@@ -44,8 +48,12 @@ struct ProductPageInfoView: View {
 
                 Spacer()
 
-                favoriteIcon
-                    .padding(.trailing)
+                Button(action: {
+                    viewModel.handleFavoriteToggle(userFavorites: userFavorites)
+                }, label: {
+                    favoriteIcon
+                        .padding(.trailing)
+                })
             }
 
             VStack(alignment: .leading) {
@@ -108,10 +116,10 @@ struct ProductPageInfoView: View {
         VStack(alignment: .leading) {
             Text(Strings.technicalSheet)
 
-            rowView(icon: "clock.arrow.circlepath", title: "Tempo de uso:", text: "")
-            rowView(icon: "doc.text", title: "Nota fiscal:", text: product.invoice ?? "")
+            rowView(icon: "camera", title: "Câmera traseira:", text: product.backCamera ?? "")
+            rowView(icon: "camera", title: "Câmera frontal:", text: product.frontalCamera ?? "")
             rowView(icon: "cpu", title: "Memória interna", text: product.memory ?? "")
-            rowView(icon: "cpu", title: "Memória RAM", text: product.memoryRAM ?? "")
+            rowView(icon: "cpu", title: "Memória RAM:", text: product.memoryRAM ?? "")
         }
     }
 
@@ -132,6 +140,6 @@ struct ProductPageInfoView: View {
 
 struct SelectedProductDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProductPageInfoView(product: .fixture())
+        ProductPageInfoView(viewModel: .init(product: .fixture()))
     }
 }
