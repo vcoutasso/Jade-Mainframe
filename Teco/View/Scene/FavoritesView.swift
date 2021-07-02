@@ -15,13 +15,17 @@ struct FavoritesView: View {
     // MARK: - Body
 
     var body: some View {
-        VStack {
-            // REVIEW: What is down huddle?
-            ForEach(userFavorites.favorites) { favorite in
-                FavoriteCardView(viewModel: .init(favorite: favorite))
+        NavigationView {
+            VStack {
+                // REVIEW: What is down huddle?
+                ForEach(userFavorites.favorites) { favorite in
+                    FavoriteCardView(viewModel: .init(favorite: favorite))
+                }
+                downHuddle
+                Spacer()
             }
-            downHuddle
-            Spacer()
+            .navigationTitle(Strings.goBack)
+            .navigationBarHidden(true)
         }
     }
 

@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct RegisterSaleView: View {
+struct SellingView: View {
     // MARK: - Body
 
     var body: some View {
-        Text(Strings.sellingTabName)
+        NavigationView {
+            NotFoundView()
+                .navigationTitle(Strings.goBack)
+                .navigationBarHidden(true)
+        }
     }
 }
 
 struct RegisterSaleView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterSaleView()
+        SellingView()
     }
 }
