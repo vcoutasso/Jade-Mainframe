@@ -17,7 +17,7 @@ struct CarouselView: View {
     var body: some View {
         ForEach(viewModel.carousels) { carousel in
             VStack(alignment: .leading) {
-                Text(carousel.categoryTitle)
+                Text(carousel.displayTitle)
                     .font(.body)
                     .fontWeight(.medium)
                     .lineLimit(LayoutMetrics.titleLineLimit)
