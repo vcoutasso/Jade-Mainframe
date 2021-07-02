@@ -16,13 +16,9 @@ struct PriceRangeTextField: View {
             Divider().foregroundColor(Color(.systemGray2))
             maxPriceTextField
         }.frame(width: 351, height: 82).background(RoundedRectangle(cornerRadius: 20)
-            .foregroundColor(Color(Teco
-                    .Assets
-                    .Colors
-                    .TecoPalette
-                    .lightGray.name)))
-                            .overlay(RoundedRectangle(cornerRadius: 20).stroke())
-                            .foregroundColor(Color(.systemGray3))
+            .foregroundColor(Color(.systemGray6)))
+                    .overlay(RoundedRectangle(cornerRadius: 20).stroke())
+                    .foregroundColor(Color(.systemGray3))
     }
 
     private var minPriceTextField: some View {
@@ -33,7 +29,7 @@ struct PriceRangeTextField: View {
                         .Assets
                         .Colors
                         .TecoPalette
-                        .darkGray.name))
+                        .mediumDarkGray.name))
             Spacer()
             Text("R$")
                 .foregroundColor(Color(Teco
@@ -45,7 +41,9 @@ struct PriceRangeTextField: View {
                 "",
                 text: $minPrice
             )
-            .frame(width: 75, height: 23, alignment: .leading)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.trailing)
+            .frame(width: 75, height: 23, alignment: .center)
             .background(Color(.white))
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10).stroke())
@@ -61,7 +59,7 @@ struct PriceRangeTextField: View {
                         .Assets
                         .Colors
                         .TecoPalette
-                        .darkGray
+                        .mediumDarkGray
                         .name))
             Spacer()
             Text("R$")
@@ -74,6 +72,8 @@ struct PriceRangeTextField: View {
                 "",
                 text: $maxPrice
             )
+            .foregroundColor(.black)
+            .multilineTextAlignment(.trailing)
             .frame(width: 75, height: 23, alignment: .leading)
             .background(Color(.white))
             .cornerRadius(10)
