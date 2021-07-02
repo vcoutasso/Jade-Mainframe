@@ -38,7 +38,7 @@ struct ToggleGroupView: View {
                     }
                 } label: {
                     Text(filters[filterIdx].name)
-                        .foregroundColor(Color(.systemGray))
+                        .foregroundColor(Color(Teco.Assets.Colors.TecoPalette.mediumDarkGray.name))
                         .font(Font.system(size: 16, weight: .semibold, design: .default))
                 }
                 .padding()
