@@ -10,6 +10,7 @@ import SwiftUI
 struct CarouselView: View {
     // MARK: - Variables
 
+    @ObservedObject var searchModel: SearchBarManager
     @ObservedObject var viewModel: CarouselManager
 
     // MARK: - Body
@@ -27,8 +28,16 @@ struct CarouselView: View {
                     HStack(spacing: LayoutMetrics.horizontalSpacing) {
                         ForEach(carousel.products) { product in
                             NavigationLink(destination: ProductPageView(viewModel: .init(product: product)), label: {
-                                CardView(product: product, locale: viewModel.locale)
-                                    .padding(LayoutMetrics.cardPadding)
+                                if searchModel.searchBar.searchText != "" {
+                                    if product.model!.contains(searchModel.searchBar.searchText) {
+                                        CardView(product: product, locale: viewModel.locale)
+                                            .padding(LayoutMetrics.cardPadding)
+                                    }
+                                }
+                                else {
+                                    CardView(product: product, locale: viewModel.locale)
+                                        .padding(LayoutMetrics.cardPadding)
+                                }
                             })
                         }
                     }
@@ -49,13 +58,13 @@ struct CarouselView: View {
     }
 }
 
-struct CarouselView_Previews: PreviewProvider {
-    private static let mockViewModel: CarouselManager = .init(
-        carousels: [.fixture(), .fixtureDiscount()],
-        locale: Strings.locale
-    )
-
-    static var previews: some View {
-        CarouselView(viewModel: mockViewModel)
-    }
-}
+// struct CarouselView_Previews: PreviewProvider {
+//    private static let mockViewModel: CarouselManager = .init(
+//        carousels: [.fixture(), .fixtureDiscount()],
+//        locale: Strings.locale
+//    )
+//
+//    static var previews: some View {
+//        CarouselView(searchText: "", viewModel: mockViewModel)
+//    }
+// }
