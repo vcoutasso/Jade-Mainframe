@@ -11,9 +11,10 @@ import Foundation
     extension Profile {
         static func fixture(
             name: String = "Joãozinho Pedro",
-            email: String = "joaozinho.p@icloud.com"
+            email: String = "joaozinho.p@icloud.com",
+            location: String = "Curitiba, PR"
         ) -> Profile {
-            .init(name: name, email: email)
+            .init(name: name, email: email, location: location)
         }
     }
 #endif
