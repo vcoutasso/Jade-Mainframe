@@ -16,7 +16,8 @@ import Foundation
         ) -> FavoritedItem {
             .init(announcementName: announcementName,
                   productPrice: productPrice,
-                  isWatched: isWatched)
+                  isWatched: isWatched,
+                  product: .fixture())
         }
 
         static func fixtureWatched(
@@ -26,7 +27,8 @@ import Foundation
         ) -> FavoritedItem {
             .init(announcementName: announcementName,
                   productPrice: productPrice,
-                  isWatched: isWatched)
+                  isWatched: isWatched,
+                  product: .fixture())
         }
     }
 #endif

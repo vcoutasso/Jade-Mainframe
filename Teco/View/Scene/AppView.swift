@@ -10,6 +10,8 @@ import SwiftUI
 struct AppView: View {
     // MARK: - Variables
 
+    @EnvironmentObject var userFavorites: FavoritesData
+
     @ObservedObject var homeViewManager: HomeManager
     @ObservedObject var favoritesViewManager: FavoritesManager
     @ObservedObject var profileViewManager: ProfileManager

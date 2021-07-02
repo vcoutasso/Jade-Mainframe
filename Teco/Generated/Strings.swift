@@ -22,7 +22,7 @@ internal enum Strings {
   internal static let announcedProducts = Strings.tr("Localizable", "announcedProducts")
   /// Compra e Venda
   internal static let buyAndSell = Strings.tr("Localizable", "buyAndSell")
-  /// Cansado de procurar? \nA gente fica de olho e te avisa quando achar.
+  /// Cansado de procurar? \nA gente fica de olho e te avisa \nquando achar.
   internal static let callToTheWatchList = Strings.tr("Localizable", "callToTheWatchList")
   /// Confirmar características
   internal static let confirmFeatures = Strings.tr("Localizable", "confirmFeatures")
@@ -32,6 +32,8 @@ internal enum Strings {
   internal static let description = Strings.tr("Localizable", "description")
   /// Favoritos
   internal static let favoritesTabName = Strings.tr("Localizable", "favoritesTabName")
+  /// Voltar
+  internal static let goBack = Strings.tr("Localizable", "goBack")
   /// Central de ajuda
   internal static let helpCenter = Strings.tr("Localizable", "helpCenter")
   /// Home
