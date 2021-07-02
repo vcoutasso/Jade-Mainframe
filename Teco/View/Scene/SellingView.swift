@@ -14,6 +14,7 @@ struct SellingView: View {
         NavigationView {
             NotFoundView()
                 .navigationTitle(Strings.goBack)
+                .navigationBarTitleDisplayMode(.inline)
                 .navigationBarHidden(true)
         }
     }

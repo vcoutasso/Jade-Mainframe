@@ -23,6 +23,7 @@ struct ProfileView: View {
                 institutional
             }
             .navigationTitle(Strings.goBack)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
     }

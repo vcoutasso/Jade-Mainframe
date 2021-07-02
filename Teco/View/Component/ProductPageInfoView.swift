@@ -7,12 +7,45 @@
 
 import SwiftUI
 
+struct TutorialModal: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    @State var currentIndex = 0
+
+    let images: [String] = [
+        Assets.Images.Splash.modalFavorites.name,
+        Assets.Images.Splash.modalWatchlist.name,
+    ]
+
+    var body: some View {
+        TabView(selection: $currentIndex) {
+            ForEach(0 ..< images.count) { idx in
+                Image(images[idx])
+//                    .resizable()
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                    .background(Color(.gray))
+                    .ignoresSafeArea(.all)
+                    .tag(idx)
+            }
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
+        .onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+        }
+    }
+}
+
 struct ProductPageInfoView: View {
     // MARK: - Variables
 
     @EnvironmentObject var userFavorites: FavoritesData
 
+    @AppStorage("showTutorial") var showTutorial: Bool?
+
     @ObservedObject var viewModel: ProductPageManager
+
+    @State private var isPresented = false
 
     var profile: Profile = .init(name: "Joãozinho Pedro", email: "", location: "Curitiba, PR")
 
@@ -53,10 +86,15 @@ struct ProductPageInfoView: View {
 
                 Button(action: {
                     viewModel.handleFavoriteToggle(userFavorites: userFavorites)
+                    if showTutorial ?? true {
+                        isPresented.toggle()
+                        showTutorial = false
+                    }
                 }, label: {
                     favoriteIcon
                         .padding(.trailing)
                 })
+                    .fullScreenCover(isPresented: $isPresented, content: TutorialModal.init)
             }
 
             VStack(alignment: .leading) {
