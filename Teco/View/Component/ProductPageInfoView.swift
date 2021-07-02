@@ -64,7 +64,7 @@ struct ProductPageInfoView: View {
                     .strikethrough()
                     .foregroundColor(Color(Assets.Colors.TecoPalette.mediumDarkGray.color))
                     .font(TecoFonts.discountSelectedProductFont)
-                    .opacity((product.discount ?? 0) > 0 ? 0 : 1)
+                    .opacity((product.discount ?? 0) > 0 ? 1 : 0)
 
                 Text("\(priceFormatter(price: product.price!, locale: Strings.locale))")
                     .font(TecoFonts.priceSelectedProductFont)
