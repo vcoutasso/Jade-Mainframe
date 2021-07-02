@@ -105,7 +105,7 @@ struct ProductPageInfoView: View {
         VStack(alignment: .leading) {
             Text(Strings.aboutProduct)
 
-            rowView(icon: "clock.arrow.circlepath", title: "Tempo de uso:", text: "")
+            rowView(icon: "clock.arrow.circlepath", title: "Tempo de uso:", text: product.useTime ?? "")
             rowView(icon: "doc.text", title: "Nota fiscal:", text: product.invoice ?? "")
             rowView(icon: "earpods", title: "Acesssórios:", text: product.acessories ?? "Não")
             rowView(icon: "iphone", title: "", text: product.screenState ?? "")

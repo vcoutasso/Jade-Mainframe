@@ -87,7 +87,7 @@ struct CloudKitAvailableModels {
                 let result = Product(recordID: recordID, model: name, memory: "", memoryRAM: "",
                                      price: 0.0, discount: 0.0, screenState: "", batteryState: "",
                                      backCamera: "", frontalCamera: "", acessories: "", description: "",
-                                     invoice: "", images: images)
+                                     invoice: "", useTime: "", images: images)
                 data.append(result)
             }
         }
@@ -96,7 +96,8 @@ struct CloudKitAvailableModels {
                 if let err = err {
                     completion(.failure(err))
                     return
-                } else {
+                }
+                else {
                     completion(.success(data))
                     return
                 }

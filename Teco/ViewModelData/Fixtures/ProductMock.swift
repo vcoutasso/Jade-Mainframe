@@ -24,12 +24,13 @@ import SwiftUI
             acessories: String = "Não",
             description: String = "Descrição",
             invoice: String = "Sim",
+            useTime: String = "2 anos",
             images: [UIImage] = [Assets.Images._12.image, Assets.Images._12.image]
         ) -> Product {
             .init(model: model, memory: memory, memoryRAM: memoryRAM,
                   price: price, discount: discount, screenState: screenState,
                   batteryState: batteryState, backCamera: backCamera, frontalCamera: frontalCamera,
-                  acessories: acessories, description: description, invoice: invoice, images: images)
+                  acessories: acessories, description: description, invoice: invoice, useTime: useTime, images: images)
         }
 
         static func fixtureDiscount(
@@ -45,12 +46,13 @@ import SwiftUI
             acessories: String = "Não",
             description: String = "Descrição",
             invoice: String = "Sim",
+            useTime: String = "2 anos",
             images: [UIImage] = []
         ) -> Product {
             .init(model: model, memory: memory, memoryRAM: memoryRAM,
                   price: price, discount: discount, screenState: screenState,
                   batteryState: batteryState, backCamera: backCamera, frontalCamera: frontalCamera,
-                  acessories: acessories, description: description, invoice: invoice, images: images)
+                  acessories: acessories, description: description, invoice: invoice, useTime: useTime, images: images)
         }
     }
 #endif
