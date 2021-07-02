@@ -32,6 +32,8 @@ internal enum Strings {
   internal static let description = Strings.tr("Localizable", "description")
   /// Favoritos
   internal static let favoritesTabName = Strings.tr("Localizable", "favoritesTabName")
+  /// Voltar
+  internal static let goBack = Strings.tr("Localizable", "goBack")
   /// Central de ajuda
   internal static let helpCenter = Strings.tr("Localizable", "helpCenter")
   /// Home

@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct TecoApp: App {
-    // MARK: - Body
+    var userFavorites = FavoritesData()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(userFavorites: userFavorites)
+                .environmentObject(userFavorites)
         }
     }
 }

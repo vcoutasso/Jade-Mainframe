@@ -26,8 +26,10 @@ struct CarouselView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: LayoutMetrics.horizontalSpacing) {
                         ForEach(carousel.products) { product in
-                            CardView(product: product, locale: viewModel.locale)
-                                .padding(LayoutMetrics.cardPadding)
+                            NavigationLink(destination: ProductPageView(viewModel: .init(product: product)), label: {
+                                CardView(product: product, locale: viewModel.locale)
+                                    .padding(LayoutMetrics.cardPadding)
+                            })
                         }
                     }
                 }

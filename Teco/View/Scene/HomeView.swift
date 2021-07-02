@@ -15,16 +15,20 @@ struct HomeView: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            headerView
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    storiesView
-                    /* DEPRECATED (for now at least) */
-                    // bannerView
-                    carouselListView
+        NavigationView {
+            VStack(spacing: 0) {
+                headerView
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        storiesView
+                        /* DEPRECATED (for now at least) */
+                        // bannerView
+                        carouselListView
+                    }
                 }
             }
+            .navigationTitle(Strings.goBack)
+            .navigationBarHidden(true)
         }
     }
 
