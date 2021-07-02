@@ -29,6 +29,7 @@ struct FavoritesView: View {
                 Spacer()
             }
             .navigationTitle(Strings.goBack)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
     }

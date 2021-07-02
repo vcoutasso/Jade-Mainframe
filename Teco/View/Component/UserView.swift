@@ -28,6 +28,7 @@ struct UserView: View {
                     .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
             }
         }
+        .offset(x: -20)
     }
 
     private enum LayoutMetrics {

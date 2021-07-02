@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("showTutorial") var showTutorial: Bool = true
+
     @ObservedObject var userFavorites: FavoritesData
 
     @ObservedObject private var mockHome: HomeManager = .init(

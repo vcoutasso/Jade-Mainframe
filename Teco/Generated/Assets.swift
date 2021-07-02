@@ -53,6 +53,8 @@ internal enum Assets {
     }
     internal enum Splash {
       internal static let notFound = ImageAsset(name: "Images/Splash/NotFound")
+      internal static let modalFavorites = ImageAsset(name: "Images/Splash/modalFavorites")
+      internal static let modalWatchlist = ImageAsset(name: "Images/Splash/modalWatchlist")
     }
   }
 
@@ -82,6 +84,8 @@ internal enum Assets {
     Images.Icons.iphoneScreen,
     Images.Icons.logo,
     Images.Splash.notFound,
+    Images.Splash.modalFavorites,
+    Images.Splash.modalWatchlist,
   ]
   // swiftlint:enable trailing_comma
 }
