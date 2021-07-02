@@ -14,8 +14,8 @@ struct ContentView: View {
         searchBar: SearchBarManager(),
         stories: StoriesManager(products: []),
         carousel: CarouselManager(carousels: [
-            Carousel(products: [], categoryTitle: "AnnouncedIphones"),
-            Carousel(products: [], categoryTitle: "AnnouncedDiscounts"),
+            Carousel(products: [], categoryTitle: "AnnouncedIphones", displayTitle: "Adicionados recentemente"),
+            Carousel(products: [], categoryTitle: "AnnouncedDiscounts", displayTitle: "Discontos para você"),
         ]
         )
     )

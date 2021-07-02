@@ -13,14 +13,14 @@ import Foundation
             products: [Product] = [Product](repeating: .fixture(), count: 10),
             categoryTitle: String = "Adicionados Recentemente"
         ) -> Carousel {
-            .init(products: products, categoryTitle: categoryTitle)
+            .init(products: products, categoryTitle: categoryTitle, displayTitle: categoryTitle)
         }
 
         static func fixtureDiscount(
             products: [Product] = [Product](repeating: .fixtureDiscount(), count: 10),
             categoryTitle: String = "Em Promoção"
         ) -> Carousel {
-            .init(products: products, categoryTitle: categoryTitle)
+            .init(products: products, categoryTitle: categoryTitle, displayTitle: categoryTitle)
         }
     }
 #endif
