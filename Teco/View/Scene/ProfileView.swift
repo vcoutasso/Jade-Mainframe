@@ -13,15 +13,17 @@ struct ProfileView: View {
     @ObservedObject var viewModel: ProfileManager
 
     var body: some View {
-        VStack {
-            UserView(profile: viewModel.profile)
-                .padding()
-
+        NavigationView {
             ScrollView {
+                UserView(profile: viewModel.profile)
+                    .padding()
+
                 buyAndSell
                 account
                 institutional
             }
+            .navigationTitle(Strings.goBack)
+            .navigationBarHidden(true)
         }
     }
 
