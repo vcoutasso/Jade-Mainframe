@@ -12,4 +12,5 @@ struct FavoritedItem: Identifiable {
     let announcementName: String
     let productPrice: Double
     var isWatched: Bool
+    let product: Product
 }

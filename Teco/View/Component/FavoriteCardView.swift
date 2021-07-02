@@ -12,7 +12,9 @@ struct FavoriteCardView: View {
 
     var body: some View {
         HStack(spacing: 20) {
-            Rectangle()
+            Image(uiImage: viewModel.item.product.images!.first!)
+                .resizable()
+                .scaledToFill()
                 .frame(width: LayoutMetrics.cardSize, height: LayoutMetrics.cardSize)
                 .cornerRadius(LayoutMetrics.cornerRadius)
                 .offset(x: LayoutMetrics.cardOffSet)

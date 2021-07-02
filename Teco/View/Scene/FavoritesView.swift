@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    // MARK: - Body
+    @EnvironmentObject var userFavorites: FavoritesData
 
     @ObservedObject var viewModel: FavoritesManager
+
+    // MARK: - Body
 
     var body: some View {
         VStack {
             // REVIEW: What is down huddle?
-            ForEach(viewModel.favoritedItems) { favorite in
+            ForEach(userFavorites.favorites) { favorite in
                 FavoriteCardView(viewModel: .init(favorite: favorite))
             }
             downHuddle

@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ProductPageView: View {
-    let product: Product
+    @ObservedObject var viewModel: ProductPageManager
 
     var body: some View {
         ScrollView {
-            ProductPageHeaderView(product: product)
+            ProductPageHeaderView(product: viewModel.product)
 
-            ProductPageInfoView(product: product)
+            ProductPageInfoView(viewModel: viewModel)
         }
     }
 }
 
 struct ProductPageViewPreviews: PreviewProvider {
     static var previews: some View {
-        ProductPageView(product: .fixture())
+        ProductPageView(viewModel: .init(product: .fixture()))
     }
 }

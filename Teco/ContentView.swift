@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    // MARK: - Body
+    @ObservedObject var userFavorites: FavoritesData
 
     @ObservedObject private var mockHome: HomeManager = .init(
         searchBar: SearchBarManager(),
@@ -22,7 +22,10 @@ struct ContentView: View {
 
     @ObservedObject private var mockFavorites: FavoritesManager = .init(favoritedItems: [.fixture(), .fixtureWatched()])
 
-    @ObservedObject private var mockProfile: ProfileManager = .init(profile: .fixture())
+    @ObservedObject private var mockProfile: ProfileManager = .init(
+        profile: .fixture())
+
+    // MARK: - Body
 
     var body: some View {
         AppView(homeViewManager: mockHome,
@@ -36,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(userFavorites: .init(favorites: []))
     }
 }

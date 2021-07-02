@@ -10,7 +10,13 @@ import SwiftUI
 struct ProductPageInfoView: View {
     // MARK: - Variables
 
-    var product: Product
+    @EnvironmentObject var userFavorites: FavoritesData
+
+    @ObservedObject var viewModel: ProductPageManager
+
+    var product: Product {
+        viewModel.product
+    }
 
     // MARK: - body
 
@@ -31,7 +37,7 @@ struct ProductPageInfoView: View {
     // MARK: - Private variables
 
     private var favoriteIcon: some View {
-        Image(Assets.Images.Icons.heart.name)
+        Image(viewModel.isFavorite ? Assets.Images.Icons.filledHeart.name : Assets.Images.Icons.heart.name)
     }
 
     private var header: some View {
@@ -42,8 +48,12 @@ struct ProductPageInfoView: View {
 
                 Spacer()
 
-                favoriteIcon
-                    .padding(.trailing)
+                Button(action: {
+                    viewModel.handleFavoriteToggle(userFavorites: userFavorites)
+                }, label: {
+                    favoriteIcon
+                        .padding(.trailing)
+                })
             }
 
             VStack(alignment: .leading) {
@@ -130,6 +140,6 @@ struct ProductPageInfoView: View {
 
 struct SelectedProductDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProductPageInfoView(product: .fixture())
+        ProductPageInfoView(viewModel: .init(product: .fixture()))
     }
 }
