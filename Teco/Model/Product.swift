@@ -24,5 +24,6 @@ struct Product: Identifiable {
     let acessories: String?
     let description: String?
     let invoice: String?
+    let useTime: String?
     let images: [UIImage]?
 }
