@@ -24,7 +24,9 @@ struct SettingsGroupView: View {
                 .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
             VStack {
                 ForEach(options) { option in
-                    lineComponent(lineContent: option)
+                    NavigationLink(destination: NotFoundView(), label: {
+                        lineComponent(lineContent: option)
+                    })
                     Divider()
                 }
             }

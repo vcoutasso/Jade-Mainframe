@@ -26,7 +26,7 @@ struct AppView: View {
                 Image(systemName: tabBarManager.homeSymbolName)
                 Text(Strings.homeTabName)
             }
-            RegisterSaleView().tabItem {
+            NotFoundView().tabItem {
                 Image(systemName: tabBarManager.sellingSymbolName)
                 Text(Strings.sellingTabName)
             }
