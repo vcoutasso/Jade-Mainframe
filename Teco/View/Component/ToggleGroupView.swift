@@ -10,34 +10,22 @@ import SwiftUI
 struct ToggleGroupView: View {
     // MARK: - Variables
 
-    @State private var expandNutritionalInfo: Bool = false
-    @State private var filters: [Filter] = [
-        Filter(name: "Modelo", availables: ["iPhone 7", "iPhone 11 Pro"], selected: [false, false]),
-        Filter(name: "Armazenamento", availables: ["512 GB", "256GB", "128 GB"], selected: [false, false, false]),
-        Filter(name: "Câmera", availables: ["12 MP", "16 MP"], selected: [false, false]),
-    ]
+    let groupName: String
+    @Binding public var filters: [Filter]
 
     // MARK: - Body
 
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("Descrição")
-                    .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .leading)
-                    .font(Font.system(size: 16, weight: .semibold, design: .default))
+        VStack {
+            Text(groupName)
+                .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .leading)
+                .font(Font.system(size: 16, weight: .semibold, design: .default))
 
-                HStack {
-                    Spacer()
-                    VStack {
-                        Group {
-                            groupInformation()
-                        }
-                        .padding(.bottom)
-                    }
-                    Spacer()
-                }
+            HStack {
+                Spacer()
+                groupInformation()
+                Spacer()
             }
-            .frame(minHeight: 0, maxHeight: .infinity, alignment: .top)
         }
     }
 
@@ -72,7 +60,6 @@ struct ToggleGroupView: View {
                         Text(filters[value].availables[index])
                     }
                 }
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .padding(2)
             }
             .font(Font.system(size: 17, weight: .regular, design: .default))
@@ -92,8 +79,8 @@ struct ToggleGroupView: View {
     }
 }
 
-struct ToggleGroupView_Previews: PreviewProvider {
-    static var previews: some View {
-        ToggleGroupView()
-    }
-}
+// struct ToggleGroupView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ToggleGroupView()
+//    }
+// }

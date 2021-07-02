@@ -8,22 +8,38 @@
 import SwiftUI
 
 struct AddDesiredProductsView: View {
+    @State public var filtersGroup1: [Filter] = [
+        Filter(name: "Modelo", availables: ["iPhone 7", "iPhone 11 Pro"], selected: [false, false]),
+        Filter(name: "Armazenamento", availables: ["512 GB", "256 GB", "128 GB"], selected: [false, false, false]),
+        Filter(name: "Câmera", availables: ["12 MP", "16 MP"], selected: [false, false]),
+    ]
+
+    @State public var filtersGroup2: [Filter] = [
+        Filter(name: "Nota Fiscal", availables: ["Possui nota fiscal"], selected: [false]),
+        Filter(name: "Acessórios", availables: ["Carregador", "Fone de Ouvido"], selected: [false, false]),
+        Filter(name: "Saúde da bateria", availables: ["Alta", "Média", "Baixa"], selected: [false, false, false]),
+    ]
+
     var body: some View {
         ScrollView {
             VStack {
                 Image("\(Assets.Images.Banners.bannerCansado.name)")
                     .frame(width: 390, height: 216)
-                Text("receba notificacoes..")
-                Text("coloque...")
                 VStack(alignment: .leading) {
-                    productIsChosen // "iPhone 12 128GB"é um dado entrando
-                    //                    productNotChosen
+                    // productIsChosen // "iPhone 12 128GB"é um dado entrando
+                    productNotChosen
                 }
+                .padding(.top)
                 // descricao
                 // descricao do usado
                 // faixa de preco
+                VStack {
+                    ToggleGroupView(groupName: "Descrição do modelo", filters: $filtersGroup1)
+                    ToggleGroupView(groupName: "Descrição do usado", filters: $filtersGroup2)
+                }
+                .padding(.top)
 
-                moreButton
+//                moreButton
                 confirmButtom
             }
         }
@@ -46,7 +62,7 @@ struct AddDesiredProductsView: View {
             Receba notificações de venderores\ncom os produtos que você deseja, na\nfaixa de preço escolhida.\n
             Coloque o que você precisa e a gente\navisa quando chegar. Não perca nenhuma oferta.
             """).font(Font.system(size: 15))
-        }.frame(width: 302)
+        }.frame(width: 350)
     }
 
     private var moreButton: some View {
@@ -59,17 +75,24 @@ struct AddDesiredProductsView: View {
     }
 
     private var confirmButtom: some View {
-        return Text(Strings.confirmFeatures).foregroundColor(.white)
-            .fontWeight(.semibold)
-            .frame(width: 349, height: 49, alignment: .center)
-            .background(RoundedRectangle(cornerRadius: 10))
-            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
-            .padding(.top)
+        return Button {
+            print("Confirm selected features!")
+        } label: {
+            Text(Strings.confirmFeatures).foregroundColor(.white)
+                .fontWeight(.semibold)
+                .frame(width: 349, height: 49, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 10))
+                .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
+                .padding(.top)
+        }
     }
 }
 
 struct AddDesiredProductsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddDesiredProductsView()
+        Group {
+            AddDesiredProductsView()
+            AddDesiredProductsView()
+        }
     }
 }
