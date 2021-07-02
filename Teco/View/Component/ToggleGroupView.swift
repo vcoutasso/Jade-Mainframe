@@ -70,14 +70,12 @@ struct ToggleGroupView: View {
                 HStack {
                     Toggle(isOn: $filters[value].selected[index]) {
                         Text(filters[value].availables[index])
-                            .font(Font.system(size: 17, weight: .regular, design: .default))
                     }
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .padding(2)
             }
-            .font(.system(.body, design: .default)
-                .weight(.regular))
+            .font(Font.system(size: 17, weight: .regular, design: .default))
         }
     }
 
