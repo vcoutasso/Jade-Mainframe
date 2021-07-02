@@ -48,7 +48,8 @@ struct ToggleGroupView: View {
         }
         .accentColor(Color(.systemGray))
         .background(Color(.systemGray6))
-        .cornerRadius(20)
+        .cornerRadius(20).overlay(RoundedRectangle(cornerRadius: 20).stroke())
+        .foregroundColor(Color(.systemGray3))
     }
 
     private func disclosureGroupItem(value: Int, index: Int) -> some View {
