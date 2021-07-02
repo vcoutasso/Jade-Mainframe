@@ -27,7 +27,7 @@ struct AddDesiredProductsView: View {
                     .frame(width: 390, height: 216)
                 VStack(alignment: .leading) {
                     // productIsChosen // "iPhone 12 128GB"é um dado entrando
-                    productNotChosen
+                    productNotChosen.padding()
                 }
                 .padding(.top)
                 // descricao
