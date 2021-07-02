@@ -14,6 +14,8 @@ struct ProductPageInfoView: View {
 
     @ObservedObject var viewModel: ProductPageManager
 
+    var profile: Profile = .init(name: "Joãozinho Pedro", email: "", location: "Curitiba, PR")
+
     var product: Product {
         viewModel.product
     }
@@ -30,6 +32,7 @@ struct ProductPageInfoView: View {
                 .padding(.bottom)
             technicalSheet
                 .padding(.bottom)
+            seller
         }
         .padding([.leading, .trailing])
     }
@@ -61,7 +64,7 @@ struct ProductPageInfoView: View {
                     .strikethrough()
                     .foregroundColor(Color(Assets.Colors.TecoPalette.mediumDarkGray.color))
                     .font(TecoFonts.discountSelectedProductFont)
-                    .opacity(product.discount ?? 0 > 0 ? 0 : 1)
+                    .opacity((product.discount ?? 0) > 0 ? 1 : 0)
 
                 Text("\(priceFormatter(price: product.price!, locale: Strings.locale))")
                     .font(TecoFonts.priceSelectedProductFont)
@@ -120,6 +123,34 @@ struct ProductPageInfoView: View {
             rowView(icon: "camera", title: "Câmera frontal:", text: product.frontalCamera ?? "")
             rowView(icon: "cpu", title: "Memória interna", text: product.memory ?? "")
             rowView(icon: "cpu", title: "Memória RAM:", text: product.memoryRAM ?? "")
+        }
+    }
+
+    private var seller: some View {
+        VStack(alignment: .leading) {
+            Text(Strings.seller)
+
+            HStack {
+                Image("Images/Icons/avatar")
+                    .frame(width: 58, height: 58)
+
+                VStack(alignment: .leading) {
+                    Text(profile.name)
+
+                    Text(profile.location)
+                }
+
+                Spacer()
+
+                Text("Ver perfil")
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color))
+            }
+            .padding([.leading, .trailing])
+            .background(RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(Assets.Colors.TecoPalette.lightGray.color))
+                .frame(width: 350, height: 78, alignment: .center)
+                .foregroundColor(.white)
+            )
         }
     }
 

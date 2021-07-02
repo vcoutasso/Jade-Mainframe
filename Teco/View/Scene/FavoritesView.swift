@@ -34,33 +34,32 @@ struct FavoritesView: View {
     }
 
     private var downHuddle: some View {
-        HStack {
-            Spacer()
-            VStack(alignment: .leading) {
-                Text(Strings.watchList)
-                    .padding([.top, .bottom], 10)
-                    .foregroundColor(Color(.darkGray))
-                VStack {
-                    HStack {
-                        binocularIconFill
-                        Text("""
-                        \(Strings.callToTheWatchList) \
-                        \(Text(Strings.readMore).font(TecoFonts.readMore)
-                            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)))
-                        """).font(TecoFonts.callToWatchList)
-                            .lineLimit(3)
-                    }
-                    addButtom
+        VStack(alignment: .leading) {
+            Text(Strings.watchList)
+                .padding([.top, .bottom], 10)
+                .foregroundColor(Color(.darkGray))
+            VStack {
+                HStack {
+                    binocularIconFill
+                    Text("""
+                    \(Strings.callToTheWatchList) \
+                    \(Text(Strings.readMore).font(TecoFonts.readMore)
+                        .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)))
+                    """).font(TecoFonts.callToWatchList)
+                        .lineLimit(3)
+                }
+                NavigationLink(destination: AddDesiredProductsView()) {
+                    addButton
                 }
             }
-            Spacer()
         }
+        .padding()
     }
 
     // MARK: - Private view variables
 
     private var binocularIconStroke: some View {
-        return Image(systemName: viewModel.watchListSymbolName)
+        Image(systemName: viewModel.watchListSymbolName)
             .padding(10)
             .overlay(Circle()
                 .stroke())
@@ -78,8 +77,8 @@ struct FavoritesView: View {
         }
     }
 
-    private var addButtom: some View {
-        return Text(Strings.addProducts)
+    private var addButton: some View {
+        Text(Strings.addProducts)
             .fontWeight(.semibold)
             .padding()
             .padding([.leading, .trailing], 10)

@@ -15,24 +15,30 @@ struct SearchBarView: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(alignment: .leading) {
-            TextField(Strings.searchBarPlaceholderText, text: $viewModel.searchBar.searchText)
-                .font(Font.system(.body, design: .default)
-                    .weight(.regular))
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
-                .padding(LayoutMetrics.allPadding)
-                .padding(.leading, LayoutMetrics.searchTextPadding - LayoutMetrics.allPadding)
-                .overlay(
-                    Image(systemName: viewModel.symbolName)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, LayoutMetrics.iconPadding)
-                )
-                .background(Color(.white))
-                .cornerRadius(LayoutMetrics.cornerRadius)
-                .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .center)
-                .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
+        VStack(alignment: .center) {
+            Image("Images/Icons/logo")
+                .padding(.bottom)
+
+            VStack(alignment: .leading) {
+                TextField(Strings.searchBarPlaceholderText, text: $viewModel.searchBar.searchText)
+                    .font(Font.system(.body, design: .default)
+                        .weight(.regular))
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .padding(LayoutMetrics.allPadding)
+                    .padding(.leading, LayoutMetrics.searchTextPadding - LayoutMetrics.allPadding)
+                    .overlay(
+                        Image(systemName: viewModel.symbolName)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, LayoutMetrics.iconPadding)
+                    )
+                    .background(Color(.white))
+                    .cornerRadius(LayoutMetrics.cornerRadius)
+                    .frame(width: LayoutMetrics.frameWidth, height: LayoutMetrics.frameHeight, alignment: .center)
+                    .foregroundColor(Color(Assets.Colors.TecoPalette.mediumGray.color))
+            }
         }
+        .frame(width: 390, height: 175, alignment: .center)
     }
 
     // MARK: - Layout Metrics
@@ -53,5 +59,6 @@ struct SearchBarView_Previews: PreviewProvider {
 
     static var previews: some View {
         SearchBarView(viewModel: mockViewModel)
+            .preferredColorScheme(.dark)
     }
 }

@@ -12,6 +12,8 @@ struct FavoriteCardView: View {
 
     @ObservedObject var viewModel: FavoriteCardManager
 
+    @State var isLinkActive = false
+
     var body: some View {
         HStack(spacing: 20) {
             Image(uiImage: viewModel.item.product.images!.first!)
@@ -38,12 +40,15 @@ struct FavoriteCardView: View {
                                Image(viewModel.heartImageName)
                            })
 
-                    Button(action: {
-                               viewModel.handleBinocularToggle()
-                           },
-                           label: {
-                               Image(uiImage: viewModel.isWatched ? Assets.Images.Icons.filledBinoculars.image : Assets.Images.Icons.binoculars.image)
-                           })
+                    NavigationLink(destination: AddDesiredProductsView(), isActive: $isLinkActive) {
+                        Button(action: {
+                                   viewModel.handleBinocularToggle()
+                                   isLinkActive = viewModel.isWatched ? true : false
+                               },
+                               label: {
+                                   Image(uiImage: viewModel.isWatched ? Assets.Images.Icons.filledBinoculars.image : Assets.Images.Icons.binoculars.image)
+                               })
+                    }
                 }
                 .offset(x: LayoutMetrics.iconsOffSet)
             }

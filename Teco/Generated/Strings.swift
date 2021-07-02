@@ -58,6 +58,8 @@ internal enum Strings {
   internal static let searchBarPlaceholderText = Strings.tr("Localizable", "searchBarPlaceholderText")
   /// Ver mais características
   internal static let seeMore = Strings.tr("Localizable", "seeMore")
+  /// Vendedor
+  internal static let seller = Strings.tr("Localizable", "seller")
   /// Vender
   internal static let sellingTabName = Strings.tr("Localizable", "sellingTabName")
   /// Configurações
