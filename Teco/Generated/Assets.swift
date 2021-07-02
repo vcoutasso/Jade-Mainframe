@@ -39,6 +39,9 @@ internal enum Assets {
   }
   internal enum Images {
     internal static let _12 = ImageAsset(name: "Images/12")
+    internal enum Banners {
+      internal static let bannerCansado = ImageAsset(name: "Images/Banners/bannerCansado")
+    }
     internal enum Icons {
       internal static let binoculars = ImageAsset(name: "Images/Icons/binoculars")
       internal static let filledBinoculars = ImageAsset(name: "Images/Icons/filledBinoculars")
@@ -65,6 +68,7 @@ internal enum Assets {
   ]
   internal static let allImages: [ImageAsset] = [
     Images._12,
+    Images.Banners.bannerCansado,
     Images.Icons.binoculars,
     Images.Icons.filledBinoculars,
     Images.Icons.filledHeart,
