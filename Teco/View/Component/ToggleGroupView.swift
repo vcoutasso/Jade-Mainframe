@@ -48,7 +48,8 @@ struct ToggleGroupView: View {
         }
         .accentColor(Color(.systemGray))
         .background(Color(.systemGray6))
-        .cornerRadius(20).overlay(RoundedRectangle(cornerRadius: 20).stroke())
+        .cornerRadius(20)
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke())
         .foregroundColor(Color(.systemGray3))
     }
 
@@ -58,7 +59,7 @@ struct ToggleGroupView: View {
             HStack {
                 HStack {
                     Toggle(isOn: $filters[value].selected[index]) {
-                        Text(filters[value].availables[index])
+                        Text(filters[value].availables[index]).foregroundColor(.black)
                     }
                 }
                 .padding(2)
