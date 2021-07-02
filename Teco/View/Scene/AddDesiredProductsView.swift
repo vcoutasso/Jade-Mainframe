@@ -38,8 +38,8 @@ struct AddDesiredProductsView: View {
                     ToggleGroupView(groupName: "Descrição do usado", filters: $filtersGroup2)
                 }
                 .padding(.top)
-
-//                moreButton
+                PriceRangeTextField()
+                moreButton
                 confirmButtom
             }
         }

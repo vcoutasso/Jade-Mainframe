@@ -69,7 +69,7 @@ struct ToggleGroupView: View {
     // MARK: - Layout Metrics
 
     private enum LayoutMetrics {
-        static let frameWidth: CGFloat = 362
+        static let frameWidth: CGFloat = 351
         static let frameHeight: CGFloat = 34
         static let cornerRadius: CGFloat = 10
         static let searchTextPadding: CGFloat = 38
