@@ -15,15 +15,16 @@ struct StoriesView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: LayoutMetrics.horizontalSpacing) {
                     ForEach(viewModel.products) { product in
-                        productStoriesView(product: product)
+                        NavigationLink(destination: NotFoundView(), label: {
+                            productStoriesView(product: product)
+                        })
                     }
-                    seeMore
+                    NavigationLink(destination: NotFoundView(), label: {
+                        seeMore
+                    })
                 }
             }
         }
-//        .onAppear {
-//            // MARK: - fetch available models from CloudKit
-//
     }
 
     private var seeMore: some View {
