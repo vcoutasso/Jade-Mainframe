@@ -26,7 +26,11 @@ struct AppView: View {
                 Image(systemName: tabBarManager.homeSymbolName)
                 Text(Strings.homeTabName)
             }
+<<<<<<< HEAD
             SellingView().tabItem {
+=======
+            NotFoundView().tabItem {
+>>>>>>> e3caaa768dea105d55ecad55e1a770baa1b82776
                 Image(systemName: tabBarManager.sellingSymbolName)
                 Text(Strings.sellingTabName)
             }
