@@ -41,7 +41,9 @@ struct PriceRangeTextField: View {
                 "",
                 text: $minPrice
             )
-            .frame(width: 75, height: 23, alignment: .leading)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.trailing)
+            .frame(width: 75, height: 23, alignment: .center)
             .background(Color(.white))
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10).stroke())
@@ -70,6 +72,8 @@ struct PriceRangeTextField: View {
                 "",
                 text: $maxPrice
             )
+            .foregroundColor(.black)
+            .multilineTextAlignment(.trailing)
             .frame(width: 75, height: 23, alignment: .leading)
             .background(Color(.white))
             .cornerRadius(10)

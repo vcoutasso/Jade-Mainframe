@@ -39,7 +39,7 @@ struct ToggleGroupView: View {
                 } label: {
                     Text(filters[filterIdx].name)
                         .foregroundColor(Color(Teco.Assets.Colors.TecoPalette.mediumDarkGray.name))
-                        .font(Font.system(size: 16, weight: .semibold, design: .default))
+                        .font(Font.system(size: 16, weight: .regular, design: .default))
                 }
                 .padding([.leading, .trailing]).offset(y: 3)
 
@@ -48,7 +48,7 @@ struct ToggleGroupView: View {
         }
         .accentColor(Color(.systemGray))
         .background(Color(.systemGray6))
-        .cornerRadius(8)
+        .cornerRadius(20)
     }
 
     private func disclosureGroupItem(value: Int, index: Int) -> some View {

@@ -27,7 +27,7 @@ struct AddDesiredProductsView: View {
                     .frame(width: 390, height: 216)
                 VStack(alignment: .leading) {
                     // productIsChosen // "iPhone 12 128GB"é um dado entrando
-                    productNotChosen.padding()
+                    productNotChosen.padding(.top, 30)
                 }
                 .padding(.top)
                 // descricao
@@ -52,7 +52,7 @@ struct AddDesiredProductsView: View {
             Quando vendedores anunciarem produtos que se encaixam neste perfil, avisaremos você na hora.\n
             Quais destas características você quer manter pra procura?
             """)
-                .font(Font.system(size: 15))
+                .font(Font.system(size: 16))
         }.frame(width: 302)
     }
 
@@ -61,7 +61,7 @@ struct AddDesiredProductsView: View {
             Text("""
             Receba notificações de venderores\ncom os produtos que você deseja, na\nfaixa de preço escolhida.\n
             Coloque o que você precisa e a gente\navisa quando chegar. Não perca nenhuma oferta.
-            """).font(Font.system(size: 15))
+            """).font(Font.system(size: 16))
         }.frame(width: 350)
     }
 
