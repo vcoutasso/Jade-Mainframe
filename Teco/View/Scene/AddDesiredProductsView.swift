@@ -43,6 +43,7 @@ struct AddDesiredProductsView: View {
                 confirmButtom
             }
         }
+//        .navigationTitle(Strings.goBack)
     }
 
     private var productIsChosen: some View {
@@ -66,12 +67,14 @@ struct AddDesiredProductsView: View {
     }
 
     private var moreButton: some View {
-        return Text(Strings.seeMore)
-            .fontWeight(.semibold)
-            .frame(width: 349, height: 49, alignment: .center)
-            .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 2))
-            .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)).padding(.top)
+        NavigationLink(destination: NotFoundView()) {
+            Text(Strings.seeMore)
+                .fontWeight(.semibold)
+                .frame(width: 349, height: 49, alignment: .center)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 2))
+                .foregroundColor(Color(Assets.Colors.TecoPalette.darkBlue.color)).padding(.top)
+        }
     }
 
     private var confirmButtom: some View {
