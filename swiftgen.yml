@@ -1,0 +1,18 @@
+input_dir: Teco/Resources/
+output_dir: Teco/Generated/
+strings:
+  inputs: Base.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: Strings.swift
+      params:
+          enumName: Strings
+xcassets:
+  inputs: Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Assets.swift
+      params:
+          enumName: Assets
+          allValues: true

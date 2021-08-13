@@ -1,0 +1,30 @@
+name: Build
+
+on: 
+    pull_request:
+        branches:
+            - master
+            - development
+jobs:
+    Build:
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: List available Xcode versions
+              run: ls /Applications | grep Xcode
+
+            - name: Select Xcode
+              run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
+
+            - name: Install xcodegen
+              run: brew install xcodegen
+
+            - name: Generate project files
+              run: xcodegen
+
+            - name: Install pods
+              run: pod install
+
+            - name: Build and run unit tests
+              run: xcodebuild -workspace Teco.xcworkspace -scheme Teco -destination platform\=iOS\ Simulator,OS\=14.4,name\=iPhone\ 12 build test | xcpretty && exit ${PIPESTATUS[0]}

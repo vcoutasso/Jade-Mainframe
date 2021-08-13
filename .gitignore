@@ -89,4 +89,12 @@ fastlane/test_output
 
 iOSInjectionProject/
 
+# You again
 .DS_Store
+
+# Ignore Pods/ directory as we generate it with cocoapods
+Pods/
+
+# Ignore project files as we generate them with xcodegen
+*.xcodeproj
+*.xcworkspace

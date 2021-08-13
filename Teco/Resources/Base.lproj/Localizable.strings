@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  Jade-Mainframe
+
+  Created by Vinícius Couto on 21/06/21.
+  
+*/
+
+/* String constants */
+"requiredFieldSymbol" = "*";
+"searchBarPlaceholderText" = "Pesquisar no Teco";
+"invalidPriceWarning" = "Preço Inválido";
+"currencySymbol" = "R$";
+"locale" = "pt_BR";
+
+"homeTabName" = "Início";
+"sellingTabName" = "Vender";
+"profileTabName" = "Perfil";
+"favoritesTabName" = "Favoritos";
+
+"moreCategories" = "+ categorias";
+
+"buyAndSell" = "Compra e Venda";
+"announcedProducts" = "Produtos anunciados";
+"paymentMethods" = "Formas de pagamento";
+"account" = "Conta";
+"settings" = "Configurações";
+"helpCenter" = "Central de ajuda";
+"institutional" = "Institucional";
+"aboutUs" = "Sobre nós";
+
+"watchList" = "ficar de olho";
+"callToTheWatchList" = "Cansado de procurar? \nA gente fica de olho e te avisa \nquando achar.";
+"readMore" = "Saiba mais";
+"addProducts" = "Adicionar produtos desejados";
+
+"description" = "Descrição";
+"aboutProduct" = "Sobre este produto";
+"technicalSheet" = "Ficha técnica";
+
+"goBack" = "Voltar";
+"seeMore" = "Ver mais características";
+"confirmFeatures" = "Confirmar características";
+
+"seller" = "Vendedor";
+
